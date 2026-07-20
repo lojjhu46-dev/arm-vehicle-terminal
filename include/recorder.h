@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdio.h>
+#include <time.h>
 
 #include "jpeglib.h"
 
@@ -11,9 +12,13 @@ typedef struct {
     char dirbuffer[256];
     int cnt;
     int CNT;
+    int recording;
 } Recorder;
 
 void recorder_init(Recorder *recorder);
+int recorder_prepare_session(Recorder *recorder, const char *root_dir, time_t timestamp);
+int recorder_start_session(Recorder *recorder, const char *root_dir);
+void recorder_stop_session(Recorder *recorder);
 void recorder_save_frame(Recorder *recorder, int touch_x, const JSAMPLE *image_buffer);
 const char *recorder_last_path(const Recorder *recorder);
 

@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 #include "app_config.h"
-#include "image_convert.h"
+#include "../include/image_convert.h"
 #include "jpeg_codec.h"
 #include "ui_flow.h"
 

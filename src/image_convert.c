@@ -2,7 +2,6 @@
 
 #include "app_config.h"
 #include "image_convert.h"
-#include "overlay.h"
 
 //转换一个像素点
 unsigned int yuyv_to_rgb_pix(int Y, int Cb, int Cr, JSAMPLE **pimage_buffer)
@@ -64,6 +63,5 @@ JSAMPLE *image_convert_frame(const char *pbuffer, unsigned int *lcd_mp)
            lcd_mp[y * LCD_WIDTH + x] = lcdbuf[y * CAMERA_FRAME_W + x - 80];
         }
     }
-    parking_assist_lines_drawing((int *)lcd_mp);
     return image_buffer;
 }
