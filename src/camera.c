@@ -161,4 +161,10 @@ void camera_close(Camera *camera)
     free(camera->buffers);
     if (camera->fd != -1)
         close(camera->fd);
+    //最新改动
+    /* 关闭后重置状态，允许退出流程再次安全调用 camera_close()。 */
+    camera->buffers = NULL;
+    camera->n_buffers = 0;
+    camera->fd = -1;
+    //最新改动
 }

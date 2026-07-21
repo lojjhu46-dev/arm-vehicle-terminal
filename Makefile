@@ -5,9 +5,11 @@ LDFLAGS := -L$(CURDIR)/lib
 LDLIBS := -ljpeg
 THREAD_FLAGS := -pthread
 
-APP_SOURCES := src/main.c src/lcd.c src/touch.c src/camera.c src/image_convert.c src/overlay.c src/jpeg_codec.c src/recorder.c src/ui_flow.c
+#最新改动
+APP_SOURCES := src/main.c src/lcd.c src/touch.c src/camera.c src/image_convert.c src/overlay.c src/record_indicator.c src/jpeg_codec.c src/recorder.c src/ui_flow.c
+#最新改动
 
-.PHONY: all test-overlay test-public-headers test-recorder-header test-recorder-session test-yuyv-conversion syntax-check
+.PHONY: all test-overlay test-public-headers test-recorder-header test-recorder-session test-record-indicator test-yuyv-conversion syntax-check
 
 all: mainui
 
@@ -26,6 +28,12 @@ test-recorder-header: tests/test_recorder_header.c
 test-recorder-session: tests/test_recorder_session.c src/recorder.c
 	$(CC) $(CPPFLAGS) $(CFLAGS) -o tests/test_recorder_session tests/test_recorder_session.c src/recorder.c
 	./tests/test_recorder_session
+
+#最新改动
+test-record-indicator: tests/test_record_indicator.c src/record_indicator.c include/record_indicator.h
+	$(CC) $(CPPFLAGS) $(CFLAGS) -o tests/test_record_indicator tests/test_record_indicator.c src/record_indicator.c
+	./tests/test_record_indicator
+#最新改动
 
 test-yuyv-conversion: tests/test_yuyv_conversion.c src/image_convert.c src/overlay.c
 	$(CC) $(CPPFLAGS) $(CFLAGS) -o tests/test_yuyv_conversion tests/test_yuyv_conversion.c src/image_convert.c src/overlay.c

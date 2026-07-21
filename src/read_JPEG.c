@@ -1,4 +1,4 @@
-#include "read.JPEG.h"
+#include "read_JPEG.h"
 
 GLOBAL(void)
 write_JPEG_file (char * filename, int quality)

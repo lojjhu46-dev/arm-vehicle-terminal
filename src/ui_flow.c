@@ -1,10 +1,21 @@
+//最新改动
+#include <errno.h>
+#include <pthread.h>
+#include <semaphore.h>
 #include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
+//最新改动
 
 #include "app_config.h"
-#include "../include/image_convert.h"
+#include "image_convert.h"
 #include "jpeg_codec.h"
+//最新改动
+#include "overlay.h"
+#include "record_indicator.h"
+//最新改动
 #include "ui_flow.h"
+
 
 void show_startup_animation(Lcd *lcd)
 {
@@ -27,76 +38,290 @@ void show_startup_animation(Lcd *lcd)
     read_JPEG_file(frames[5], lcd->pixels);
 }
 
-//处理图像
-static int mainloop(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
+//最新改动
+typedef struct {
+    sem_t lcd_sem;
+    pthread_mutex_t state_mutex;
+    int live_mode;
+    int recording;
+    int touch_running;
+} UiState;
+
+typedef struct {
+    Lcd *lcd;
+    Touch *touch;
+    Camera *camera;
+    Recorder *recorder;
+    UiState *state;
+} CameraThreadContext;
+
+typedef struct {
+    Lcd *lcd;
+    UiState *state;
+} IndicatorThreadContext;
+
+static int is_camera_entry_touch(int x, int y)
 {
-    //跳转到指定目录下
-    chdir("/root/workspace/");
-    for (;;)
+    return x > 10 && x < 70 && y > 70 && y < 110;
+}
+
+static int is_camera_exit_touch(int x, int y)
+{
+    return x > 10 && x < 70 && y > 140 && y < 170;
+}
+
+static void lcd_sem_wait(UiState *state)
+{
+    while (sem_wait(&state->lcd_sem) == -1 && errno == EINTR)
     {
-        touch_read(touch);
-        if (camera_wait_frame(camera) < 0)
-            return -1;
+    }
+}
 
-        //循环 出队->处理->入队
-        for (unsigned int i = 0; i < camera->n_buffers; ++i)
+static int ui_is_live(UiState *state)
+{
+    int live_mode;
+
+    pthread_mutex_lock(&state->state_mutex);
+    live_mode = state->live_mode;
+    pthread_mutex_unlock(&state->state_mutex);
+    return live_mode;
+}
+
+static int ui_is_recording(UiState *state)
+{
+    int recording;
+
+    pthread_mutex_lock(&state->state_mutex);
+    recording = state->recording;
+    pthread_mutex_unlock(&state->state_mutex);
+    return recording;
+}
+
+static void ui_set_live(UiState *state, int live_mode)
+{
+    pthread_mutex_lock(&state->state_mutex);
+    state->live_mode = live_mode;
+    if (!live_mode)
+        state->recording = 0;
+    pthread_mutex_unlock(&state->state_mutex);
+}
+
+static void ui_set_recording(UiState *state, int recording)
+{
+    pthread_mutex_lock(&state->state_mutex);
+    state->recording = recording;
+    pthread_mutex_unlock(&state->state_mutex);
+}
+
+static void show_main_interface(Lcd *lcd, UiState *state)
+{
+    lcd_sem_wait(state);
+    read_JPEG_file("./logo/main_UI.jpeg", lcd->pixels);
+    sem_post(&state->lcd_sem);
+}
+
+static void *touch_thread_main(void *argument)
+{
+    CameraThreadContext *context = argument;
+
+    while (context->state->touch_running)
+    {
+        int x;
+        int y;
+
+        if (touch_read(context->touch) == -1)
         {
-            void *frame_buffer = camera_dequeue(camera);
-            if (frame_buffer == NULL)
-                return -1;
-
-            //处理图像帧并显示到LCD
-            JSAMPLE *image_buffer = image_convert_frame(frame_buffer, (unsigned int *)lcd->pixels);
-            if (image_buffer == NULL)
-                return -1;
-
-            // 小改动：先完成颜色转码，再编码 JPEG，确保保存的是当前摄像头帧。
-            recorder_save_frame(recorder, touch->touchsrceen_x, image_buffer);
-            free(image_buffer);
-
-            //缓冲区入队
-            if (camera_requeue(camera) == -1)
-                return -1;
+            usleep(10 * 1000);
+            continue;
         }
-        if (touch->touchsrceen_x < 80)
+
+        touch_get_position(context->touch, &x, &y);
+        if (!ui_is_live(context->state) && is_camera_entry_touch(x, y))
+            ui_set_live(context->state, 1);
+        else if (ui_is_live(context->state) && is_camera_exit_touch(x, y))
+            ui_set_live(context->state, 0);
+    }
+    return NULL;
+}
+
+static void *camera_thread_main(void *argument)
+{
+    CameraThreadContext *context = argument;
+
+    if (camera_open(context->camera, "/dev/video7") == -1 ||
+        camera_init(context->camera) == -1 ||
+        camera_start(context->camera) == -1)
+    {
+        camera_close(context->camera);
+        ui_set_live(context->state, 0);
+        return NULL;
+    }
+
+    while (ui_is_live(context->state))
+    {
+        void *frame_buffer;
+        JSAMPLE *image_buffer;
+        int touch_x;
+        int touch_y;
+
+        if (camera_wait_frame(context->camera) < 0)
+            break;
+        frame_buffer = camera_dequeue(context->camera);
+        if (frame_buffer == NULL)
+            break;
+
+        lcd_sem_wait(context->state);
+        image_buffer = image_convert_frame(frame_buffer, (unsigned int *)context->lcd->pixels);
+        if (image_buffer != NULL)
+            parking_assist_lines_drawing(context->lcd->pixels);
+        sem_post(&context->state->lcd_sem);
+        if (image_buffer == NULL)
+            break;
+
+        touch_get_position(context->touch, &touch_x, &touch_y);
+        recorder_save_frame(context->recorder, touch_x, image_buffer);
+        ui_set_recording(context->state, context->recorder->recording);
+        free(image_buffer);
+
+        if (camera_requeue(context->camera) == -1)
+            break;
+        (void)touch_y;
+    }
+
+    camera_close(context->camera);
+    ui_set_live(context->state, 0);
+    return NULL;
+}
+
+static void *red_dot_thread_main(void *argument)
+{
+    IndicatorThreadContext *context = argument;
+    int visible = 0;
+
+    while (ui_is_live(context->state))
+    {
+        if (ui_is_recording(context->state))
         {
-            //点击指定区域触发回放功能
-            for (int i = 0; i < JPEG_NUM; i++)
+            lcd_sem_wait(context->state);
+            record_indicator_draw_dot(context->lcd->pixels, visible);
+            sem_post(&context->state->lcd_sem);
+            visible = !visible;
+            usleep(500 * 1000);
+        }
+        else
+        {
+            if (visible)
             {
-                read_JPEG_file(recorder_last_path(recorder), lcd->pixels);
-                usleep(30 * 1000);
+                lcd_sem_wait(context->state);
+                record_indicator_draw_dot(context->lcd->pixels, 0);
+                sem_post(&context->state->lcd_sem);
+                visible = 0;
             }
+            usleep(50 * 1000);
         }
     }
+
+    lcd_sem_wait(context->state);
+    record_indicator_draw_dot(context->lcd->pixels, 0);
+    sem_post(&context->state->lcd_sem);
+    return NULL;
+}
+
+static void *rec_thread_main(void *argument)
+{
+    IndicatorThreadContext *context = argument;
+    int shown = 0;
+
+    while (ui_is_live(context->state))
+    {
+        int recording = ui_is_recording(context->state);
+
+        if (recording && !shown)
+        {
+            lcd_sem_wait(context->state);
+            record_indicator_draw_rec(context->lcd->pixels, 1);
+            sem_post(&context->state->lcd_sem);
+            shown = 1;
+        }
+        else if (!recording && shown)
+        {
+            lcd_sem_wait(context->state);
+            record_indicator_draw_rec(context->lcd->pixels, 0);
+            sem_post(&context->state->lcd_sem);
+            shown = 0;
+        }
+        usleep(50 * 1000);
+    }
+
+    lcd_sem_wait(context->state);
+    record_indicator_draw_rec(context->lcd->pixels, 0);
+    sem_post(&context->state->lcd_sem);
+    return NULL;
 }
 
 int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
 {
-    int x,y;
-    for(;;)
+    UiState state;
+    CameraThreadContext camera_context;
+    IndicatorThreadContext indicator_context;
+    pthread_t touch_thread;
+
+    memset(&state, 0, sizeof(state));
+    if (sem_init(&state.lcd_sem, 0, 1) == -1 ||
+        pthread_mutex_init(&state.state_mutex, NULL) != 0)
+        return -1;
+
+    state.touch_running = 1;
+    memset(&camera_context, 0, sizeof(camera_context));
+    camera_context.lcd = lcd;
+    camera_context.touch = touch;
+    camera_context.camera = camera;
+    camera_context.recorder = recorder;
+    camera_context.state = &state;
+    indicator_context.lcd = lcd;
+    indicator_context.state = &state;
+
+    if (pthread_create(&touch_thread, NULL, touch_thread_main, &camera_context) != 0)
+        return -1;
+
+    for (;;)
     {
-        touch_read(touch);
-        x = touch->touchsrceen_x;
-        y = touch->touchsrceen_y;
-        (void)x;
-        (void)y;
-        if ((touch->touchsrceen_x > 10 && touch->touchsrceen_x < 70) &&
-            (touch->touchsrceen_y > 70 && touch->touchsrceen_y < 110))
+        pthread_t camera_thread;
+        pthread_t red_dot_thread;
+        pthread_t rec_thread;
+
+        while (!ui_is_live(&state))
+            usleep(10 * 1000);
+
+        touch_reset_position(touch);
+        if (pthread_create(&camera_thread, NULL, camera_thread_main, &camera_context) != 0)
         {
-            //3.打开摄像头
-            if (camera_open(camera, "/dev/video7") == -1)
-                return -1;
-
-            //4.初始化摄像头
-            if (camera_init(camera) == -1)
-                return -1;
-
-            //5.开始采集
-            if (camera_start(camera) == -1)
-                return -1;
-
-            //6.处理图像
-            return mainloop(lcd, touch, camera, recorder);
+            ui_set_live(&state, 0);
+            return -1;
         }
+        if (pthread_create(&red_dot_thread, NULL, red_dot_thread_main, &indicator_context) != 0)
+        {
+            ui_set_live(&state, 0);
+            pthread_join(camera_thread, NULL);
+            return -1;
+        }
+        if (pthread_create(&rec_thread, NULL, rec_thread_main, &indicator_context) != 0)
+        {
+            ui_set_live(&state, 0);
+            pthread_join(camera_thread, NULL);
+            pthread_join(red_dot_thread, NULL);
+            return -1;
+        }
+
+        while (ui_is_live(&state))
+            usleep(10 * 1000);
+
+        pthread_join(camera_thread, NULL);
+        pthread_join(red_dot_thread, NULL);
+        pthread_join(rec_thread, NULL);
+        recorder_stop_session(recorder);
+        show_main_interface(lcd, &state);
+        touch_reset_position(touch);
     }
 }
+//最新改动
