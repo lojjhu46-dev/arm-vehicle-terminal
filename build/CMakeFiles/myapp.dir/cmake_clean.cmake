@@ -1,0 +1,31 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/myapp.dir/src/camera.c.o"
+  "CMakeFiles/myapp.dir/src/camera.c.o.d"
+  "CMakeFiles/myapp.dir/src/image_convert.c.o"
+  "CMakeFiles/myapp.dir/src/image_convert.c.o.d"
+  "CMakeFiles/myapp.dir/src/jpeg_codec.c.o"
+  "CMakeFiles/myapp.dir/src/jpeg_codec.c.o.d"
+  "CMakeFiles/myapp.dir/src/lcd.c.o"
+  "CMakeFiles/myapp.dir/src/lcd.c.o.d"
+  "CMakeFiles/myapp.dir/src/live_controls.c.o"
+  "CMakeFiles/myapp.dir/src/live_controls.c.o.d"
+  "CMakeFiles/myapp.dir/src/main.c.o"
+  "CMakeFiles/myapp.dir/src/main.c.o.d"
+  "CMakeFiles/myapp.dir/src/overlay.c.o"
+  "CMakeFiles/myapp.dir/src/overlay.c.o.d"
+  "CMakeFiles/myapp.dir/src/record_indicator.c.o"
+  "CMakeFiles/myapp.dir/src/record_indicator.c.o.d"
+  "CMakeFiles/myapp.dir/src/recorder.c.o"
+  "CMakeFiles/myapp.dir/src/recorder.c.o.d"
+  "CMakeFiles/myapp.dir/src/touch.c.o"
+  "CMakeFiles/myapp.dir/src/touch.c.o.d"
+  "CMakeFiles/myapp.dir/src/ui_flow.c.o"
+  "CMakeFiles/myapp.dir/src/ui_flow.c.o.d"
+  "myapp"
+  "myapp.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/myapp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

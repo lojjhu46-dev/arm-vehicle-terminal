@@ -1,9 +1,10 @@
-//最新改动
 #include "record_indicator.h"
 
 #define LCD_WIDTH 800
 #define LCD_HEIGHT 480
 
+//最新改动
+// 验证录像指示器在亮起和清除时写入预期颜色。
 int main(void)
 {
     int framebuffer[LCD_WIDTH * LCD_HEIGHT] = {0};

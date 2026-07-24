@@ -12,7 +12,8 @@
 //清空缓冲区
 #define CLEAR(x) memset(&(x), 0, sizeof(x))
 
-//打开设备
+//最新改动
+// 打开指定 V4L2 摄像头设备并保存文件描述符。
 int camera_open(Camera *camera, const char *device_name)
 {
     //打开摄像头设备
@@ -25,8 +26,10 @@ int camera_open(Camera *camera, const char *device_name)
     }
     return 0;
 }
+//最新改动
 
-//初始化摄像头
+//最新改动
+// 配置 YUYV 采集格式并申请 mmap 摄像头缓冲区。
 int camera_init(Camera *camera)
 {
     //初始化采集格式
@@ -87,8 +90,10 @@ int camera_init(Camera *camera)
 
     return 0;
 }
+//最新改动
 
-//开始采集
+//最新改动
+// 将全部缓冲区入队并启动 V4L2 视频流。
 int camera_start(Camera *camera)
 {
     unsigned int i;
@@ -113,7 +118,10 @@ int camera_start(Camera *camera)
     type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
     return ioctl(camera->fd, VIDIOC_STREAMON, &type);
 }
+//最新改动
 
+//最新改动
+// 等待摄像头文件描述符出现可读取的视频帧。
 int camera_wait_frame(Camera *camera)
 {
     //定义了一个文件描述符的集合
@@ -130,7 +138,10 @@ int camera_wait_frame(Camera *camera)
 
     return select(camera->fd + 1, &fds, NULL, NULL, &tv);
 }
+//最新改动
 
+//最新改动
+// 从驱动出队一帧，并返回驱动索引对应的 mmap 地址。
 void *camera_dequeue(Camera *camera)
 {
     CLEAR(camera->active_buffer);
@@ -144,13 +155,19 @@ void *camera_dequeue(Camera *camera)
     // 小改动：使用驱动返回的索引，避免访问与出队帧不对应的缓冲区。
     return camera->buffers[camera->active_buffer.index].start;
 }
+//最新改动
 
+//最新改动
+// 将最近出队的帧缓冲重新交还给 V4L2 驱动。
 int camera_requeue(Camera *camera)
 {
     //缓冲区入队
     return ioctl(camera->fd, VIDIOC_QBUF, &camera->active_buffer);
 }
+//最新改动
 
+//最新改动
+// 解除摄像头缓冲映射并重置结构体，支持安全的重复清理。
 void camera_close(Camera *camera)
 {
     for (unsigned int i = 0; i < camera->n_buffers; ++i)
@@ -161,10 +178,9 @@ void camera_close(Camera *camera)
     free(camera->buffers);
     if (camera->fd != -1)
         close(camera->fd);
-    //最新改动
     /* 关闭后重置状态，允许退出流程再次安全调用 camera_close()。 */
     camera->buffers = NULL;
     camera->n_buffers = 0;
     camera->fd = -1;
-    //最新改动
 }
+//最新改动

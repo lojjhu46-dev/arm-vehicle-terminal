@@ -3,11 +3,11 @@
 
 int parking_assist_lines_drawing(int *lcd_mp)
 {
-    int y_bottom = 470;
+    int y_bottom = LCD_HEIGHT - 1;
     int y_top = 170;
 
-    // 调整这两个值改变斜率和延伸感
-    int left_bottom = 30;   // 左线底部位置
+    // 辅助线从摄像头画面左右下角向内延伸，不能覆盖两侧控制栏。
+    int left_bottom = CAMERA_DISPLAY_X;
     int left_top = 280;     // 左线上端位置，越大越往中间收，延伸感越强
 
     for(int y = y_bottom; y >= y_top; y--)
@@ -46,14 +46,16 @@ int parking_assist_lines_drawing(int *lcd_mp)
                      (y_bottom - y_top);
 
         // 右辅助线对称
-        int right_x = 799 - left_x;
+        int right_x = CAMERA_DISPLAY_X + CAMERA_FRAME_W - 1 -
+                      (left_x - CAMERA_DISPLAY_X);
 
         // 画左辅助线，向右加粗
         for(int i = 0; i < width; i++)
         {
             int x = left_x + i;
 
-            if(x >= 0 && x < LCD_WIDTH && y >= 0 && y < LCD_HEIGHT)
+            if(x >= CAMERA_DISPLAY_X && x < CAMERA_DISPLAY_X + CAMERA_FRAME_W &&
+               y >= 0 && y < LCD_HEIGHT)
                 lcd_mp[y * LCD_WIDTH + x] = color;
         }
 
@@ -62,7 +64,8 @@ int parking_assist_lines_drawing(int *lcd_mp)
         {
             int x = right_x - i;
 
-            if(x >= 0 && x < LCD_WIDTH && y >= 0 && y < LCD_HEIGHT)
+            if(x >= CAMERA_DISPLAY_X && x < CAMERA_DISPLAY_X + CAMERA_FRAME_W &&
+               y >= 0 && y < LCD_HEIGHT)
                 lcd_mp[y * LCD_WIDTH + x] = color;
         }
     }

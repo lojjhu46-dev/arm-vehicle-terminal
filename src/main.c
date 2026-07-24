@@ -31,6 +31,7 @@ int main(void)
     }
     //播放开机动画
     show_startup_animation(&lcd);
+    //界面显示，切换
     result = ui_run(&lcd, &touch, &camera, &recorder);
     if(result == -1) 
     {

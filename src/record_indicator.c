@@ -1,16 +1,20 @@
-//最新改动
 #include "app_config.h"
 #include "record_indicator.h"
 
 #define RECORD_COLOR 0xFF0000
 #define BACKGROUND_COLOR 0x000000
 
+//最新改动
+// 在坐标合法时写入一个 framebuffer 像素。
 static void draw_pixel(int *lcd_mp, int x, int y, int color)
 {
     if (x >= 0 && x < LCD_WIDTH && y >= 0 && y < LCD_HEIGHT)
         lcd_mp[y * LCD_WIDTH + x] = color;
 }
+//最新改动
 
+//最新改动
+// 绘制或清除右上角录像闪烁红点。
 void record_indicator_draw_dot(int *lcd_mp, int visible)
 {
     const int center_x = 740;
@@ -30,7 +34,10 @@ void record_indicator_draw_dot(int *lcd_mp, int visible)
         }
     }
 }
+//最新改动
 
+//最新改动
+// 绘制或清除右上角固定显示的 REC 字样。
 void record_indicator_draw_rec(int *lcd_mp, int visible)
 {
     const int color = visible ? RECORD_COLOR : BACKGROUND_COLOR;

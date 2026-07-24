@@ -7,6 +7,8 @@
 #include "app_config.h"
 #include "touch.h"
 
+//最新改动
+// 打开触摸设备并初始化保护共享坐标的互斥锁。
 int touch_open(Touch *touch)
 {
     if (pthread_mutex_init(&touch->mutex, NULL) != 0)
@@ -21,33 +23,67 @@ int touch_open(Touch *touch)
     }
     touch->touchsrceen_x = 0;
     touch->touchsrceen_y = 0;
+    touch->touch_active = 0;
     return 0;
 }
+//最新改动
 
+static int touch_process_event(Touch *touch, const struct input_event *event,
+                               int *tap_x, int *tap_y)
+{
+    int tapped = 0;
+
+    pthread_mutex_lock(&touch->mutex);
+    if (event->type == EV_ABS)
+    {
+        if (event->code == ABS_X)
+            touch->touchsrceen_x = event->value * LCD_WIDTH / 1024;
+        else if (event->code == ABS_Y)
+            touch->touchsrceen_y = event->value * LCD_HEIGHT / 600;
+    }
+    else if (event->type == EV_KEY && event->code == BTN_TOUCH)
+    {
+        if (event->value != 0)
+            touch->touch_active = 1;
+        else if (touch->touch_active)
+        {
+            touch->touch_active = 0;
+            if (tap_x != NULL)
+                *tap_x = touch->touchsrceen_x;
+            if (tap_y != NULL)
+                *tap_y = touch->touchsrceen_y;
+            tapped = 1;
+        }
+    }
+    pthread_mutex_unlock(&touch->mutex);
+    return tapped;
+}
+
+// 读取一个输入事件，并将触摸原始坐标转换为 LCD 坐标。
 int touch_read(Touch *touch)
 {
-    struct input_event touchsrceen_event;
+    struct input_event event;
 
-    memset(&touchsrceen_event, 0, sizeof(struct input_event));
-    if (read(touch->fd, &touchsrceen_event, sizeof(struct input_event)) < 0)
+    memset(&event, 0, sizeof(event));
+    if (read(touch->fd, &event, sizeof(event)) != sizeof(event))
         return -1;
-
-    if (touchsrceen_event.type == EV_ABS)
-    {
-        pthread_mutex_lock(&touch->mutex);
-        if (touchsrceen_event.code == ABS_X)
-        {
-            touch->touchsrceen_x = touchsrceen_event.value * LCD_WIDTH / 1024;
-        }
-        else if (touchsrceen_event.code == ABS_Y)
-        {
-            touch->touchsrceen_y = touchsrceen_event.value * LCD_HEIGHT / 600;
-        }
-        pthread_mutex_unlock(&touch->mutex);
-    }
-    return 0;
+    return touch_process_event(touch, &event, NULL, NULL);
 }
 
+// 仅在手指抬起时返回一次完整点击及其最终 LCD 坐标。
+int touch_read_tap(Touch *touch, int *x, int *y)
+{
+    struct input_event event;
+
+    memset(&event, 0, sizeof(event));
+    if (read(touch->fd, &event, sizeof(event)) != sizeof(event))
+        return -1;
+    return touch_process_event(touch, &event, x, y);
+}
+//最新改动
+
+//最新改动
+// 在互斥锁保护下返回最近一次触摸坐标。
 void touch_get_position(Touch *touch, int *x, int *y)
 {
     pthread_mutex_lock(&touch->mutex);
@@ -55,18 +91,26 @@ void touch_get_position(Touch *touch, int *x, int *y)
     *y = touch->touchsrceen_y;
     pthread_mutex_unlock(&touch->mutex);
 }
+//最新改动
 
+//最新改动
+// 清除旧坐标，防止同一次点击被下一界面重复处理。
 void touch_reset_position(Touch *touch)
 {
     pthread_mutex_lock(&touch->mutex);
     touch->touchsrceen_x = -1;
     touch->touchsrceen_y = -1;
+    touch->touch_active = 0;
     pthread_mutex_unlock(&touch->mutex);
 }
+//最新改动
 
+//最新改动
+// 关闭触摸设备并销毁坐标互斥锁。
 void touch_close(Touch *touch)
 {
     if (touch->fd != -1)
         close(touch->fd);
     pthread_mutex_destroy(&touch->mutex);
 }
+//最新改动

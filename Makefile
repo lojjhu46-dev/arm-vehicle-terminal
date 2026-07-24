@@ -1,43 +1,36 @@
+PROJECT := ./
+INCLUDE := $(PROJECT)/include
+LIB := $(PROJECT)/lib
+BUILD := $(PROJECT)/build
+BIN := $(PROJECT)/bin
+SRC := $(PROJECT)/src
+
 CC := arm-linux-gcc
-CFLAGS ?= -Wall -Wextra -std=gnu11
-CPPFLAGS := -Iinclude
-LDFLAGS := -L$(CURDIR)/lib
-LDLIBS := -ljpeg
-THREAD_FLAGS := -pthread
+TARGET := $(BIN)/app
 
-#最新改动
-APP_SOURCES := src/main.c src/lcd.c src/touch.c src/camera.c src/image_convert.c src/overlay.c src/record_indicator.c src/jpeg_codec.c src/recorder.c src/ui_flow.c
-#最新改动
+SRCS := $(wildcard $(SRC)/*.c)
+OBJS := $(patsubst $(SRC)/%.c,$(BUILD)/%.o,$(SRCS))
+DEPS := $(OBJS:.o=.d)
 
-.PHONY: all test-overlay test-public-headers test-recorder-header test-recorder-session test-record-indicator test-yuyv-conversion syntax-check
+CPPFLAGS := -I$(INCLUDE)
+CFLAGS := -Wall -Wextra -std=gnu11 -pthread
+LDFLAGS := -L$(LIB) -Wl,-rpath-link,$(LIB)
+LDLIBS := -ljpeg -pthread
 
-all: mainui
+.PHONY: all clean
 
-mainui: $(APP_SOURCES)
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(THREAD_FLAGS) -L$(CURDIR)/lib -Wl,-rpath-link,$(CURDIR)/lib -o $@ $(APP_SOURCES) $(LDLIBS)
-test-overlay: tests/test_overlay.c src/overlay.c include/overlay.h
-	$(CC) $(CPPFLAGS) $(CFLAGS) -o tests/test_overlay tests/test_overlay.c src/overlay.c
-	./tests/test_overlay
+all: $(TARGET)
 
-test-public-headers: tests/test_public_headers.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) -fsyntax-only tests/test_public_headers.c
+$(TARGET): $(OBJS) | $(BIN)
+	$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
-test-recorder-header: tests/test_recorder_header.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) -fsyntax-only tests/test_recorder_header.c
+$(BUILD)/%.o: $(SRC)/%.c | $(BUILD)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -MP -c $< -o $@
 
-test-recorder-session: tests/test_recorder_session.c src/recorder.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) -o tests/test_recorder_session tests/test_recorder_session.c src/recorder.c
-	./tests/test_recorder_session
+$(BUILD) $(BIN):
+	mkdir -p $@
 
-#最新改动
-test-record-indicator: tests/test_record_indicator.c src/record_indicator.c include/record_indicator.h
-	$(CC) $(CPPFLAGS) $(CFLAGS) -o tests/test_record_indicator tests/test_record_indicator.c src/record_indicator.c
-	./tests/test_record_indicator
-#最新改动
+clean:
+	rm -f $(BUILD)/*.o $(BUILD)/*.d 
 
-test-yuyv-conversion: tests/test_yuyv_conversion.c src/image_convert.c src/overlay.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) -o tests/test_yuyv_conversion tests/test_yuyv_conversion.c src/image_convert.c src/overlay.c
-	./tests/test_yuyv_conversion
-
-syntax-check:
-	$(CC) $(CPPFLAGS) $(CFLAGS) -fsyntax-only $(APP_SOURCES)
+-include $(DEPS)

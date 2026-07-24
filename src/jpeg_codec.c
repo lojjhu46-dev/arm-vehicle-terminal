@@ -225,3 +225,60 @@ int read_JPEG_file(const char *filename, int *lcd_mp)
   /* And we're done! */
   return 0;
 }
+
+int read_JPEG_image(const char *filename, int **pixels, int *width, int *height)
+{
+  struct jpeg_decompress_struct cinfo;
+  struct jpeg_error_mgr jerr;
+  FILE *infile;
+  unsigned char *buffer;
+  int row_stride;
+
+  *pixels = NULL;
+  *width = 0;
+  *height = 0;
+  if ((infile = fopen(filename, "rb")) == NULL)
+    return -1;
+
+  cinfo.err = jpeg_std_error(&jerr);
+  jpeg_create_decompress(&cinfo);
+  jpeg_stdio_src(&cinfo, infile);
+  (void)jpeg_read_header(&cinfo, TRUE);
+  (void)jpeg_start_decompress(&cinfo);
+
+  row_stride = cinfo.output_width * cinfo.output_components;
+  buffer = calloc((size_t)row_stride, 1);
+  *pixels = calloc((size_t)cinfo.output_width * cinfo.output_height, sizeof(**pixels));
+  if (buffer == NULL || *pixels == NULL)
+  {
+    free(buffer);
+    free(*pixels);
+    *pixels = NULL;
+    jpeg_destroy_decompress(&cinfo);
+    fclose(infile);
+    return -1;
+  }
+
+  while (cinfo.output_scanline < cinfo.output_height)
+  {
+    jpeg_read_scanlines(&cinfo, &buffer, 1);
+    for (size_t x = 0; x < cinfo.output_width; ++x)
+    {
+      int red = buffer[x * cinfo.output_components];
+      int green = cinfo.output_components > 1 ?
+          buffer[x * cinfo.output_components + 1] : red;
+      int blue = cinfo.output_components > 2 ?
+          buffer[x * cinfo.output_components + 2] : red;
+
+      (*pixels)[(cinfo.output_scanline - 1) * cinfo.output_width + x] =
+          red << 16 | green << 8 | blue;
+    }
+  }
+  (void)jpeg_finish_decompress(&cinfo);
+  *width = (int)cinfo.output_width;
+  *height = (int)cinfo.output_height;
+  jpeg_destroy_decompress(&cinfo);
+  fclose(infile);
+  free(buffer);
+  return 0;
+}

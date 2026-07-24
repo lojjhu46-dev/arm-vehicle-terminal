@@ -10,7 +10,11 @@ int main(void)
     if (parking_assist_lines_drawing(framebuffer) != 0)
         return 1;
 
-    if (framebuffer[470 * LCD_WIDTH + 30] != 0xFF0000)
+    if (framebuffer[479 * LCD_WIDTH + 80] != 0xFF0000)
+        return 1;
+
+    if (framebuffer[479 * LCD_WIDTH + 79] != 0x000000 ||
+        framebuffer[479 * LCD_WIDTH + 720] != 0x000000)
         return 1;
 
     return 0;

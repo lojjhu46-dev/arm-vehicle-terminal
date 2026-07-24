@@ -57,11 +57,16 @@ JSAMPLE *image_convert_frame(const char *pbuffer, unsigned int *lcd_mp)
     //把转换之后的像素点刷新到LCD
     for (size_t y = 0; y < CAMERA_FRAME_H; y++)
     {
-        for (size_t x = 80; x < CAMERA_FRAME_W + 80; x++)
+        for (size_t x = 0; x < CAMERA_DISPLAY_X; x++)
+            lcd_mp[y * LCD_WIDTH + x] = 0x000000;
+        for (size_t x = CAMERA_DISPLAY_X;
+             x < CAMERA_FRAME_W + CAMERA_DISPLAY_X; x++)
         {
-           // 小改动：按显示偏移换算源像素索引，避免读取 lcdbuf 越界。
-           lcd_mp[y * LCD_WIDTH + x] = lcdbuf[y * CAMERA_FRAME_W + x - 80];
+           lcd_mp[y * LCD_WIDTH + x] =
+               lcdbuf[y * CAMERA_FRAME_W + x - CAMERA_DISPLAY_X];
         }
+        for (size_t x = CAMERA_FRAME_W + CAMERA_DISPLAY_X; x < LCD_WIDTH; x++)
+            lcd_mp[y * LCD_WIDTH + x] = 0x000000;
     }
     return image_buffer;
 }

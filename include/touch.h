@@ -7,11 +7,13 @@ typedef struct {
     int fd;
     int touchsrceen_x;
     int touchsrceen_y;
+    int touch_active;
     pthread_mutex_t mutex;
 } Touch;
 
 int touch_open(Touch *touch);
 int touch_read(Touch *touch);
+int touch_read_tap(Touch *touch, int *x, int *y);
 void touch_get_position(Touch *touch, int *x, int *y);
 void touch_reset_position(Touch *touch);
 void touch_close(Touch *touch);
