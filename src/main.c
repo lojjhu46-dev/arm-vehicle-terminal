@@ -20,13 +20,20 @@ int main(void)
 
     memset(&camera, 0, sizeof(camera));
     camera.fd = -1;
-    recorder_init(&recorder);
+    //最新修改
+    if (recorder_init(&recorder) == -1)
+        return -1;
+    //最新修改
 
     if (lcd_open(&lcd) == -1)
+    {
+        recorder_destroy(&recorder);
         return -1;
+    }
     if (touch_open(&touch) == -1)
     {
         lcd_close(&lcd);
+        recorder_destroy(&recorder);
         return -1;
     }
     //播放开机动画
@@ -38,6 +45,9 @@ int main(void)
         fprintf(stderr,"mian ui show error:%s\n",strerror(errno));
     }
     camera_close(&camera);
+    //最新修改
+    recorder_destroy(&recorder);
+    //最新修改
     touch_close(&touch);
     lcd_close(&lcd);
     return result;

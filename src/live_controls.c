@@ -8,11 +8,14 @@
 #define LEFT_BUTTON_X 10
 #define RIGHT_BUTTON_X (LCD_WIDTH - LEFT_BUTTON_X - 60)
 #define TOP_BUTTON_Y 96
+#define MIDDLE_BUTTON_Y 208
 #define BOTTOM_BUTTON_Y 320
 #define BUTTON_WIDTH 60
 #define EXIT_BUTTON_HEIGHT 64
+#define FILE_MANAGER_BUTTON_HEIGHT 64
 #define GUIDES_BUTTON_HEIGHT 64
 #define RECORD_BUTTON_HEIGHT 66
+#define VIEW_RECORDINGS_BUTTON_HEIGHT 64
 #define PHOTO_BUTTON_HEIGHT 60
 
 static int load_sprite(LiveControlSprite *sprite, const char *filename)
@@ -32,16 +35,20 @@ int live_controls_init(LiveControls *controls)
 {
     static const char *const filenames[] = {
         RESOURCE_DIR "/exit_live_view.jpg",
+        RESOURCE_DIR "/file_manager.jpg",
         RESOURCE_DIR "/start_recording.jpg",
         RESOURCE_DIR "/save_exit_recording.jpg",
+        RESOURCE_DIR "/view_recordings.jpg",
         RESOURCE_DIR "/enable_parking_guides.jpg",
         RESOURCE_DIR "/disable_parking_guides.jpg",
         RESOURCE_DIR "/photo.jpg",
     };
     LiveControlSprite *const sprites[] = {
         &controls->exit_button,
+        &controls->file_manager_button,
         &controls->record_start_button,
         &controls->record_stop_button,
+        &controls->view_recordings_button,
         &controls->guides_enable_button,
         &controls->guides_disable_button,
         &controls->photo_button,
@@ -63,8 +70,10 @@ void live_controls_destroy(LiveControls *controls)
 {
     LiveControlSprite *const sprites[] = {
         &controls->exit_button,
+        &controls->file_manager_button,
         &controls->record_start_button,
         &controls->record_stop_button,
+        &controls->view_recordings_button,
         &controls->guides_enable_button,
         &controls->guides_disable_button,
         &controls->photo_button,
@@ -83,6 +92,8 @@ LiveControl live_controls_hit_test(int x, int y)
     {
         if (y >= TOP_BUTTON_Y && y < TOP_BUTTON_Y + EXIT_BUTTON_HEIGHT)
             return LIVE_CONTROL_EXIT;
+        if (y >= MIDDLE_BUTTON_Y && y < MIDDLE_BUTTON_Y + FILE_MANAGER_BUTTON_HEIGHT)
+            return LIVE_CONTROL_FILE_MANAGER;
         if (y >= BOTTOM_BUTTON_Y && y < BOTTOM_BUTTON_Y + GUIDES_BUTTON_HEIGHT)
             return LIVE_CONTROL_GUIDES;
     }
@@ -90,6 +101,8 @@ LiveControl live_controls_hit_test(int x, int y)
     {
         if (y >= TOP_BUTTON_Y && y < TOP_BUTTON_Y + RECORD_BUTTON_HEIGHT)
             return LIVE_CONTROL_RECORD;
+        if (y >= MIDDLE_BUTTON_Y && y < MIDDLE_BUTTON_Y + VIEW_RECORDINGS_BUTTON_HEIGHT)
+            return LIVE_CONTROL_VIEW_RECORDINGS;
         if (y >= BOTTOM_BUTTON_Y && y < BOTTOM_BUTTON_Y + PHOTO_BUTTON_HEIGHT)
             return LIVE_CONTROL_PHOTO;
     }
@@ -113,13 +126,55 @@ static void draw_sprite(int *framebuffer, const LiveControlSprite *sprite, int x
     }
 }
 
-void live_controls_draw(const LiveControls *controls, int *framebuffer,
-                        int recording, int guides_enabled)
+//最新修改
+// 清除首次进入实时画面时遗留的主界面侧栏像素。
+static void clear_sidebars(int *framebuffer)
 {
+    for (int y = 0; y < LCD_HEIGHT; ++y)
+    {
+        for (int x = 0; x < CAMERA_DISPLAY_X; ++x)
+            framebuffer[y * LCD_WIDTH + x] = 0x000000;
+        for (int x = CAMERA_DISPLAY_X + CAMERA_FRAME_W; x < LCD_WIDTH; ++x)
+            framebuffer[y * LCD_WIDTH + x] = 0x000000;
+    }
+}
+
+// 清除按钮区域，保留右上角 REC 指示器。
+static void clear_button_areas(int *framebuffer)
+{
+    for (int y = TOP_BUTTON_Y; y < BOTTOM_BUTTON_Y + 68; ++y)
+    {
+        for (int x = LEFT_BUTTON_X; x < LEFT_BUTTON_X + BUTTON_WIDTH; ++x)
+            framebuffer[y * LCD_WIDTH + x] = 0x000000;
+        for (int x = RIGHT_BUTTON_X; x < RIGHT_BUTTON_X + BUTTON_WIDTH; ++x)
+            framebuffer[y * LCD_WIDTH + x] = 0x000000;
+    }
+}
+
+// 仅在首次显示或按钮状态变化时刷新侧栏。
+void live_controls_draw(const LiveControls *controls, int *framebuffer,
+                        int recording, int guides_enabled, int initial_draw)
+{
+    if (initial_draw)
+        clear_sidebars(framebuffer);
+    else
+        clear_button_areas(framebuffer);
     draw_sprite(framebuffer, &controls->exit_button, LEFT_BUTTON_X, TOP_BUTTON_Y);
+    draw_sprite(framebuffer, &controls->file_manager_button, LEFT_BUTTON_X,
+                MIDDLE_BUTTON_Y);
     draw_sprite(framebuffer, guides_enabled ? &controls->guides_disable_button :
                 &controls->guides_enable_button, LEFT_BUTTON_X, BOTTOM_BUTTON_Y);
     draw_sprite(framebuffer, recording ? &controls->record_stop_button :
                 &controls->record_start_button, RIGHT_BUTTON_X, TOP_BUTTON_Y);
+    draw_sprite(framebuffer, &controls->view_recordings_button, RIGHT_BUTTON_X,
+                MIDDLE_BUTTON_Y);
     draw_sprite(framebuffer, &controls->photo_button, RIGHT_BUTTON_X, BOTTOM_BUTTON_Y);
 }
+
+// 仅绘制回放界面所需的退出按钮。
+void live_controls_draw_playback(const LiveControls *controls, int *framebuffer)
+{
+    clear_sidebars(framebuffer);
+    draw_sprite(framebuffer, &controls->exit_button, LEFT_BUTTON_X, TOP_BUTTON_Y);
+}
+//最新修改

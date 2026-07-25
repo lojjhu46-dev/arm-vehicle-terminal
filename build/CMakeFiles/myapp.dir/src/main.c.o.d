@@ -38,6 +38,15 @@ CMakeFiles/myapp.dir/src/main.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm/posix_types.h \
  /mnt/hgfs/Embedded_development/Project/include/lcd.h \
  /mnt/hgfs/Embedded_development/Project/include/recorder.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/endian.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/setjmp.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/libio.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/_G_config.h \
@@ -49,15 +58,6 @@ CMakeFiles/myapp.dir/src/main.c.o: \
  /mnt/hgfs/Embedded_development/Project/include/jconfig.h \
  /mnt/hgfs/Embedded_development/Project/include/jmorecfg.h \
  /mnt/hgfs/Embedded_development/Project/include/touch.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/endian.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/setjmp.h \
  /mnt/hgfs/Embedded_development/Project/include/ui_flow.h \
  /mnt/hgfs/Embedded_development/Project/include/camera.h \
  /mnt/hgfs/Embedded_development/Project/include/lcd.h \
@@ -81,5 +81,6 @@ CMakeFiles/myapp.dir/src/main.c.o: \
  /mnt/hgfs/Embedded_development/Project/include/image_convert.h \
  /mnt/hgfs/Embedded_development/Project/include/jpeg_codec.h \
  /mnt/hgfs/Embedded_development/Project/include/live_controls.h \
+ /mnt/hgfs/Embedded_development/Project/include/playback.h \
  /mnt/hgfs/Embedded_development/Project/include/overlay.h \
  /mnt/hgfs/Embedded_development/Project/include/record_indicator.h

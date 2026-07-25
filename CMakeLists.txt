@@ -13,6 +13,7 @@ set(SREC
     src/camera.c 
     src/image_convert.c 
     src/live_controls.c
+    src/playback.c
     src/overlay.c 
     src/record_indicator.c 
     src/jpeg_codec.c 

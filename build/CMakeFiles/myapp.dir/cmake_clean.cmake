@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/myapp.dir/src/main.c.o.d"
   "CMakeFiles/myapp.dir/src/overlay.c.o"
   "CMakeFiles/myapp.dir/src/overlay.c.o.d"
+  "CMakeFiles/myapp.dir/src/playback.c.o"
+  "CMakeFiles/myapp.dir/src/playback.c.o.d"
   "CMakeFiles/myapp.dir/src/record_indicator.c.o"
   "CMakeFiles/myapp.dir/src/record_indicator.c.o.d"
   "CMakeFiles/myapp.dir/src/recorder.c.o"

@@ -19,7 +19,8 @@ int main(void)
 
     setenv("TZ", "UTC", 1);
     tzset();
-    recorder_init(&recorder);
+    if (recorder_init(&recorder) != 0)
+        return 1;
 
     if (recorder_prepare_session(&recorder, "/tmp/mainui-recordings", timestamp) != 0)
         return 1;
@@ -30,6 +31,8 @@ int main(void)
     recorder_stop_session(&recorder);
     if (recorder.recording != 0)
         return 1;
+
+    recorder_destroy(&recorder);
 
     return 0;
 }

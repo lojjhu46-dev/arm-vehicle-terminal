@@ -1,10 +1,6 @@
 CMakeFiles/myapp.dir/src/ui_flow.c.o: \
  /mnt/hgfs/Embedded_development/Project/src/ui_flow.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
- /mnt/hgfs/Embedded_development/Project/include/ui_flow.h \
- /mnt/hgfs/Embedded_development/Project/include/camera.h \
- /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/videodev2.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/time.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
@@ -18,6 +14,10 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/select.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/select.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sigset.h \
+ /mnt/hgfs/Embedded_development/Project/include/ui_flow.h \
+ /mnt/hgfs/Embedded_development/Project/include/camera.h \
+ /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/videodev2.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/ioctl.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm/ioctl.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm-generic/ioctl.h \
@@ -31,18 +31,6 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm/posix_types.h \
  /mnt/hgfs/Embedded_development/Project/include/lcd.h \
  /mnt/hgfs/Embedded_development/Project/include/recorder.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/libio.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/_G_config.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/wchar.h \
- /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdarg.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
- /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
- /mnt/hgfs/Embedded_development/Project/include/jpeglib.h \
- /mnt/hgfs/Embedded_development/Project/include/jconfig.h \
- /mnt/hgfs/Embedded_development/Project/include/jmorecfg.h \
- /mnt/hgfs/Embedded_development/Project/include/touch.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/endian.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h \
@@ -50,8 +38,20 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/setjmp.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/libio.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/_G_config.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/wchar.h \
+ /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdarg.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
+ /mnt/hgfs/Embedded_development/Project/include/jpeglib.h \
+ /mnt/hgfs/Embedded_development/Project/include/jconfig.h \
+ /mnt/hgfs/Embedded_development/Project/include/jmorecfg.h \
+ /mnt/hgfs/Embedded_development/Project/include/touch.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/errno.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/errno.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/errno.h \
@@ -77,5 +77,6 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: \
  /mnt/hgfs/Embedded_development/Project/include/image_convert.h \
  /mnt/hgfs/Embedded_development/Project/include/jpeg_codec.h \
  /mnt/hgfs/Embedded_development/Project/include/live_controls.h \
+ /mnt/hgfs/Embedded_development/Project/include/playback.h \
  /mnt/hgfs/Embedded_development/Project/include/overlay.h \
  /mnt/hgfs/Embedded_development/Project/include/record_indicator.h

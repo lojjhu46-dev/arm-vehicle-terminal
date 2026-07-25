@@ -1,19 +1,48 @@
+#include <stdlib.h>
+#include <string.h>
+
 #include "app_config.h"
+#include "jpeg_codec.h"
 #include "record_indicator.h"
 
+//最新修改
 #define RECORD_COLOR 0xFF0000
 #define BACKGROUND_COLOR 0x000000
+#define REC_X 750
+#define REC_Y 17
+#define REC_WIDTH 49
+#define REC_HEIGHT 26
 
-//最新改动
-// 在坐标合法时写入一个 framebuffer 像素。
+// 在坐标合法时写入 framebuffer 像素。
 static void draw_pixel(int *lcd_mp, int x, int y, int color)
 {
     if (x >= 0 && x < LCD_WIDTH && y >= 0 && y < LCD_HEIGHT)
         lcd_mp[y * LCD_WIDTH + x] = color;
 }
-//最新改动
 
-//最新改动
+// 加载 REC.jpeg，避免手绘字符变形。
+int record_indicator_init(RecordIndicator *indicator)
+{
+    memset(indicator, 0, sizeof(*indicator));
+    if (read_JPEG_image(RESOURCE_DIR "/REC.jpeg", &indicator->pixels,
+                        &indicator->width, &indicator->height) == -1)
+        return -1;
+    if (indicator->width != REC_WIDTH || indicator->height != REC_HEIGHT)
+    {
+        free(indicator->pixels);
+        memset(indicator, 0, sizeof(*indicator));
+        return -1;
+    }
+    return 0;
+}
+
+// 释放 REC 图标缓存。
+void record_indicator_destroy(RecordIndicator *indicator)
+{
+    free(indicator->pixels);
+    memset(indicator, 0, sizeof(*indicator));
+}
+
 // 绘制或清除右上角录像闪烁红点。
 void record_indicator_draw_dot(int *lcd_mp, int visible)
 {
@@ -34,34 +63,21 @@ void record_indicator_draw_dot(int *lcd_mp, int visible)
         }
     }
 }
-//最新改动
 
-//最新改动
-// 绘制或清除右上角固定显示的 REC 字样。
-void record_indicator_draw_rec(int *lcd_mp, int visible)
+// 绘制或清除 JPEG 形式的 REC 图标。
+void record_indicator_draw_rec(const RecordIndicator *indicator, int *lcd_mp,
+                               int visible)
 {
-    const int color = visible ? RECORD_COLOR : BACKGROUND_COLOR;
-    const int top = 22;
-    const int bottom = 38;
-
-    for (int y = top; y <= bottom; ++y)
+    for (int y = 0; y < REC_HEIGHT; ++y)
     {
-        for (int x = 756; x <= 764; ++x)
+        for (int x = 0; x < REC_WIDTH; ++x)
         {
-            if (x == 756 || y == top || y == 30 ||
-                (x == 764 && y <= 30) || (y > 30 && x == y + 734))
-                draw_pixel(lcd_mp, x, y, color);
-        }
-        for (int x = 770; x <= 778; ++x)
-        {
-            if (x == 770 || y == top || y == 30 || y == bottom)
-                draw_pixel(lcd_mp, x, y, color);
-        }
-        for (int x = 784; x <= 792; ++x)
-        {
-            if (x == 784 || y == top || y == bottom)
-                draw_pixel(lcd_mp, x, y, color);
+            int color = BACKGROUND_COLOR;
+
+            if (visible && indicator != NULL && indicator->pixels != NULL)
+                color = indicator->pixels[y * indicator->width + x];
+            draw_pixel(lcd_mp, REC_X + x, REC_Y + y, color);
         }
     }
 }
-//最新改动
+//最新修改

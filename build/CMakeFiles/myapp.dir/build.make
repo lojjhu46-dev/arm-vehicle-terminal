@@ -153,10 +153,24 @@ CMakeFiles/myapp.dir/src/live_controls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/live_controls.c.s"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/hgfs/Embedded_development/Project/src/live_controls.c -o CMakeFiles/myapp.dir/src/live_controls.c.s
 
+CMakeFiles/myapp.dir/src/playback.c.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/src/playback.c.o: ../src/playback.c
+CMakeFiles/myapp.dir/src/playback.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/myapp.dir/src/playback.c.o"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/playback.c.o -MF CMakeFiles/myapp.dir/src/playback.c.o.d -o CMakeFiles/myapp.dir/src/playback.c.o -c /mnt/hgfs/Embedded_development/Project/src/playback.c
+
+CMakeFiles/myapp.dir/src/playback.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/myapp.dir/src/playback.c.i"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/hgfs/Embedded_development/Project/src/playback.c > CMakeFiles/myapp.dir/src/playback.c.i
+
+CMakeFiles/myapp.dir/src/playback.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/playback.c.s"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/hgfs/Embedded_development/Project/src/playback.c -o CMakeFiles/myapp.dir/src/playback.c.s
+
 CMakeFiles/myapp.dir/src/overlay.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/overlay.c.o: ../src/overlay.c
 CMakeFiles/myapp.dir/src/overlay.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/myapp.dir/src/overlay.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/myapp.dir/src/overlay.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/overlay.c.o -MF CMakeFiles/myapp.dir/src/overlay.c.o.d -o CMakeFiles/myapp.dir/src/overlay.c.o -c /mnt/hgfs/Embedded_development/Project/src/overlay.c
 
 CMakeFiles/myapp.dir/src/overlay.c.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/myapp.dir/src/overlay.c.s: cmake_force
 CMakeFiles/myapp.dir/src/record_indicator.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/record_indicator.c.o: ../src/record_indicator.c
 CMakeFiles/myapp.dir/src/record_indicator.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/myapp.dir/src/record_indicator.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/myapp.dir/src/record_indicator.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/record_indicator.c.o -MF CMakeFiles/myapp.dir/src/record_indicator.c.o.d -o CMakeFiles/myapp.dir/src/record_indicator.c.o -c /mnt/hgfs/Embedded_development/Project/src/record_indicator.c
 
 CMakeFiles/myapp.dir/src/record_indicator.c.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/myapp.dir/src/record_indicator.c.s: cmake_force
 CMakeFiles/myapp.dir/src/jpeg_codec.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/jpeg_codec.c.o: ../src/jpeg_codec.c
 CMakeFiles/myapp.dir/src/jpeg_codec.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/myapp.dir/src/jpeg_codec.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/myapp.dir/src/jpeg_codec.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/jpeg_codec.c.o -MF CMakeFiles/myapp.dir/src/jpeg_codec.c.o.d -o CMakeFiles/myapp.dir/src/jpeg_codec.c.o -c /mnt/hgfs/Embedded_development/Project/src/jpeg_codec.c
 
 CMakeFiles/myapp.dir/src/jpeg_codec.c.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/myapp.dir/src/jpeg_codec.c.s: cmake_force
 CMakeFiles/myapp.dir/src/recorder.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/recorder.c.o: ../src/recorder.c
 CMakeFiles/myapp.dir/src/recorder.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/myapp.dir/src/recorder.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/myapp.dir/src/recorder.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/recorder.c.o -MF CMakeFiles/myapp.dir/src/recorder.c.o.d -o CMakeFiles/myapp.dir/src/recorder.c.o -c /mnt/hgfs/Embedded_development/Project/src/recorder.c
 
 CMakeFiles/myapp.dir/src/recorder.c.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/myapp.dir/src/recorder.c.s: cmake_force
 CMakeFiles/myapp.dir/src/ui_flow.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/ui_flow.c.o: ../src/ui_flow.c
 CMakeFiles/myapp.dir/src/ui_flow.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/myapp.dir/src/ui_flow.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/myapp.dir/src/ui_flow.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/ui_flow.c.o -MF CMakeFiles/myapp.dir/src/ui_flow.c.o.d -o CMakeFiles/myapp.dir/src/ui_flow.c.o -c /mnt/hgfs/Embedded_development/Project/src/ui_flow.c
 
 CMakeFiles/myapp.dir/src/ui_flow.c.i: cmake_force
@@ -231,6 +245,7 @@ myapp_OBJECTS = \
 "CMakeFiles/myapp.dir/src/camera.c.o" \
 "CMakeFiles/myapp.dir/src/image_convert.c.o" \
 "CMakeFiles/myapp.dir/src/live_controls.c.o" \
+"CMakeFiles/myapp.dir/src/playback.c.o" \
 "CMakeFiles/myapp.dir/src/overlay.c.o" \
 "CMakeFiles/myapp.dir/src/record_indicator.c.o" \
 "CMakeFiles/myapp.dir/src/jpeg_codec.c.o" \
@@ -246,6 +261,7 @@ myapp: CMakeFiles/myapp.dir/src/touch.c.o
 myapp: CMakeFiles/myapp.dir/src/camera.c.o
 myapp: CMakeFiles/myapp.dir/src/image_convert.c.o
 myapp: CMakeFiles/myapp.dir/src/live_controls.c.o
+myapp: CMakeFiles/myapp.dir/src/playback.c.o
 myapp: CMakeFiles/myapp.dir/src/overlay.c.o
 myapp: CMakeFiles/myapp.dir/src/record_indicator.c.o
 myapp: CMakeFiles/myapp.dir/src/jpeg_codec.c.o
@@ -253,7 +269,7 @@ myapp: CMakeFiles/myapp.dir/src/recorder.c.o
 myapp: CMakeFiles/myapp.dir/src/ui_flow.c.o
 myapp: CMakeFiles/myapp.dir/build.make
 myapp: CMakeFiles/myapp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable myapp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/hgfs/Embedded_development/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable myapp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myapp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

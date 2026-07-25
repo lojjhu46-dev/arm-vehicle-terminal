@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/hgfs/Embedded_development/Project/src/live_controls.c" "CMakeFiles/myapp.dir/src/live_controls.c.o" "gcc" "CMakeFiles/myapp.dir/src/live_controls.c.o.d"
   "/mnt/hgfs/Embedded_development/Project/src/main.c" "CMakeFiles/myapp.dir/src/main.c.o" "gcc" "CMakeFiles/myapp.dir/src/main.c.o.d"
   "/mnt/hgfs/Embedded_development/Project/src/overlay.c" "CMakeFiles/myapp.dir/src/overlay.c.o" "gcc" "CMakeFiles/myapp.dir/src/overlay.c.o.d"
+  "/mnt/hgfs/Embedded_development/Project/src/playback.c" "CMakeFiles/myapp.dir/src/playback.c.o" "gcc" "CMakeFiles/myapp.dir/src/playback.c.o.d"
   "/mnt/hgfs/Embedded_development/Project/src/record_indicator.c" "CMakeFiles/myapp.dir/src/record_indicator.c.o" "gcc" "CMakeFiles/myapp.dir/src/record_indicator.c.o.d"
   "/mnt/hgfs/Embedded_development/Project/src/recorder.c" "CMakeFiles/myapp.dir/src/recorder.c.o" "gcc" "CMakeFiles/myapp.dir/src/recorder.c.o.d"
   "/mnt/hgfs/Embedded_development/Project/src/touch.c" "CMakeFiles/myapp.dir/src/touch.c.o" "gcc" "CMakeFiles/myapp.dir/src/touch.c.o.d"

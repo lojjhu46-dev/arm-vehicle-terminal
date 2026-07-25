@@ -8,7 +8,7 @@ int parking_assist_lines_drawing(int *lcd_mp)
 
     // 辅助线从摄像头画面左右下角向内延伸，不能覆盖两侧控制栏。
     int left_bottom = CAMERA_DISPLAY_X;
-    int left_top = 280;     // 左线上端位置，越大越往中间收，延伸感越强
+    int left_top = 320;     // 左线上端位置，越大越往中间收，延伸感越强
 
     for(int y = y_bottom; y >= y_top; y--)
     {
@@ -24,6 +24,7 @@ int parking_assist_lines_drawing(int *lcd_mp)
            (y > 405 && y < 420) ||
            (y > 300 && y < 315) ||
            (y > 345 && y < 360) ||
+           (y > 265 && y < 280) ||
            (y > 180 && y < 195) ||
            (y > 220 && y < 235))
         {
@@ -35,10 +36,12 @@ int parking_assist_lines_drawing(int *lcd_mp)
 
         if((y > 420 && y < 430) || (y > 320 && y < 330))
             width = 40;
-        else if(y >= 200 && y < 210)
-            width = 20;
-        else if(y <= 180)
+        //else if(y >= 200 && y < 210)
+            //width = 20;
+        else if(y > 180 && y < 200)
             width = 170;
+        else if(y <= 180)
+            width = 0;
 
         // 根据 y 计算左辅助线当前 x 坐标
         int left_x = left_bottom +

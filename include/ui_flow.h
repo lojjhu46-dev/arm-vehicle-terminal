@@ -15,6 +15,7 @@
 #include "image_convert.h"
 #include "jpeg_codec.h"
 #include "live_controls.h"
+#include "playback.h"
 //最新改动
 #include "overlay.h"
 #include "record_indicator.h"
@@ -28,6 +29,7 @@ typedef struct {
     int recording;                 // 录像状态：1 表示正在保存帧，0 表示未录像。
     int parking_guides_enabled;    // 倒车辅助线状态：1 表示显示，0 表示隐藏。
     unsigned int pending_actions;  // 摄像头线程待执行的录像切换和拍照请求。
+    int playback_mode;             // 1 表示正在播放历史录像。
     int touch_running;             // 触摸线程运行标志：1 继续读取，0 请求退出。
 } UiState;
 
@@ -38,14 +40,9 @@ typedef struct {
     Camera *camera;                // V4L2 摄像头设备、缓冲区及当前帧信息。
     Recorder *recorder;            // 录像会话目录、帧编号和录像状态。
     LiveControls *controls;        // 实时画面侧边控制栏图标。
+    RecordIndicator *indicator;    // 录像红点和 REC 图标资源。
     UiState *state;                // 与其他线程共享的界面状态和同步对象。
 } CameraThreadContext;
-
-// 红点线程和 REC 线程的运行上下文。
-typedef struct {
-    Lcd *lcd;                      // 红点或 REC 的绘制目标。
-    UiState *state;                // 读取录像状态，并获取 LCD 信号量。
-} IndicatorThreadContext;
 
 void show_startup_animation(Lcd *lcd);
 int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder);

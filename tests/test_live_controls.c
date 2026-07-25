@@ -17,9 +17,13 @@ int main(void)
         return 1;
     if (live_controls_hit_test(10, 320) != LIVE_CONTROL_GUIDES)
         return 1;
+    if (live_controls_hit_test(10, 208) != LIVE_CONTROL_FILE_MANAGER)
+        return 1;
     if (live_controls_hit_test(730, 96) != LIVE_CONTROL_RECORD)
         return 1;
     if (live_controls_hit_test(789, 379) != LIVE_CONTROL_PHOTO)
+        return 1;
+    if (live_controls_hit_test(730, 208) != LIVE_CONTROL_VIEW_RECORDINGS)
         return 1;
     if (live_controls_hit_test(70, 96) != LIVE_CONTROL_NONE)
         return 1;

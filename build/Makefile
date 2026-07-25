@@ -297,6 +297,30 @@ src/overlay.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/overlay.c.s
 .PHONY : src/overlay.c.s
 
+src/playback.o: src/playback.c.o
+.PHONY : src/playback.o
+
+# target to build an object file
+src/playback.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/playback.c.o
+.PHONY : src/playback.c.o
+
+src/playback.i: src/playback.c.i
+.PHONY : src/playback.i
+
+# target to preprocess a source file
+src/playback.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/playback.c.i
+.PHONY : src/playback.c.i
+
+src/playback.s: src/playback.c.s
+.PHONY : src/playback.s
+
+# target to generate assembly for a file
+src/playback.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/playback.c.s
+.PHONY : src/playback.c.s
+
 src/record_indicator.o: src/record_indicator.c.o
 .PHONY : src/record_indicator.o
 
@@ -423,6 +447,9 @@ help:
 	@echo "... src/overlay.o"
 	@echo "... src/overlay.i"
 	@echo "... src/overlay.s"
+	@echo "... src/playback.o"
+	@echo "... src/playback.i"
+	@echo "... src/playback.s"
 	@echo "... src/record_indicator.o"
 	@echo "... src/record_indicator.i"
 	@echo "... src/record_indicator.s"

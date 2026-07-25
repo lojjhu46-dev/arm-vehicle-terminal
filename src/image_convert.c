@@ -32,41 +32,52 @@ unsigned int yuyv_to_rgb_pix(int Y, int Cb, int Cr, JSAMPLE **pimage_buffer)
 	return pix_point;
 }
 
-//转换一帧   YUYV  YUYVYUYVYUYV -- Y0U0V0 + Y1U0V0
-JSAMPLE *image_convert_frame(const char *pbuffer, unsigned int *lcd_mp)
+//最新修改
+// 申请一次 RGB 缓冲，避免逐帧分配内存。
+int image_converter_init(ImageConverter *converter)
 {
-    //申请帧缓冲区，用于存储转换好的一帧图像RGB像素点
-    JSAMPLE *image_buffer = calloc(1, CAMERA_FRAME_W * CAMERA_FRAME_H * 3);
+    converter->rgb_buffer = malloc(CAMERA_FRAME_W * CAMERA_FRAME_H * 3);
+    return converter->rgb_buffer == NULL ? -1 : 0;
+}
+
+// 释放实时画面转换缓冲。
+void image_converter_destroy(ImageConverter *converter)
+{
+    free(converter->rgb_buffer);
+    converter->rgb_buffer = NULL;
+}
+
+// 转换一帧并且只写入中间摄像头画面，保留两侧静态控制栏。
+JSAMPLE *image_convert_frame(ImageConverter *converter, const char *pbuffer,
+                              unsigned int *lcd_mp)
+{
+    JSAMPLE *image_buffer = converter->rgb_buffer;
     JSAMPLE *pimage_buffer = image_buffer;
-    unsigned int lcdbuf[CAMERA_FRAME_W * CAMERA_FRAME_H] = {0};
-    int i,j;
+    size_t input_index = 0;
 
     if (image_buffer == NULL)
         return NULL;
 
-    //用于记录转换完成的ARGB像素点
-    for(i = 0, j = 0; j < CAMERA_FRAME_W * CAMERA_FRAME_H; i += 4, j += 2)
+    for (size_t y = 0; y < CAMERA_FRAME_H; ++y)
     {
-        //                                 Y0          U0        V0
-        lcdbuf[j] = yuyv_to_rgb_pix(pbuffer[i], pbuffer[i + 1], pbuffer[i + 3], &pimage_buffer);
-
-        //                                 Y1          U0        V0
-        lcdbuf[j + 1] = yuyv_to_rgb_pix(pbuffer[i + 2], pbuffer[i + 1], pbuffer[i + 3], &pimage_buffer);
-    }
-
-    //把转换之后的像素点刷新到LCD
-    for (size_t y = 0; y < CAMERA_FRAME_H; y++)
-    {
-        for (size_t x = 0; x < CAMERA_DISPLAY_X; x++)
-            lcd_mp[y * LCD_WIDTH + x] = 0x000000;
-        for (size_t x = CAMERA_DISPLAY_X;
-             x < CAMERA_FRAME_W + CAMERA_DISPLAY_X; x++)
+        for (size_t x = 0; x < CAMERA_FRAME_W; x += 2)
         {
-           lcd_mp[y * LCD_WIDTH + x] =
-               lcdbuf[y * CAMERA_FRAME_W + x - CAMERA_DISPLAY_X];
+            unsigned int first_pixel;
+            unsigned int second_pixel;
+
+            first_pixel = yuyv_to_rgb_pix((unsigned char)pbuffer[input_index],
+                                           (unsigned char)pbuffer[input_index + 1],
+                                           (unsigned char)pbuffer[input_index + 3],
+                                           &pimage_buffer);
+            second_pixel = yuyv_to_rgb_pix((unsigned char)pbuffer[input_index + 2],
+                                            (unsigned char)pbuffer[input_index + 1],
+                                            (unsigned char)pbuffer[input_index + 3],
+                                            &pimage_buffer);
+            lcd_mp[y * LCD_WIDTH + CAMERA_DISPLAY_X + x] = first_pixel;
+            lcd_mp[y * LCD_WIDTH + CAMERA_DISPLAY_X + x + 1] = second_pixel;
+            input_index += 4;
         }
-        for (size_t x = CAMERA_FRAME_W + CAMERA_DISPLAY_X; x < LCD_WIDTH; x++)
-            lcd_mp[y * LCD_WIDTH + x] = 0x000000;
     }
     return image_buffer;
 }
+//最新修改
