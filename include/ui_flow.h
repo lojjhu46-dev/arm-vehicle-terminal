@@ -44,7 +44,7 @@ typedef struct {
     UiState *state;                // 与其他线程共享的界面状态和同步对象。
 } CameraThreadContext;
 
-void show_startup_animation(Lcd *lcd);
-int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder);
+void show_startup_animation(Lcd *lcd); // 显示开机动画
+int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder); // 运行主 UI 循环
 
 #endif

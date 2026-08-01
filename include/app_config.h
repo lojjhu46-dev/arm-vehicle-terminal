@@ -3,10 +3,10 @@
 
 #define TOUCH_PATH "/dev/input/event0"
 #define LCD_PATH "/dev/fb0"
-#define LCD_WIDTH 800
-#define LCD_HEIGHT 480
-#define LCD_MEM (LCD_WIDTH * LCD_HEIGHT * 4)
-#define JPEG_NUM 200
+#define LCD_WIDTH 800  // LCD 水平方向像素数
+#define LCD_HEIGHT 480 // LCD 垂直方向像素数
+#define LCD_MEM (LCD_WIDTH * LCD_HEIGHT * 4) // framebuffer 总字节数
+#define JPEG_NUM 200  // 录像帧最大数量
 // 摄像头采集图像的宽和高。
 #define CAMERA_FRAME_W 640
 #define CAMERA_FRAME_H 480

@@ -41,18 +41,18 @@ typedef struct {
     int worker_started;          // 后台线程已创建标志。
 } Recorder;
 
-int recorder_init(Recorder *recorder);
-void recorder_destroy(Recorder *recorder);
-int recorder_prepare_session(Recorder *recorder, const char *root_dir, time_t timestamp);
-int recorder_start_session(Recorder *recorder, const char *root_dir);
-void recorder_stop_session(Recorder *recorder);
-int recorder_submit_frame(Recorder *recorder, const JSAMPLE *image_buffer);
+int recorder_init(Recorder *recorder); // 初始化录像模块并启动后台编码线程
+void recorder_destroy(Recorder *recorder); // 销毁录像模块并停止后台线程
+int recorder_prepare_session(Recorder *recorder, const char *root_dir, time_t timestamp); // 准备录像目录
+int recorder_start_session(Recorder *recorder, const char *root_dir); // 启动录像会话
+void recorder_stop_session(Recorder *recorder); // 停止录像会话
+int recorder_submit_frame(Recorder *recorder, const JSAMPLE *image_buffer); // 提交一帧录像数据
 int recorder_save_photo(Recorder *recorder, const char *photo_dir,
-                        const JSAMPLE *image_buffer);
-int recorder_is_recording(Recorder *recorder);
-unsigned int recorder_dropped_frames(Recorder *recorder);
-void recorder_wait_idle(Recorder *recorder);
-const char *recorder_last_path(const Recorder *recorder);
+                        const JSAMPLE *image_buffer); // 提交拍照任务
+int recorder_is_recording(Recorder *recorder); // 查询录像状态
+unsigned int recorder_dropped_frames(Recorder *recorder); // 查询丢帧数
+void recorder_wait_idle(Recorder *recorder); // 等待所有编码任务完成
+const char *recorder_last_path(const Recorder *recorder); // 获取最后一次写入路径
 //最新修改
 
 #endif

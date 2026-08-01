@@ -28,6 +28,7 @@ int touch_open(Touch *touch)
 }
 //最新改动
 
+// 处理单个 input_event；转换坐标并在手指抬起时输出 tap 位置。
 static int touch_process_event(Touch *touch, const struct input_event *event,
                                int *tap_x, int *tap_y)
 {

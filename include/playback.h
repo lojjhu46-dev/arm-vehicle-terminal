@@ -13,7 +13,7 @@ typedef struct {
     size_t count;
 } PlaybackFrames;
 
-int playback_load_latest(PlaybackFrames *frames, const char *root_dir);
+int playback_load_latest(PlaybackFrames *frames, const char *root_dir); // 加载最新录像会话的帧路径
 //最新修改
 
 #endif

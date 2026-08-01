@@ -4,6 +4,7 @@
 #include "app_config.h"
 #include "jpeg_codec.h"
 
+// 将 RGB 图像缓冲按指定质量编码为 JPEG 文件。
 void write_JPEG_file(const char *filename, int quality, const JSAMPLE *image_buffer)
 {
   /* This struct contains the JPEG compression parameters and pointers to
@@ -112,6 +113,7 @@ void write_JPEG_file(const char *filename, int quality, const JSAMPLE *image_buf
   /* And we're done! */
 }
 
+// 读取 JPEG 文件并解码到 LCD framebuffer 中。
 int read_JPEG_file(const char *filename, int *lcd_mp)
 {
   /* This struct contains the JPEG decompression parameters and pointers to
@@ -226,6 +228,7 @@ int read_JPEG_file(const char *filename, int *lcd_mp)
   return 0;
 }
 
+// 读取 JPEG 图像并返回像素数组、宽度和高度。
 int read_JPEG_image(const char *filename, int **pixels, int *width, int *height)
 {
   struct jpeg_decompress_struct cinfo;

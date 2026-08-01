@@ -1,6 +1,7 @@
 #ifndef OVERLAY_H
 #define OVERLAY_H
 
+// 绘制倒车辅助线相关函数
 int parking_assist_lines_drawing(int *lcd_mp);
 static void draw_line(int *lcd,
                       int x0, int y0,

@@ -8,6 +8,7 @@
 #include "playback.h"
 
 //最新修改
+// 内部排序结构：保存单帧编号与文件路径，用于按帧号重排。
 typedef struct {
     int number;
     char path[256];

@@ -16,7 +16,7 @@
 // 打开指定 V4L2 摄像头设备并保存文件描述符。
 int camera_open(Camera *camera, const char *device_name)
 {
-    //打开摄像头设备
+    // 打开摄像头设备
     camera->fd = open(device_name, O_RDWR, 0);
 
     //错误处理

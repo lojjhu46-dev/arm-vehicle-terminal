@@ -6,15 +6,15 @@
 #include "touch.h"
 #include "ui_flow.h"
 
+// 程序入口：初始化 LCD、触摸、录像与摄像头模块，显示开机动画，运行 UI 主循环
 int main(void)
 {
-    //定义并初始化结构体用于存储lcd屏幕和触摸屏的信息
-    
+    // 定义并初始化结构体用于存储 lcd 屏幕和触摸屏信息
     Lcd lcd = { .fd = -1, .pixels = NULL };
     Touch touch = { .fd = -1, .touchsrceen_x = 0, .touchsrceen_y = 0 };
-    //定义结构体存储摄像头设备节点信息
+    // 定义结构体存储摄像头设备节点信息
     Camera camera;
-    //定义结构体存储拼接目录路径的所需信息
+    // 定义结构体存储录像会话与帧路径信息
     Recorder recorder;
     int result;
 

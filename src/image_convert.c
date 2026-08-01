@@ -3,7 +3,7 @@
 #include "app_config.h"
 #include "image_convert.h"
 
-//转换一个像素点
+// 将 YUYV 像素转换为 RGB 像素，并写入转换缓冲。
 unsigned int yuyv_to_rgb_pix(int Y, int Cb, int Cr, JSAMPLE **pimage_buffer)
 {
 	unsigned int pix_point = 0;//存储一个像素点的数据
