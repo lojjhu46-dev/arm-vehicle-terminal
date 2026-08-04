@@ -15,6 +15,7 @@
 #include "image_convert.h"
 #include "jpeg_codec.h"
 #include "live_controls.h"
+#include "lvgl_file_browser.h"
 #include "playback.h"
 //最新改动
 #include "overlay.h"
@@ -31,6 +32,7 @@ typedef struct {
     unsigned int pending_actions;  // 摄像头线程待执行的录像切换和拍照请求。
     int playback_mode;             // 1 表示正在播放历史录像。
     int touch_running;             // 触摸线程运行标志：1 继续读取，0 请求退出。
+    int file_browser_requested;    // 文件管理按钮已请求交给主线程运行 LVGL。
 } UiState;
 
 // 摄像头线程的运行上下文，集中传递线程需要访问的模块对象。

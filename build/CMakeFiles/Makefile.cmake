@@ -8,9 +8,17 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "CMakeFiles/3.22.1/CMakeASMCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
+  "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/CMakeLists.txt"
+  "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/env_support/cmake/os_desktop.cmake"
+  "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/env_support/cmake/version.cmake"
+  "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h.in"
+  "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lvgl.pc.in"
+  "/usr/share/cmake-3.22/Modules/CMakeASMCompiler.cmake.in"
+  "/usr/share/cmake-3.22/Modules/CMakeASMInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
@@ -19,6 +27,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake"
+  "/usr/share/cmake-3.22/Modules/CMakeDetermineASMCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeDetermineCCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake"
@@ -36,6 +45,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in"
   "/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/share/cmake-3.22/Modules/CMakeTestASMCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake"
@@ -57,6 +67,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake"
+  "/usr/share/cmake-3.22/Modules/Compiler/GNU-ASM.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake"
@@ -114,9 +125,14 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "CMakeFiles/3.22.1/CMakeASMCompiler.cmake"
+  "lvgl/lvgl.pc"
+  "lvgl/lv_version.h"
+  "lvgl/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/myapp.dir/DependInfo.cmake"
+  "lvgl/CMakeFiles/lvgl.dir/DependInfo.cmake"
   )

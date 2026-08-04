@@ -6,6 +6,29 @@ project(${TARGET})
 
 set(LIB_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
+set(FREETYPE_ROOT_DIR
+    "${CMAKE_CURRENT_SOURCE_DIR}/../freetype/freetype_arm"
+    CACHE PATH "FreeType ARM SDK directory")
+if(NOT EXISTS "${FREETYPE_ROOT_DIR}/include/ft2build.h" OR
+   NOT EXISTS "${FREETYPE_ROOT_DIR}/lib/libfreetype.a")
+    message(FATAL_ERROR "FreeType ARM SDK not found: ${FREETYPE_ROOT_DIR}")
+endif()
+
+# LVGL is used only by the file browser. The default points at the local
+# reference checkout, while cross builds may provide another checkout.
+set(LVGL_ROOT_DIR
+    "${CMAKE_CURRENT_SOURCE_DIR}/../lvgl_project/lv_port_pc_vscode/lvgl"
+    CACHE PATH "LVGL source directory")
+if(NOT IS_DIRECTORY "${LVGL_ROOT_DIR}")
+    message(FATAL_ERROR "LVGL source directory not found: ${LVGL_ROOT_DIR}")
+endif()
+set(LV_BUILD_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/lv_conf.h"
+    CACHE PATH "LVGL configuration file")
+set(CONFIG_LV_BUILD_DEMOS OFF CACHE BOOL "" FORCE)
+set(CONFIG_LV_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(CONFIG_LV_USE_THORVG_INTERNAL OFF CACHE BOOL "" FORCE)
+set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
+
 set(SREC
     src/main.c
     src/lcd.c 
@@ -18,14 +41,20 @@ set(SREC
     src/record_indicator.c 
     src/jpeg_codec.c 
     src/recorder.c 
-    src/ui_flow.c    
+    src/ui_flow.c
+    src/main_weather.c
+    src/lvgl_file_browser.c
+    src/freetype_lcd.c
 )
+
+add_subdirectory(${LVGL_ROOT_DIR} ${CMAKE_CURRENT_BINARY_DIR}/lvgl)
 
 add_executable(${TARGET} ${SREC})
 
 
 target_include_directories(${TARGET} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${FREETYPE_ROOT_DIR}/include
 )
 
 
@@ -35,6 +64,10 @@ target_link_directories(${TARGET} PRIVATE
 
 
 target_link_libraries(${TARGET}
+    lvgl
+    ${FREETYPE_ROOT_DIR}/lib/libfreetype.a
     pthread
     jpeg
+    m
+    dl
 )

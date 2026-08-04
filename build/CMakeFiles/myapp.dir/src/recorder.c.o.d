@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/recorder.c.o: \
- /mnt/hgfs/Embedded_development/Project/src/recorder.c \
+ /home/gec/workspace/Project/src/recorder.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/errno.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -43,12 +43,12 @@ CMakeFiles/myapp.dir/src/recorder.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/stat.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stat.h \
- /mnt/hgfs/Embedded_development/Project/include/app_config.h \
- /mnt/hgfs/Embedded_development/Project/include/jpeg_codec.h \
- /mnt/hgfs/Embedded_development/Project/include/jpeglib.h \
- /mnt/hgfs/Embedded_development/Project/include/jconfig.h \
- /mnt/hgfs/Embedded_development/Project/include/jmorecfg.h \
- /mnt/hgfs/Embedded_development/Project/include/recorder.h \
+ /home/gec/workspace/Project/include/app_config.h \
+ /home/gec/workspace/Project/include/jpeg_codec.h \
+ /home/gec/workspace/Project/include/jpeglib.h \
+ /home/gec/workspace/Project/include/jconfig.h \
+ /home/gec/workspace/Project/include/jmorecfg.h \
+ /home/gec/workspace/Project/include/recorder.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \

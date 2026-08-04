@@ -1,7 +1,10 @@
 #include <string.h>
 #include <errno.h>
+#include "app_config.h"
 #include "camera.h"
+#include "freetype_lcd.h"
 #include "lcd.h"
+#include "main_weather.h"
 #include "recorder.h"
 #include "touch.h"
 #include "ui_flow.h"
@@ -36,6 +39,21 @@ int main(void)
         recorder_destroy(&recorder);
         return -1;
     }
+    if (freetype_init(MAIN_FONT_PATH) == -1)
+    {
+        touch_close(&touch);
+        lcd_close(&lcd);
+        recorder_destroy(&recorder);
+        return -1;
+    }
+    if (main_weather_init() == -1)
+    {
+        freetype_exit();
+        touch_close(&touch);
+        lcd_close(&lcd);
+        recorder_destroy(&recorder);
+        return -1;
+    }
     //播放开机动画
     show_startup_animation(&lcd);
     //界面显示，切换
@@ -48,6 +66,8 @@ int main(void)
     //最新修改
     recorder_destroy(&recorder);
     //最新修改
+    main_weather_destroy();
+    freetype_exit();
     touch_close(&touch);
     lcd_close(&lcd);
     return result;

@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/touch.c.o: \
- /mnt/hgfs/Embedded_development/Project/src/touch.c \
+ /home/gec/workspace/Project/src/touch.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/fcntl.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -58,8 +58,8 @@ CMakeFiles/myapp.dir/src/touch.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/environments.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/confname.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/getopt.h \
- /mnt/hgfs/Embedded_development/Project/include/app_config.h \
- /mnt/hgfs/Embedded_development/Project/include/touch.h \
+ /home/gec/workspace/Project/include/app_config.h \
+ /home/gec/workspace/Project/include/touch.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \

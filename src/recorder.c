@@ -40,6 +40,17 @@ static int recorder_is_busy_locked(const Recorder *recorder)
     return 0;
 }
 
+static int recorder_ensure_directory(const char *path)
+{
+    struct stat status;
+
+    if (mkdir(path, 0777) == 0)
+        return 0;
+    if (errno != EEXIST || stat(path, &status) == -1 || !S_ISDIR(status.st_mode))
+        return -1;
+    return 0;
+}
+
 // 按当前时间生成照片输出路径。
 static int recorder_build_photo_path(Recorder *recorder, char *path, size_t path_size)
 {
@@ -237,8 +248,9 @@ int recorder_start_session(Recorder *recorder, const char *root_dir)
         pthread_mutex_unlock(&recorder->mutex);
         return 0;
     }
-    if (recorder_prepare_session(recorder, root_dir, time(NULL)) == -1 ||
-        (mkdir(recorder->dirbuffer, 0777) == -1 && errno != EEXIST))
+    if (recorder_ensure_directory(root_dir) == -1 ||
+        recorder_prepare_session(recorder, root_dir, time(NULL)) == -1 ||
+        recorder_ensure_directory(recorder->dirbuffer) == -1)
     {
         pthread_mutex_unlock(&recorder->mutex);
         return -1;

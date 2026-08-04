@@ -13,7 +13,10 @@
 #define CAMERA_DISPLAY_X ((LCD_WIDTH - CAMERA_FRAME_W) / 2)
 
 #define RECORD_ROOT_DIR "/root/workspace"
+#define RECORDINGS_DIR RECORD_ROOT_DIR "/recordings"
 #define PHOTO_DIR RECORD_ROOT_DIR "/photos"
 #define RESOURCE_DIR "./resource"
+#define MAIN_FONT_PATH RESOURCE_DIR "/fonts/SIMHEI.TTF"
+#define MAIN_WEATHER_ICON_DIR RESOURCE_DIR "/Weather"
 
 #endif

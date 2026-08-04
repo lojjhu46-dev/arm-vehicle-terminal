@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/ui_flow.c.o: \
- /mnt/hgfs/Embedded_development/Project/src/ui_flow.c \
+ /home/gec/workspace/Project/src/ui_flow.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/time.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -14,8 +14,8 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/select.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/select.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sigset.h \
- /mnt/hgfs/Embedded_development/Project/include/ui_flow.h \
- /mnt/hgfs/Embedded_development/Project/include/camera.h \
+ /home/gec/workspace/Project/include/ui_flow.h \
+ /home/gec/workspace/Project/include/camera.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/videodev2.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/ioctl.h \
@@ -29,8 +29,8 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/posix_types.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/stddef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm/posix_types.h \
- /mnt/hgfs/Embedded_development/Project/include/lcd.h \
- /mnt/hgfs/Embedded_development/Project/include/recorder.h \
+ /home/gec/workspace/Project/include/lcd.h \
+ /home/gec/workspace/Project/include/recorder.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/endian.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h \
@@ -48,10 +48,10 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdarg.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
- /mnt/hgfs/Embedded_development/Project/include/jpeglib.h \
- /mnt/hgfs/Embedded_development/Project/include/jconfig.h \
- /mnt/hgfs/Embedded_development/Project/include/jmorecfg.h \
- /mnt/hgfs/Embedded_development/Project/include/touch.h \
+ /home/gec/workspace/Project/include/jpeglib.h \
+ /home/gec/workspace/Project/include/jconfig.h \
+ /home/gec/workspace/Project/include/jmorecfg.h \
+ /home/gec/workspace/Project/include/touch.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/errno.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/errno.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/errno.h \
@@ -73,10 +73,11 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/environments.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/confname.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/getopt.h \
- /mnt/hgfs/Embedded_development/Project/include/app_config.h \
- /mnt/hgfs/Embedded_development/Project/include/image_convert.h \
- /mnt/hgfs/Embedded_development/Project/include/jpeg_codec.h \
- /mnt/hgfs/Embedded_development/Project/include/live_controls.h \
- /mnt/hgfs/Embedded_development/Project/include/playback.h \
- /mnt/hgfs/Embedded_development/Project/include/overlay.h \
- /mnt/hgfs/Embedded_development/Project/include/record_indicator.h
+ /home/gec/workspace/Project/include/app_config.h \
+ /home/gec/workspace/Project/include/image_convert.h \
+ /home/gec/workspace/Project/include/jpeg_codec.h \
+ /home/gec/workspace/Project/include/live_controls.h \
+ /home/gec/workspace/Project/include/lvgl_file_browser.h \
+ /home/gec/workspace/Project/include/playback.h \
+ /home/gec/workspace/Project/include/overlay.h \
+ /home/gec/workspace/Project/include/record_indicator.h

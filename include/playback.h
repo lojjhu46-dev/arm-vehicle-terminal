@@ -14,6 +14,7 @@ typedef struct {
 } PlaybackFrames;
 
 int playback_load_latest(PlaybackFrames *frames, const char *root_dir); // 加载最新录像会话的帧路径
+int playback_load_session(PlaybackFrames *frames, const char *session_dir); // 加载指定录像会话
 //最新修改
 
 #endif

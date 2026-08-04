@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/camera.c.o: \
- /mnt/hgfs/Embedded_development/Project/src/camera.c \
+ /home/gec/workspace/Project/src/camera.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/fcntl.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -49,8 +49,8 @@ CMakeFiles/myapp.dir/src/camera.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/environments.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/confname.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/getopt.h \
- /mnt/hgfs/Embedded_development/Project/include/app_config.h \
- /mnt/hgfs/Embedded_development/Project/include/camera.h \
+ /home/gec/workspace/Project/include/app_config.h \
+ /home/gec/workspace/Project/include/camera.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/videodev2.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/time.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/types.h \

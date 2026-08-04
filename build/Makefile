@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/hgfs/Embedded_development/Project
+CMAKE_SOURCE_DIR = /home/gec/workspace/Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/hgfs/Embedded_development/Project/build
+CMAKE_BINARY_DIR = /home/gec/workspace/Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -85,11 +85,56 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/Embedded_development/Project/build/CMakeFiles /mnt/hgfs/Embedded_development/Project/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gec/workspace/Project/build/CMakeFiles /home/gec/workspace/Project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/Embedded_development/Project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gec/workspace/Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +173,19 @@ myapp: cmake_check_build_system
 myapp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/build
 .PHONY : myapp/fast
+
+#=============================================================================
+# Target rules for targets named lvgl
+
+# Build rule for target.
+lvgl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lvgl
+.PHONY : lvgl
+
+# fast build rule for target.
+lvgl/fast:
+	$(MAKE) $(MAKESILENT) -f lvgl/CMakeFiles/lvgl.dir/build.make lvgl/CMakeFiles/lvgl.dir/build
+.PHONY : lvgl/fast
 
 src/camera.o: src/camera.c.o
 .PHONY : src/camera.o
@@ -248,6 +306,30 @@ src/live_controls.s: src/live_controls.c.s
 src/live_controls.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/live_controls.c.s
 .PHONY : src/live_controls.c.s
+
+src/lvgl_file_browser.o: src/lvgl_file_browser.c.o
+.PHONY : src/lvgl_file_browser.o
+
+# target to build an object file
+src/lvgl_file_browser.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o
+.PHONY : src/lvgl_file_browser.c.o
+
+src/lvgl_file_browser.i: src/lvgl_file_browser.c.i
+.PHONY : src/lvgl_file_browser.i
+
+# target to preprocess a source file
+src/lvgl_file_browser.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/lvgl_file_browser.c.i
+.PHONY : src/lvgl_file_browser.c.i
+
+src/lvgl_file_browser.s: src/lvgl_file_browser.c.s
+.PHONY : src/lvgl_file_browser.s
+
+# target to generate assembly for a file
+src/lvgl_file_browser.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/lvgl_file_browser.c.s
+.PHONY : src/lvgl_file_browser.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -424,7 +506,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... lvgl"
 	@echo "... myapp"
 	@echo "... src/camera.o"
 	@echo "... src/camera.i"
@@ -441,6 +528,9 @@ help:
 	@echo "... src/live_controls.o"
 	@echo "... src/live_controls.i"
 	@echo "... src/live_controls.s"
+	@echo "... src/lvgl_file_browser.o"
+	@echo "... src/lvgl_file_browser.i"
+	@echo "... src/lvgl_file_browser.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/myapp.dir/src/lcd.c.o.d"
   "CMakeFiles/myapp.dir/src/live_controls.c.o"
   "CMakeFiles/myapp.dir/src/live_controls.c.o.d"
+  "CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o"
+  "CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o.d"
   "CMakeFiles/myapp.dir/src/main.c.o"
   "CMakeFiles/myapp.dir/src/main.c.o.d"
   "CMakeFiles/myapp.dir/src/overlay.c.o"

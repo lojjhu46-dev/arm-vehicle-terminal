@@ -1,6 +1,10 @@
+#include <stdio.h>
 #include <sys/time.h>
+#include <time.h>
 
+#include "main_weather.h"
 #include "ui_flow.h"
+#include "freetype_lcd.h"
 
 //最新修改
 // 将静态 JPEG 同步写入所有 framebuffer 页面。
@@ -11,6 +15,74 @@ static void show_image_all_pages(Lcd *lcd, const char *filename)
     (void)lcd_show_page(lcd, 0);
 }
 //最新修改
+
+static time_t main_dashboard_minute = (time_t)-1;
+static unsigned long main_dashboard_weather_version;
+
+static time_t current_minute(void)
+{
+    struct timeval now;
+
+    if (gettimeofday(&now, NULL) == -1)
+        return (time_t)-1;
+    return (time_t)(now.tv_sec / 60);
+}
+
+static int main_dashboard_refresh_due(void)
+{
+    return main_dashboard_minute != current_minute() ||
+           main_dashboard_weather_version != main_weather_version();
+}
+
+static void draw_main_dashboard(Lcd *lcd)
+{
+    static const char *const weekdays[] = {
+        "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"
+    };
+    struct timeval now;
+    struct tm local_time;
+    MainWeather weather;
+    unsigned long weather_version;
+    char clock_text[8];
+    char date_text[32];
+    char date_part[16];
+    char temperature_text[16];
+    char weather_text[96];
+
+    gettimeofday(&now, NULL);
+    if (localtime_r(&now.tv_sec, &local_time) == NULL)
+        return;
+    if (strftime(clock_text, sizeof(clock_text), "%H:%M", &local_time) == 0 ||
+        strftime(date_part, sizeof(date_part), "%Y/%m/%d", &local_time) == 0)
+        return;
+    snprintf(date_text, sizeof(date_text), "%s  %s", date_part,
+             weekdays[local_time.tm_wday]);
+    if (main_weather_get(&weather, &weather_version) == -1)
+        return;
+    snprintf(temperature_text, sizeof(temperature_text), "%d℃",
+             weather.temperature_c);
+    snprintf(weather_text, sizeof(weather_text), "%s | %s", weather.city,
+             main_weather_label(weather.type));
+
+    (void)main_weather_draw_icon(lcd, &weather);
+
+    for (int page = 0; page < lcd_page_count(lcd); ++page)
+    {
+        freetype_set_lcd((unsigned int *)lcd_page_pixels(lcd, page));
+
+        freetype_set_size(52);
+        lcd_draw_text(120, 105, clock_text, 0xf4f4f4);
+        freetype_set_size(18);
+        lcd_draw_text(123, 129, date_text, 0x9c9c9c);
+        freetype_set_size(54);
+        lcd_draw_text(558, 105, temperature_text, 0xf4f4f4);
+        freetype_set_size(18);
+        lcd_draw_text(565, 129, weather_text, 0x9c9c9c);
+    }
+    main_dashboard_minute = (time_t)(now.tv_sec / 60);
+    main_dashboard_weather_version = weather_version;
+    (void)lcd_show_page(lcd, 0);
+}
 
 void show_startup_animation(Lcd *lcd)
 {
@@ -29,8 +101,10 @@ void show_startup_animation(Lcd *lcd)
         }
     }
     show_image_all_pages(lcd, frames[4]);
+
     usleep(400 * 1000);
     show_image_all_pages(lcd, frames[5]);
+    draw_main_dashboard(lcd);
 }
 
 //最新改动
@@ -38,6 +112,12 @@ void show_startup_animation(Lcd *lcd)
 static int is_camera_entry_touch(int x, int y)
 {
     return x > 45 && x < 160 && y > 160 && y < 305;
+}
+
+// 判断触摸坐标是否命中主界面的文件管理入口。
+static int is_main_file_manager_touch(int x, int y)
+{
+    return x > 195 && x < 310 && y > 160 && y < 305;
 }
 //最新改动
 
@@ -64,6 +144,46 @@ static int ui_is_live(UiState *state)
     live_mode = state->live_mode;
     pthread_mutex_unlock(&state->state_mutex);
     return live_mode;
+}
+
+static int ui_touch_running(UiState *state)
+{
+    int running;
+
+    pthread_mutex_lock(&state->state_mutex);
+    running = state->touch_running;
+    pthread_mutex_unlock(&state->state_mutex);
+    return running;
+}
+
+static int ui_is_file_browser_requested(UiState *state)
+{
+    int requested;
+
+    pthread_mutex_lock(&state->state_mutex);
+    requested = state->file_browser_requested;
+    pthread_mutex_unlock(&state->state_mutex);
+    return requested;
+}
+
+static void ui_request_file_browser(UiState *state)
+{
+    pthread_mutex_lock(&state->state_mutex);
+    state->file_browser_requested = 1;
+    state->live_mode = 0;
+    state->recording = 0;
+    state->touch_running = 0;
+    pthread_mutex_unlock(&state->state_mutex);
+}
+
+static void ui_finish_file_browser(UiState *state, int playback)
+{
+    pthread_mutex_lock(&state->state_mutex);
+    state->file_browser_requested = 0;
+    state->touch_running = 1;
+    state->playback_mode = playback;
+    state->live_mode = 0;
+    pthread_mutex_unlock(&state->state_mutex);
 }
 //最新改动
 
@@ -165,6 +285,7 @@ static void show_main_interface(Lcd *lcd, UiState *state)
 {
     lcd_sem_wait(state);
     show_image_all_pages(lcd, "./resource/logo/mian_UI.jpeg");
+    draw_main_dashboard(lcd);
     sem_post(&state->lcd_sem);
 }
 //最新改动
@@ -175,7 +296,7 @@ static void *touch_thread_main(void *argument)
 {
     CameraThreadContext *context = argument;
 
-    while (context->state->touch_running)
+    while (ui_touch_running(context->state))
     {
         int x;
         int y;
@@ -197,6 +318,8 @@ static void *touch_thread_main(void *argument)
         }
         else if (!ui_is_live(context->state) && is_camera_entry_touch(x, y))
             ui_set_live(context->state, 1);
+        else if (!ui_is_live(context->state) && is_main_file_manager_touch(x, y))
+            ui_request_file_browser(context->state);
         else if (ui_is_live(context->state))
         {
             switch (live_controls_hit_test(x, y))
@@ -205,6 +328,7 @@ static void *touch_thread_main(void *argument)
                 ui_set_live(context->state, 0);
                 break;
             case LIVE_CONTROL_FILE_MANAGER:
+                ui_request_file_browser(context->state);
                 break;
             case LIVE_CONTROL_RECORD:
                 ui_queue_action(context->state, UI_ACTION_RECORD_TOGGLE);
@@ -265,13 +389,15 @@ static int draw_playback_frame(int *framebuffer, const char *filename)
 }
 
 // 按约 33 帧每秒播放最新录像会话。
-static void playback_run(Lcd *lcd, UiState *state, LiveControls *controls)
+static void playback_run(Lcd *lcd, UiState *state, LiveControls *controls,
+                         const char *path, int load_latest)
 {
     PlaybackFrames frames;
     unsigned int page_initialized[LCD_MAX_PAGES] = {0};
     size_t frame_index = 0;
 
-    if (playback_load_latest(&frames, RECORD_ROOT_DIR) == -1)
+    if ((load_latest ? playback_load_latest(&frames, path) :
+         playback_load_session(&frames, path)) == -1)
     {
         ui_stop_playback(state);
         return;
@@ -347,7 +473,7 @@ static void *camera_thread_main(void *argument)
             if (recorder_is_recording(context->recorder))
                 recorder_stop_session(context->recorder);
             else
-                (void)recorder_start_session(context->recorder, RECORD_ROOT_DIR);
+                (void)recorder_start_session(context->recorder, RECORDINGS_DIR);
         }
         recording = recorder_is_recording(context->recorder);
         ui_set_recording(context->state, recording);
@@ -406,6 +532,35 @@ static void *camera_thread_main(void *argument)
 //最新修改
 
 //最新修改
+static int ui_run_file_browser(Lcd *lcd, Touch *touch, Recorder *recorder,
+                               UiState *state, LiveControls *controls,
+                               CameraThreadContext *camera_context,
+                               pthread_t *touch_thread, int *touch_thread_running)
+{
+    LvglBrowserSelection selection;
+
+    recorder_stop_session(recorder);
+    recorder_wait_idle(recorder);
+    if (*touch_thread_running)
+    {
+        pthread_join(*touch_thread, NULL);
+        *touch_thread_running = 0;
+    }
+    touch_reset_position(touch);
+    if (lvgl_file_browser_run(lcd, touch, RECORD_ROOT_DIR, &selection) == -1)
+        memset(&selection, 0, sizeof(selection));
+    ui_finish_file_browser(state, selection.result == LVGL_BROWSER_PLAYBACK);
+    if (pthread_create(touch_thread, NULL, touch_thread_main, camera_context) != 0)
+        return -1;
+    *touch_thread_running = 1;
+    touch_reset_position(touch);
+    if (selection.result == LVGL_BROWSER_PLAYBACK)
+        playback_run(lcd, state, controls, selection.path, 0);
+    show_main_interface(lcd, state);
+    touch_reset_position(touch);
+    return 0;
+}
+
 // 初始化同步对象并协调触摸与三页摄像头线程生命周期。
 int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
 {
@@ -414,6 +569,7 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
     LiveControls controls;
     RecordIndicator indicator;
     pthread_t touch_thread;
+    int touch_thread_running = 0;
 
     memset(&state, 0, sizeof(state));
     if (sem_init(&state.lcd_sem, 0, 1) == -1 ||
@@ -455,19 +611,34 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
         sem_destroy(&state.lcd_sem);
         return -1;
     }
+    touch_thread_running = 1;
 
     for (;;)
     {
         pthread_t camera_thread;
 
-        while (!ui_is_live(&state) && !ui_is_playback(&state))
-            usleep(10 * 1000);
+        while (!ui_is_live(&state) && !ui_is_playback(&state) &&
+               !ui_is_file_browser_requested(&state))
+        {
+            if (main_dashboard_refresh_due())
+                show_main_interface(lcd, &state);
+            else
+                usleep(250 * 1000);
+        }
 
         if (ui_is_playback(&state))
         {
             touch_reset_position(touch);
-            playback_run(lcd, &state, &controls);
+            playback_run(lcd, &state, &controls, RECORDINGS_DIR, 1);
             show_main_interface(lcd, &state);
+            continue;
+        }
+        if (ui_is_file_browser_requested(&state))
+        {
+            if (ui_run_file_browser(lcd, touch, recorder, &state, &controls,
+                                    &camera_context, &touch_thread,
+                                    &touch_thread_running) == -1)
+                return -1;
             continue;
         }
 
@@ -482,12 +653,20 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
             usleep(10 * 1000);
 
         pthread_join(camera_thread, NULL);
+        if (ui_is_file_browser_requested(&state))
+        {
+            if (ui_run_file_browser(lcd, touch, recorder, &state, &controls,
+                                    &camera_context, &touch_thread,
+                                    &touch_thread_running) == -1)
+                return -1;
+            continue;
+        }
         recorder_stop_session(recorder);
+        recorder_wait_idle(recorder);
         if (ui_is_playback(&state))
         {
-            recorder_wait_idle(recorder);
             touch_reset_position(touch);
-            playback_run(lcd, &state, &controls);
+            playback_run(lcd, &state, &controls, RECORDINGS_DIR, 1);
         }
         show_main_interface(lcd, &state);
         touch_reset_position(touch);

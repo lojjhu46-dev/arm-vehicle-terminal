@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/playback.c.o: \
- /mnt/hgfs/Embedded_development/Project/src/playback.c \
+ /home/gec/workspace/Project/src/playback.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/ctype.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -43,5 +43,5 @@ CMakeFiles/myapp.dir/src/playback.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/string.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/stat.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stat.h \
- /mnt/hgfs/Embedded_development/Project/include/playback.h \
- /mnt/hgfs/Embedded_development/Project/include/app_config.h
+ /home/gec/workspace/Project/include/playback.h \
+ /home/gec/workspace/Project/include/app_config.h

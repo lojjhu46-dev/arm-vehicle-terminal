@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/live_controls.c.o: \
- /mnt/hgfs/Embedded_development/Project/src/live_controls.c \
+ /home/gec/workspace/Project/src/live_controls.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdlib.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -28,8 +28,8 @@ CMakeFiles/myapp.dir/src/live_controls.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/string.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
- /mnt/hgfs/Embedded_development/Project/include/app_config.h \
- /mnt/hgfs/Embedded_development/Project/include/jpeg_codec.h \
+ /home/gec/workspace/Project/include/app_config.h \
+ /home/gec/workspace/Project/include/jpeg_codec.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/libio.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/_G_config.h \
@@ -37,7 +37,7 @@ CMakeFiles/myapp.dir/src/live_controls.c.o: \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdarg.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
- /mnt/hgfs/Embedded_development/Project/include/jpeglib.h \
- /mnt/hgfs/Embedded_development/Project/include/jconfig.h \
- /mnt/hgfs/Embedded_development/Project/include/jmorecfg.h \
- /mnt/hgfs/Embedded_development/Project/include/live_controls.h
+ /home/gec/workspace/Project/include/jpeglib.h \
+ /home/gec/workspace/Project/include/jconfig.h \
+ /home/gec/workspace/Project/include/jmorecfg.h \
+ /home/gec/workspace/Project/include/live_controls.h

@@ -40,5 +40,9 @@ int main(void)
         strstr(frames.paths[0], "frame2.jpg") == NULL ||
         strstr(frames.paths[1], "frame10.jpg") == NULL)
         return 1;
+    if (playback_load_session(&frames,
+                              "/tmp/mainui-playback/2026-07-24_19-00-00") != 0 ||
+        frames.count != 1 || strstr(frames.paths[0], "frame0.jpg") == NULL)
+        return 1;
     return 0;
 }

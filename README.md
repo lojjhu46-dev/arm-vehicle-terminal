@@ -11,6 +11,10 @@
 - 开始/停止录像、拍照、录像指示灯
 - 最近一次录像会话的帧回放
 - 三页 framebuffer 可用时的后台绘制和翻页显示
+- 主界面底图上的 FreeType 时间、日期、天气和温度叠加
+- 12 种居中天气图标及线程安全的动态天气状态接口
+- 主界面时间按分钟自动刷新，天气状态变化后自动刷新
+- 只在文件管理入口启动的 LVGL 文件浏览器
 
 ## 硬件与运行环境
 
@@ -25,38 +29,51 @@
 | 摄像头 | `/dev/video7`，支持 V4L2 MMAP 和 YUYV 640×480 |
 | 文件系统 | `/root/workspace` 可写，且能创建录像目录和 `photos/` |
 | 运行目录 | 必须是包含 `resource/` 的项目目录，当前资源路径是相对路径 `./resource` |
+| 字库 | FreeType ARM SDK，默认路径为 `../freetype/freetype_arm` |
 
 LCD、触摸屏和摄像头设备节点在 `include/app_config.h` 以及 `src/ui_flow.c` 中配置。若开发板设备节点不同，需要修改源码后重新编译。
 
 ## 构建
 
-项目使用 CMake，交叉编译器名称默认是 `arm-linux-gcc`，JPEG 库已经随项目放在 `lib/` 目录中。
+项目使用 CMake，交叉编译器名称默认是 `arm-linux-gcc`，JPEG 库已经随项目放在 `lib/` 目录中。LVGL 和 FreeType 路径可以通过 CMake 变量覆盖。
 
 ```sh
-cmake -S . -B build-arm -DCMAKE_C_COMPILER=arm-linux-gcc
-cmake --build build-arm -j
+cmake -S . -B build-lvgl-arm \
+  -DCMAKE_C_COMPILER=arm-linux-gcc \
+  -DLVGL_ROOT_DIR=/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl \
+  -DFREETYPE_ROOT_DIR=/home/gec/workspace/freetype/freetype_arm
+cmake --build build-lvgl-arm --parallel 2
 ```
 
 生成文件为：
 
 ```text
-build-arm/myapp
+build-lvgl-arm/myapp
 ```
 
-CMake 配置会编译 `src/` 下的模块，并链接 `lib/libjpeg.so`、pthread 和 JPEG 相关头文件。交叉编译环境中至少需要安装：
+CMake 配置会编译 `src/` 下的模块和 LVGL，并链接 FreeType、JPEG、pthread、数学库和动态加载库。交叉编译环境中至少需要安装：
 
 - CMake 3.13 或更高版本（`CMakeLists.txt` 声明的最低版本为 3.5，但当前构建配置使用了较新的 CMake 命令）
 - ARM GCC 交叉编译器，命令名为 `arm-linux-gcc`，或在构建命令中替换为实际编译器名称
 - GNU make
+- LVGL 9.5 源码目录；可通过 `LVGL_ROOT_DIR` 指向本机的 LVGL checkout
+- FreeType ARM SDK；可通过 `FREETYPE_ROOT_DIR` 指向本机的 FreeType SDK
+- ImageMagick 的 `convert` 命令，仅在重新生成天气资源时需要
 
-仓库中还保留了 `64bit.make.sh`。该脚本包含固定的开发板 IP 地址和远程路径，只适合原始开发环境，不建议直接用于其他板卡。
+也可以使用项目根目录下的 `64bit.make.sh` 一键生成天气资源并完成 ARM 构建。脚本默认只构建，不执行远程上传：
+
+```sh
+./64bit.make.sh
+```
+
+需要清理构建目录时显式设置 `CLEAN_BUILD=1`；需要执行原有的 SCP 部署流程时设置 `DEPLOY=1`，并可用 `BOARD_APP_ONLY`、`BOARD_FULL` 和 `REMOTE_ROOT` 覆盖目标。
 
 ## 部署与启动
 
 将可执行文件和资源目录复制到开发板，例如：
 
 ```sh
-scp build-arm/myapp resource root@<开发板IP>:/root/workspace/
+scp build-lvgl-arm/myapp resource root@<开发板IP>:/root/workspace/
 ```
 
 登录开发板后，从资源目录所在位置启动：
@@ -82,6 +99,10 @@ cd /root/workspace
 
 点击主界面中间偏左的实时预览入口即可进入实时画面。当前入口判定范围约为 LCD 坐标 `x=45..159`、`y=160..304`。
 
+主界面使用 `resource/logo/mian_UI.jpeg` 作为底图。时间、日期、城市、温度和天气文字由 FreeType 在运行时绘制，天气图标使用 `resource/Weather/` 中与底图背景匹配的 `96×64` JPEG，显示位置为 `x=352,y=68`。
+
+UI 主循环每 `250ms` 检查一次，但只有跨分钟或天气版本变化时才重绘主界面，因此时间显示按分钟更新。天气默认值为深圳 `23℃`、晴转多云；其他模块可通过 `include/main_weather.h` 中的 `main_weather_set()` 更新城市、温度和天气类型。
+
 ### 实时画面
 
 实时画面中央显示 640×480 摄像头图像，两侧显示控制按钮：
@@ -89,7 +110,7 @@ cd /root/workspace
 | 位置 | 功能 | 当前行为 |
 | --- | --- | --- |
 | 左上 | 退出实时画面 | 返回主界面，并停止当前录像会话 |
-| 左中 | 文件管理 | 当前没有绑定处理逻辑 |
+| 左中 | 文件管理 | 停止实时采集后打开 LVGL 文件浏览器 |
 | 左下 | 倒车辅助线 | 切换辅助线显示/隐藏，默认显示 |
 | 右上 | 录像 | 开始或停止当前录像会话 |
 | 右中 | 查看录像 | 停止实时采集并回放最近录像会话 |
@@ -99,7 +120,9 @@ cd /root/workspace
 
 ### 录像回放
 
-点击“查看录像”后，程序会在录像根目录中查找名称最新的时间目录，按 `frame` 后的数字顺序播放 JPEG 帧，播放速度约为 33 FPS。回放界面只提供左上角退出按钮；退出后返回主界面。
+点击“查看录像”后，程序会在 `recordings/` 目录中查找名称最新的时间目录，按 `frame` 后的数字顺序播放 JPEG 帧，播放速度约为 33 FPS。回放界面只提供左上角退出按钮；退出后返回主界面。
+
+文件浏览器固定在 `/root/workspace` 内浏览，忽略符号链接，并拒绝根目录外的路径。点击 `photos/` 中的 `.jpg` 或 `.jpeg` 文件会显示照片；点击名称符合录像会话格式且包含 `frame<number>.jpg` 的目录，会关闭浏览器并进入原有回放流程。
 
 ## 文件保存格式
 
@@ -107,15 +130,17 @@ cd /root/workspace
 
 ```text
 /root/workspace/
-├── YYYY-MM-DD_HH-MM-SS/
-│   ├── frame0.jpg
-│   ├── frame1.jpg
-│   └── ...
+├── recordings/
+│   └── YYYY-MM-DD_HH-MM-SS/
+│       ├── frame0.jpg
+│       ├── frame1.jpg
+│       └── ...
 └── photos/
     ├── photo_YYYY-MM-DD_HH-MM-SS_000.jpg
     └── ...
 ```
 
+- 新录像会话保存在 `recordings/`，旧版直接位于 `/root/workspace` 的会话目录不会移动或改写。
 - 录像会话目录名使用本地时间，例如 `2026-07-24_20-00-00`。
 - 录像帧从 `frame0.jpg` 开始编号，编号范围为 `0` 到 `199`，超过上限后循环使用编号。
 - 录像 JPEG 质量为 75，照片 JPEG 质量为 90。
@@ -125,16 +150,38 @@ cd /root/workspace
 
 录像根目录、照片目录、帧尺寸和帧数上限可在 `include/app_config.h` 中调整。
 
+## 天气资源与和风天气 API
+
+天气图集源文件为 `resource/Weather/weather.png`，可通过以下脚本重新生成 12 张主界面天气资源：
+
+```sh
+./scripts/generate_weather_assets.sh
+```
+
+脚本会逐格裁剪图标、去除棋盘背景、统一居中缩放，并使用主界面顶部背景导出 JPEG。原始图集不会被修改。
+
+当前固件只提供本地的 `main_weather_set()` 接口，尚未直接联网请求和风天气。根据官方文档，后续应使用当前推荐的小时天气预报 v1 接口：
+
+```text
+GET /weather/v1/hourly/{latitude}/{longitude}?hours=24&localTime=true&lang=zh
+```
+
+请求必须使用 HTTPS、控制台分配的专属 API Host，以及 JWT `Authorization: Bearer <token>` 或 API Key 鉴权。返回数据中的 `hours[]` 提供 `condition.text`、`condition.code` 和 `temperature.value` 等字段，可映射到 `main_weather_set()`。旧版 `/v7/weather/{hours}` 城市小时预报已标记为即将弃用，不应作为新实现的接口。
+
+设备端接入该服务还需要 TLS HTTP 客户端、JSON 解析、DNS/网络配置、证书校验和可靠的设备时间；当前工程尚未包含这些模块。详细接口以[和风天气小时天气预报文档](https://dev.qweather.com/docs/api/weather/weather-hourly-forecast/)为准。
+
 ## 项目结构
 
 ```text
 .
 ├── CMakeLists.txt          # CMake 构建配置
-├── 64bit.make.sh           # 原开发环境中的构建和 SCP 脚本
+├── 64bit.make.sh           # 天气资源生成、ARM 构建和可选 SCP 部署
 ├── include/                # 公共头文件及应用配置
 ├── src/
 │   ├── main.c              # 设备初始化、资源释放和程序入口
 │   ├── ui_flow.c           # 主界面、触摸线程、摄像头线程和回放流程
+│   ├── main_weather.c      # 天气资源缓存、状态接口和图标绘制
+│   ├── freetype_lcd.c      # FreeType LCD 文字绘制封装
 │   ├── camera.c            # V4L2 摄像头及 MMAP 缓冲区
 │   ├── lcd.c               # framebuffer 映射和页面翻转
 │   ├── touch.c             # Linux input 触摸事件处理
@@ -143,13 +190,20 @@ cd /root/workspace
 │   ├── recorder.c           # 异步录像/拍照编码队列
 │   ├── playback.c           # 最新录像会话和帧排序
 │   ├── live_controls.c      # 实时界面按钮资源和点击区域
+│   ├── lvgl_file_browser.c  # 独立的 LVGL 文件浏览器及 LCD/触摸适配器
 │   ├── overlay.c            # 倒车辅助线
 │   └── record_indicator.c   # REC 图标和录像红点
 ├── resource/               # 开机动画、主界面和实时控制按钮图片
+│   ├── Weather/             # 12 张主界面天气 JPEG 和原始天气图集
+│   └── fonts/               # SIMHEI.TTF 字库
+├── scripts/
+│   └── generate_weather_assets.sh # 天气图标裁剪和背景合成脚本
 ├── lib/                    # ARM 版本 libjpeg 动态库及静态库
 ├── tests/                  # 模块级测试源码
-└── build/                  # CMake 构建产物，不建议作为源码依赖
+└── build-lvgl-arm/         # LVGL/FreeType ARM 构建产物
 ```
+
+`lv_conf.h` 只启用浏览器所需的 LVGL 软件绘制、对象、按钮、标签和图片，并关闭 Linux framebuffer、evdev 及 LVGL 文件式 JPEG 解码。浏览器复用已有 `Lcd` 和 `Touch` 对象，不会再次打开 `/dev/fb0` 或 `/dev/input/event0`。
 
 模块间的主要数据流为：
 
@@ -179,7 +233,8 @@ test -w /root/workspace
 ## 已知限制
 
 - 设备节点、屏幕尺寸、摄像头尺寸和存储路径主要是编译期常量，尚未提供命令行或配置文件覆盖。
-- 文件管理按钮目前是预留入口，不会打开文件管理界面。
+- 文件浏览器不提供删除、重命名、搜索或 PNG 解码。
+- 和风天气 API 尚未接入，当前天气数据不会自动从网络更新。
 - `wifi.png`、`settings.png`、`audio_recording.png`、`lock_file.png` 等资源目前未接入主 UI 流程。
 - 程序依赖从包含 `resource/` 的目录启动；直接从其他目录运行会导致资源加载失败。
 - 摄像头必须接受源码请求的 YUYV 640×480 格式，否则实时线程会退出并返回主界面。

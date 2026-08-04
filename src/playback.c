@@ -43,19 +43,63 @@ static int compare_playback_items(const void *left, const void *right)
     return (first->number > second->number) - (first->number < second->number);
 }
 
-// 查找根目录中名称最新的录像会话并加载帧路径。
-int playback_load_latest(PlaybackFrames *frames, const char *root_dir)
+// 加载指定录像会话中的 JPEG 帧。
+int playback_load_session(PlaybackFrames *frames, const char *session_dir)
 {
-    DIR *root;
     DIR *session;
     struct dirent *entry;
-    struct stat status;
-    char latest_name[32] = {0};
-    char session_path[256];
     PlaybackItem items[JPEG_NUM];
     size_t item_count = 0;
 
     memset(frames, 0, sizeof(*frames));
+    session = opendir(session_dir);
+    if (session == NULL)
+        return -1;
+    while ((entry = readdir(session)) != NULL && item_count < JPEG_NUM)
+    {
+        int number;
+        char expected[32];
+        char candidate[256];
+        struct stat status;
+
+        if (sscanf(entry->d_name, "frame%d.jpg", &number) != 1 ||
+            number < 0 || number >= JPEG_NUM)
+            continue;
+        snprintf(expected, sizeof(expected), "frame%d.jpg", number);
+        if (strcmp(entry->d_name, expected) != 0)
+            continue;
+        if (snprintf(candidate, sizeof(candidate), "%s/%s", session_dir,
+                     entry->d_name) >= (int)sizeof(candidate) ||
+            lstat(candidate, &status) == -1 || !S_ISREG(status.st_mode))
+            continue;
+        if (snprintf(items[item_count].path, sizeof(items[item_count].path),
+                     "%s/%s", session_dir, entry->d_name) >=
+            (int)sizeof(items[item_count].path))
+            continue;
+        items[item_count].number = number;
+        ++item_count;
+    }
+    closedir(session);
+    if (item_count == 0)
+        return -1;
+
+    qsort(items, item_count, sizeof(items[0]), compare_playback_items);
+    snprintf(frames->session_dir, sizeof(frames->session_dir), "%s", session_dir);
+    for (size_t i = 0; i < item_count; ++i)
+        snprintf(frames->paths[i], sizeof(frames->paths[i]), "%s", items[i].path);
+    frames->count = item_count;
+    return 0;
+}
+
+// 查找根目录中名称最新的录像会话并加载帧路径。
+int playback_load_latest(PlaybackFrames *frames, const char *root_dir)
+{
+    DIR *root;
+    struct dirent *entry;
+    struct stat status;
+    char latest_name[32] = {0};
+    char session_path[256];
+
     root = opendir(root_dir);
     if (root == NULL)
         return -1;
@@ -77,37 +121,6 @@ int playback_load_latest(PlaybackFrames *frames, const char *root_dir)
         snprintf(session_path, sizeof(session_path), "%s/%s", root_dir,
                  latest_name) >= (int)sizeof(session_path))
         return -1;
-
-    session = opendir(session_path);
-    if (session == NULL)
-        return -1;
-    while ((entry = readdir(session)) != NULL && item_count < JPEG_NUM)
-    {
-        int number;
-        char expected[32];
-
-        if (sscanf(entry->d_name, "frame%d.jpg", &number) != 1 ||
-            number < 0 || number >= JPEG_NUM)
-            continue;
-        snprintf(expected, sizeof(expected), "frame%d.jpg", number);
-        if (strcmp(entry->d_name, expected) != 0)
-            continue;
-        if (snprintf(items[item_count].path, sizeof(items[item_count].path),
-                     "%s/%s", session_path, entry->d_name) >=
-            (int)sizeof(items[item_count].path))
-            continue;
-        items[item_count].number = number;
-        ++item_count;
-    }
-    closedir(session);
-    if (item_count == 0)
-        return -1;
-
-    qsort(items, item_count, sizeof(items[0]), compare_playback_items);
-    snprintf(frames->session_dir, sizeof(frames->session_dir), "%s", session_path);
-    for (size_t i = 0; i < item_count; ++i)
-        snprintf(frames->paths[i], sizeof(frames->paths[i]), "%s", items[i].path);
-    frames->count = item_count;
-    return 0;
+    return playback_load_session(frames, session_path);
 }
 //最新修改
