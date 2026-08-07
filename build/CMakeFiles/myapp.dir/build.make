@@ -237,10 +237,52 @@ CMakeFiles/myapp.dir/src/ui_flow.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/ui_flow.c.s"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gec/workspace/Project/src/ui_flow.c -o CMakeFiles/myapp.dir/src/ui_flow.c.s
 
+CMakeFiles/myapp.dir/src/main_weather.c.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/src/main_weather.c.o: ../src/main_weather.c
+CMakeFiles/myapp.dir/src/main_weather.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/myapp.dir/src/main_weather.c.o"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/main_weather.c.o -MF CMakeFiles/myapp.dir/src/main_weather.c.o.d -o CMakeFiles/myapp.dir/src/main_weather.c.o -c /home/gec/workspace/Project/src/main_weather.c
+
+CMakeFiles/myapp.dir/src/main_weather.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/myapp.dir/src/main_weather.c.i"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gec/workspace/Project/src/main_weather.c > CMakeFiles/myapp.dir/src/main_weather.c.i
+
+CMakeFiles/myapp.dir/src/main_weather.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/main_weather.c.s"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gec/workspace/Project/src/main_weather.c -o CMakeFiles/myapp.dir/src/main_weather.c.s
+
+CMakeFiles/myapp.dir/src/weather_receiver.c.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/src/weather_receiver.c.o: ../src/weather_receiver.c
+CMakeFiles/myapp.dir/src/weather_receiver.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/myapp.dir/src/weather_receiver.c.o"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/weather_receiver.c.o -MF CMakeFiles/myapp.dir/src/weather_receiver.c.o.d -o CMakeFiles/myapp.dir/src/weather_receiver.c.o -c /home/gec/workspace/Project/src/weather_receiver.c
+
+CMakeFiles/myapp.dir/src/weather_receiver.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/myapp.dir/src/weather_receiver.c.i"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gec/workspace/Project/src/weather_receiver.c > CMakeFiles/myapp.dir/src/weather_receiver.c.i
+
+CMakeFiles/myapp.dir/src/weather_receiver.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/weather_receiver.c.s"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gec/workspace/Project/src/weather_receiver.c -o CMakeFiles/myapp.dir/src/weather_receiver.c.s
+
+CMakeFiles/myapp.dir/src/ui_remote_commands.c.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/src/ui_remote_commands.c.o: ../src/ui_remote_commands.c
+CMakeFiles/myapp.dir/src/ui_remote_commands.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/myapp.dir/src/ui_remote_commands.c.o"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/ui_remote_commands.c.o -MF CMakeFiles/myapp.dir/src/ui_remote_commands.c.o.d -o CMakeFiles/myapp.dir/src/ui_remote_commands.c.o -c /home/gec/workspace/Project/src/ui_remote_commands.c
+
+CMakeFiles/myapp.dir/src/ui_remote_commands.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/myapp.dir/src/ui_remote_commands.c.i"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gec/workspace/Project/src/ui_remote_commands.c > CMakeFiles/myapp.dir/src/ui_remote_commands.c.i
+
+CMakeFiles/myapp.dir/src/ui_remote_commands.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/ui_remote_commands.c.s"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gec/workspace/Project/src/ui_remote_commands.c -o CMakeFiles/myapp.dir/src/ui_remote_commands.c.s
+
 CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: ../src/lvgl_file_browser.c
 CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o -MF CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o.d -o CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o -c /home/gec/workspace/Project/src/lvgl_file_browser.c
 
 CMakeFiles/myapp.dir/src/lvgl_file_browser.c.i: cmake_force
@@ -250,6 +292,20 @@ CMakeFiles/myapp.dir/src/lvgl_file_browser.c.i: cmake_force
 CMakeFiles/myapp.dir/src/lvgl_file_browser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/lvgl_file_browser.c.s"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gec/workspace/Project/src/lvgl_file_browser.c -o CMakeFiles/myapp.dir/src/lvgl_file_browser.c.s
+
+CMakeFiles/myapp.dir/src/freetype_lcd.c.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/src/freetype_lcd.c.o: ../src/freetype_lcd.c
+CMakeFiles/myapp.dir/src/freetype_lcd.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/myapp.dir/src/freetype_lcd.c.o"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/freetype_lcd.c.o -MF CMakeFiles/myapp.dir/src/freetype_lcd.c.o.d -o CMakeFiles/myapp.dir/src/freetype_lcd.c.o -c /home/gec/workspace/Project/src/freetype_lcd.c
+
+CMakeFiles/myapp.dir/src/freetype_lcd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/myapp.dir/src/freetype_lcd.c.i"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gec/workspace/Project/src/freetype_lcd.c > CMakeFiles/myapp.dir/src/freetype_lcd.c.i
+
+CMakeFiles/myapp.dir/src/freetype_lcd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/freetype_lcd.c.s"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gec/workspace/Project/src/freetype_lcd.c -o CMakeFiles/myapp.dir/src/freetype_lcd.c.s
 
 # Object files for target myapp
 myapp_OBJECTS = \
@@ -265,7 +321,11 @@ myapp_OBJECTS = \
 "CMakeFiles/myapp.dir/src/jpeg_codec.c.o" \
 "CMakeFiles/myapp.dir/src/recorder.c.o" \
 "CMakeFiles/myapp.dir/src/ui_flow.c.o" \
-"CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o"
+"CMakeFiles/myapp.dir/src/main_weather.c.o" \
+"CMakeFiles/myapp.dir/src/weather_receiver.c.o" \
+"CMakeFiles/myapp.dir/src/ui_remote_commands.c.o" \
+"CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o" \
+"CMakeFiles/myapp.dir/src/freetype_lcd.c.o"
 
 # External object files for target myapp
 myapp_EXTERNAL_OBJECTS =
@@ -282,11 +342,16 @@ myapp: CMakeFiles/myapp.dir/src/record_indicator.c.o
 myapp: CMakeFiles/myapp.dir/src/jpeg_codec.c.o
 myapp: CMakeFiles/myapp.dir/src/recorder.c.o
 myapp: CMakeFiles/myapp.dir/src/ui_flow.c.o
+myapp: CMakeFiles/myapp.dir/src/main_weather.c.o
+myapp: CMakeFiles/myapp.dir/src/weather_receiver.c.o
+myapp: CMakeFiles/myapp.dir/src/ui_remote_commands.c.o
 myapp: CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o
+myapp: CMakeFiles/myapp.dir/src/freetype_lcd.c.o
 myapp: CMakeFiles/myapp.dir/build.make
 myapp: lvgl/lib/liblvgl.a
+myapp: ../../freetype/freetype_arm/lib/libfreetype.a
 myapp: CMakeFiles/myapp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gec/workspace/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable myapp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gec/workspace/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable myapp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myapp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

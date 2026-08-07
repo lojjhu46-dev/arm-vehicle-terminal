@@ -23,6 +23,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gec/workspace/Project/src/recorder.c" "CMakeFiles/myapp.dir/src/recorder.c.o" "gcc" "CMakeFiles/myapp.dir/src/recorder.c.o.d"
   "/home/gec/workspace/Project/src/touch.c" "CMakeFiles/myapp.dir/src/touch.c.o" "gcc" "CMakeFiles/myapp.dir/src/touch.c.o.d"
   "/home/gec/workspace/Project/src/ui_flow.c" "CMakeFiles/myapp.dir/src/ui_flow.c.o" "gcc" "CMakeFiles/myapp.dir/src/ui_flow.c.o.d"
+  "/home/gec/workspace/Project/src/ui_remote_commands.c" "CMakeFiles/myapp.dir/src/ui_remote_commands.c.o" "gcc" "CMakeFiles/myapp.dir/src/ui_remote_commands.c.o.d"
+  "/home/gec/workspace/Project/src/weather_receiver.c" "CMakeFiles/myapp.dir/src/weather_receiver.c.o" "gcc" "CMakeFiles/myapp.dir/src/weather_receiver.c.o.d"
   )
 
 # Targets to which this target links.

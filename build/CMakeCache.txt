@@ -250,6 +250,9 @@ CONFIG_LV_USE_PRIVATE_API:BOOL=OFF
 //Use the internal version of ThorVG
 CONFIG_LV_USE_THORVG_INTERNAL:BOOL=OFF
 
+//FreeType ARM SDK directory
+FREETYPE_ROOT_DIR:PATH=/home/gec/workspace/Project/../freetype/freetype_arm
+
 //LVGL source directory
 LVGL_ROOT_DIR:PATH=/home/gec/workspace/Project/../lvgl_project/lv_port_pc_vscode/lvgl
 

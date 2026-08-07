@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/myapp.dir/src/camera.c.o"
   "CMakeFiles/myapp.dir/src/camera.c.o.d"
+  "CMakeFiles/myapp.dir/src/freetype_lcd.c.o"
+  "CMakeFiles/myapp.dir/src/freetype_lcd.c.o.d"
   "CMakeFiles/myapp.dir/src/image_convert.c.o"
   "CMakeFiles/myapp.dir/src/image_convert.c.o.d"
   "CMakeFiles/myapp.dir/src/jpeg_codec.c.o"
@@ -13,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o.d"
   "CMakeFiles/myapp.dir/src/main.c.o"
   "CMakeFiles/myapp.dir/src/main.c.o.d"
+  "CMakeFiles/myapp.dir/src/main_weather.c.o"
+  "CMakeFiles/myapp.dir/src/main_weather.c.o.d"
   "CMakeFiles/myapp.dir/src/overlay.c.o"
   "CMakeFiles/myapp.dir/src/overlay.c.o.d"
   "CMakeFiles/myapp.dir/src/playback.c.o"
@@ -25,6 +29,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/myapp.dir/src/touch.c.o.d"
   "CMakeFiles/myapp.dir/src/ui_flow.c.o"
   "CMakeFiles/myapp.dir/src/ui_flow.c.o.d"
+  "CMakeFiles/myapp.dir/src/ui_remote_commands.c.o"
+  "CMakeFiles/myapp.dir/src/ui_remote_commands.c.o.d"
+  "CMakeFiles/myapp.dir/src/weather_receiver.c.o"
+  "CMakeFiles/myapp.dir/src/weather_receiver.c.o.d"
   "myapp"
   "myapp.pdb"
 )

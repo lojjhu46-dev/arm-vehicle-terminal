@@ -59,6 +59,9 @@ static void draw_main_dashboard(Lcd *lcd)
              weekdays[local_time.tm_wday]);
     if (main_weather_get(&weather, &weather_version) == -1)
         return;
+    fprintf(stderr, "[UI] refreshing main dashboard weather_version=%lu city=%s temp=%d type=%s\n",
+            weather_version, weather.city, weather.temperature_c,
+            main_weather_label(weather.type));
     snprintf(temperature_text, sizeof(temperature_text), "%d℃",
              weather.temperature_c);
     snprintf(weather_text, sizeof(weather_text), "%s | %s", weather.city,
@@ -123,6 +126,8 @@ static int is_main_file_manager_touch(int x, int y)
 
 #define UI_ACTION_RECORD_TOGGLE 0x01U
 #define UI_ACTION_PHOTO 0x02U
+#define UI_ACTION_RECORD_START 0x04U
+#define UI_ACTION_RECORD_STOP 0x08U
 
 //最新改动
 // 获取 LCD 二值信号量，并在信号中断时继续等待。
@@ -261,6 +266,13 @@ static int ui_parking_guides_enabled(UiState *state)
     return enabled;
 }
 
+static void ui_set_parking_guides(UiState *state, int enabled)
+{
+    pthread_mutex_lock(&state->state_mutex);
+    state->parking_guides_enabled = enabled;
+    pthread_mutex_unlock(&state->state_mutex);
+}
+
 static void ui_queue_action(UiState *state, unsigned int action)
 {
     pthread_mutex_lock(&state->state_mutex);
@@ -277,6 +289,33 @@ static unsigned int ui_take_actions(UiState *state)
     state->pending_actions = 0;
     pthread_mutex_unlock(&state->state_mutex);
     return actions;
+}
+
+/* The UI thread converts mailbox entries into work for the camera thread. */
+static void ui_apply_remote_commands(UiState *state, UiRemoteCommands *commands)
+{
+    UiRemoteCommandRequest request;
+
+    ui_remote_commands_take(commands, &request);
+    if (request.parking_guides_target >= 0)
+        ui_set_parking_guides(state, request.parking_guides_target);
+    if (request.recording_target == 1)
+    {
+        fprintf(stderr, "[UI] remote start-recording request queued\n");
+        ui_queue_action(state, UI_ACTION_RECORD_START);
+        ui_set_live(state, 1);
+    }
+    else if (request.recording_target == 0 && ui_is_live(state))
+    {
+        fprintf(stderr, "[UI] remote stop-recording request queued\n");
+        ui_queue_action(state, UI_ACTION_RECORD_STOP);
+    }
+    if (request.take_photo)
+    {
+        fprintf(stderr, "[UI] remote photo request queued\n");
+        ui_queue_action(state, UI_ACTION_PHOTO);
+        ui_set_live(state, 1);
+    }
 }
 
 //最新改动
@@ -390,7 +429,8 @@ static int draw_playback_frame(int *framebuffer, const char *filename)
 
 // 按约 33 帧每秒播放最新录像会话。
 static void playback_run(Lcd *lcd, UiState *state, LiveControls *controls,
-                         const char *path, int load_latest)
+                         const char *path, int load_latest,
+                         UiRemoteCommands *remote_commands)
 {
     PlaybackFrames frames;
     unsigned int page_initialized[LCD_MAX_PAGES] = {0};
@@ -406,6 +446,9 @@ static void playback_run(Lcd *lcd, UiState *state, LiveControls *controls,
     {
         int page;
 
+        ui_apply_remote_commands(state, remote_commands);
+        if (!ui_is_playback(state))
+            break;
         lcd_sem_wait(state);
         if (lcd_begin_frame(lcd) == -1)
         {
@@ -445,6 +488,7 @@ static void *camera_thread_main(void *argument)
         camera_start(context->camera) == -1 ||
         image_converter_init(&converter) == -1)
     {
+        fprintf(stderr, "[UI] camera thread initialization failed\n");
         camera_close(context->camera);
         ui_set_live(context->state, 0);
         return NULL;
@@ -468,12 +512,39 @@ static void *camera_thread_main(void *argument)
             break;
 
         actions = ui_take_actions(context->state);
-        if (actions & UI_ACTION_RECORD_TOGGLE)
+        if (actions & UI_ACTION_RECORD_STOP)
+        {
+            fprintf(stderr, "[UI] executing stop-recording action\n");
+            recorder_stop_session(context->recorder);
+        }
+        else if (actions & UI_ACTION_RECORD_START)
+        {
+            if (!recorder_is_recording(context->recorder))
+            {
+                if (recorder_start_session(context->recorder, RECORDINGS_DIR) == -1)
+                    fprintf(stderr, "[UI] failed to start recording session under %s\n",
+                            RECORDINGS_DIR);
+                else
+                    fprintf(stderr, "[UI] recording session started: %s\n",
+                            context->recorder->dirbuffer);
+            }
+        }
+        else if (actions & UI_ACTION_RECORD_TOGGLE)
         {
             if (recorder_is_recording(context->recorder))
+            {
+                fprintf(stderr, "[UI] executing stop-recording toggle\n");
                 recorder_stop_session(context->recorder);
+            }
             else
-                (void)recorder_start_session(context->recorder, RECORDINGS_DIR);
+            {
+                if (recorder_start_session(context->recorder, RECORDINGS_DIR) == -1)
+                    fprintf(stderr, "[UI] failed to start recording toggle under %s\n",
+                            RECORDINGS_DIR);
+                else
+                    fprintf(stderr, "[UI] recording session started: %s\n",
+                            context->recorder->dirbuffer);
+            }
         }
         recording = recorder_is_recording(context->recorder);
         ui_set_recording(context->state, recording);
@@ -532,10 +603,16 @@ static void *camera_thread_main(void *argument)
 //最新修改
 
 //最新修改
+static int ui_file_browser_interrupt(void *argument)
+{
+    return ui_remote_commands_has_live_request(argument);
+}
+
 static int ui_run_file_browser(Lcd *lcd, Touch *touch, Recorder *recorder,
                                UiState *state, LiveControls *controls,
                                CameraThreadContext *camera_context,
-                               pthread_t *touch_thread, int *touch_thread_running)
+                               pthread_t *touch_thread, int *touch_thread_running,
+                               UiRemoteCommands *remote_commands)
 {
     LvglBrowserSelection selection;
 
@@ -547,22 +624,26 @@ static int ui_run_file_browser(Lcd *lcd, Touch *touch, Recorder *recorder,
         *touch_thread_running = 0;
     }
     touch_reset_position(touch);
-    if (lvgl_file_browser_run(lcd, touch, RECORD_ROOT_DIR, &selection) == -1)
+    if (lvgl_file_browser_run(lcd, touch, RECORD_ROOT_DIR, &selection,
+                              ui_file_browser_interrupt, remote_commands) == -1)
         memset(&selection, 0, sizeof(selection));
     ui_finish_file_browser(state, selection.result == LVGL_BROWSER_PLAYBACK);
+    ui_apply_remote_commands(state, remote_commands);
     if (pthread_create(touch_thread, NULL, touch_thread_main, camera_context) != 0)
         return -1;
     *touch_thread_running = 1;
     touch_reset_position(touch);
-    if (selection.result == LVGL_BROWSER_PLAYBACK)
-        playback_run(lcd, state, controls, selection.path, 0);
-    show_main_interface(lcd, state);
+    if (selection.result == LVGL_BROWSER_PLAYBACK && !ui_is_live(state))
+        playback_run(lcd, state, controls, selection.path, 0, remote_commands);
+    if (!ui_is_live(state))
+        show_main_interface(lcd, state);
     touch_reset_position(touch);
     return 0;
 }
 
 // 初始化同步对象并协调触摸与三页摄像头线程生命周期。
-int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
+int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
+           UiRemoteCommands *remote_commands)
 {
     UiState state;
     CameraThreadContext camera_context;
@@ -617,9 +698,14 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
     {
         pthread_t camera_thread;
 
+        ui_apply_remote_commands(&state, remote_commands);
         while (!ui_is_live(&state) && !ui_is_playback(&state) &&
                !ui_is_file_browser_requested(&state))
         {
+            ui_apply_remote_commands(&state, remote_commands);
+            if (ui_is_live(&state) || ui_is_playback(&state) ||
+                ui_is_file_browser_requested(&state))
+                break;
             if (main_dashboard_refresh_due())
                 show_main_interface(lcd, &state);
             else
@@ -629,15 +715,17 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
         if (ui_is_playback(&state))
         {
             touch_reset_position(touch);
-            playback_run(lcd, &state, &controls, RECORDINGS_DIR, 1);
-            show_main_interface(lcd, &state);
+            playback_run(lcd, &state, &controls, RECORDINGS_DIR, 1,
+                         remote_commands);
+            if (!ui_is_live(&state))
+                show_main_interface(lcd, &state);
             continue;
         }
         if (ui_is_file_browser_requested(&state))
         {
             if (ui_run_file_browser(lcd, touch, recorder, &state, &controls,
                                     &camera_context, &touch_thread,
-                                    &touch_thread_running) == -1)
+                                    &touch_thread_running, remote_commands) == -1)
                 return -1;
             continue;
         }
@@ -650,14 +738,17 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
         }
 
         while (ui_is_live(&state))
+        {
+            ui_apply_remote_commands(&state, remote_commands);
             usleep(10 * 1000);
+        }
 
         pthread_join(camera_thread, NULL);
         if (ui_is_file_browser_requested(&state))
         {
             if (ui_run_file_browser(lcd, touch, recorder, &state, &controls,
                                     &camera_context, &touch_thread,
-                                    &touch_thread_running) == -1)
+                                    &touch_thread_running, remote_commands) == -1)
                 return -1;
             continue;
         }
@@ -666,9 +757,11 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder)
         if (ui_is_playback(&state))
         {
             touch_reset_position(touch);
-            playback_run(lcd, &state, &controls, RECORDINGS_DIR, 1);
+            playback_run(lcd, &state, &controls, RECORDINGS_DIR, 1,
+                         remote_commands);
         }
-        show_main_interface(lcd, &state);
+        if (!ui_is_live(&state))
+            show_main_interface(lcd, &state);
         touch_reset_position(touch);
     }
 }

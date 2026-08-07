@@ -29,6 +29,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/myapp.dir/src/touch.c.o.d"
   "CMakeFiles/myapp.dir/src/ui_flow.c.o"
   "CMakeFiles/myapp.dir/src/ui_flow.c.o.d"
+  "CMakeFiles/myapp.dir/src/ui_remote_commands.c.o"
+  "CMakeFiles/myapp.dir/src/ui_remote_commands.c.o.d"
+  "CMakeFiles/myapp.dir/src/weather_receiver.c.o"
+  "CMakeFiles/myapp.dir/src/weather_receiver.c.o.d"
   "myapp"
   "myapp.pdb"
 )

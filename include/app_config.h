@@ -19,4 +19,12 @@
 #define MAIN_FONT_PATH RESOURCE_DIR "/fonts/SIMHEI.TTF"
 #define MAIN_WEATHER_ICON_DIR RESOURCE_DIR "/Weather"
 
+/* TCP weather/command receiver settings. */
+#ifndef WEATHER_RECEIVER_PORT
+#define WEATHER_RECEIVER_PORT 8080
+#endif
+#ifndef WEATHER_RECEIVER_MAX_PAYLOAD
+#define WEATHER_RECEIVER_MAX_PAYLOAD 8192
+#endif
+
 #endif

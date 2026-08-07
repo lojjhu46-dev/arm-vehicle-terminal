@@ -4,7 +4,7 @@
 # compile C with /usr/local/arm/5.4.0/usr/bin/arm-linux-gcc
 C_DEFINES = -DLV_CONF_PATH=\"/home/gec/workspace/Project/lv_conf.h\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE
 
-C_INCLUDES = -I/home/gec/workspace/Project/include -isystem /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl -isystem /home/gec/workspace/Project -isystem /home/gec/workspace/Project/build/lvgl
+C_INCLUDES = -I/home/gec/workspace/Project/include -I/home/gec/workspace/Project/../freetype/freetype_arm/include -isystem /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl -isystem /home/gec/workspace/Project -isystem /home/gec/workspace/Project/build/lvgl
 
 C_FLAGS = 
 

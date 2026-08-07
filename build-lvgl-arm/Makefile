@@ -547,6 +547,54 @@ src/ui_flow.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/ui_flow.c.s
 .PHONY : src/ui_flow.c.s
 
+src/ui_remote_commands.o: src/ui_remote_commands.c.o
+.PHONY : src/ui_remote_commands.o
+
+# target to build an object file
+src/ui_remote_commands.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/ui_remote_commands.c.o
+.PHONY : src/ui_remote_commands.c.o
+
+src/ui_remote_commands.i: src/ui_remote_commands.c.i
+.PHONY : src/ui_remote_commands.i
+
+# target to preprocess a source file
+src/ui_remote_commands.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/ui_remote_commands.c.i
+.PHONY : src/ui_remote_commands.c.i
+
+src/ui_remote_commands.s: src/ui_remote_commands.c.s
+.PHONY : src/ui_remote_commands.s
+
+# target to generate assembly for a file
+src/ui_remote_commands.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/ui_remote_commands.c.s
+.PHONY : src/ui_remote_commands.c.s
+
+src/weather_receiver.o: src/weather_receiver.c.o
+.PHONY : src/weather_receiver.o
+
+# target to build an object file
+src/weather_receiver.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/weather_receiver.c.o
+.PHONY : src/weather_receiver.c.o
+
+src/weather_receiver.i: src/weather_receiver.c.i
+.PHONY : src/weather_receiver.i
+
+# target to preprocess a source file
+src/weather_receiver.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/weather_receiver.c.i
+.PHONY : src/weather_receiver.c.i
+
+src/weather_receiver.s: src/weather_receiver.c.s
+.PHONY : src/weather_receiver.s
+
+# target to generate assembly for a file
+src/weather_receiver.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/weather_receiver.c.s
+.PHONY : src/weather_receiver.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -606,6 +654,12 @@ help:
 	@echo "... src/ui_flow.o"
 	@echo "... src/ui_flow.i"
 	@echo "... src/ui_flow.s"
+	@echo "... src/ui_remote_commands.o"
+	@echo "... src/ui_remote_commands.i"
+	@echo "... src/ui_remote_commands.s"
+	@echo "... src/weather_receiver.o"
+	@echo "... src/weather_receiver.i"
+	@echo "... src/weather_receiver.s"
 .PHONY : help
 
 

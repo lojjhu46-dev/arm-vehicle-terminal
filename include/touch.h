@@ -14,6 +14,7 @@ typedef struct {
 int touch_open(Touch *touch);                               // 打开触摸设备
 int touch_read(Touch *touch);                               // 读取原始触摸事件
 int touch_read_tap(Touch *touch, int *x, int *y);           // 读取一次完整点击
+int touch_read_pointer(Touch *touch, int *x, int *y, int *pressed); // 读取指针状态
 void touch_get_position(Touch *touch, int *x, int *y);      // 获取最近触摸坐标
 void touch_reset_position(Touch *touch);                    // 重置触摸坐标状态
 void touch_close(Touch *touch);                             // 关闭触摸设备

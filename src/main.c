@@ -1,5 +1,6 @@
 #include <string.h>
 #include <errno.h>
+#include <stdio.h>
 #include "app_config.h"
 #include "camera.h"
 #include "freetype_lcd.h"
@@ -8,6 +9,8 @@
 #include "recorder.h"
 #include "touch.h"
 #include "ui_flow.h"
+#include "ui_remote_commands.h"
+#include "weather_receiver.h"
 
 // 程序入口：初始化 LCD、触摸、录像与摄像头模块，显示开机动画，运行 UI 主循环
 int main(void)
@@ -19,7 +22,9 @@ int main(void)
     Camera camera;
     // 定义结构体存储录像会话与帧路径信息
     Recorder recorder;
+    UiRemoteCommands remote_commands;
     int result;
+    int weather_receiver_started = 0;
 
     memset(&camera, 0, sizeof(camera));
     camera.fd = -1;
@@ -54,15 +59,34 @@ int main(void)
         recorder_destroy(&recorder);
         return -1;
     }
+    if (ui_remote_commands_init(&remote_commands) == -1)
+    {
+        main_weather_destroy();
+        freetype_exit();
+        touch_close(&touch);
+        lcd_close(&lcd);
+        recorder_destroy(&recorder);
+        return -1;
+    }
+    weather_receiver_set_text_handler(ui_remote_commands_handle_text,
+                                      &remote_commands);
+    if (weather_receiver_start() == 0)
+        weather_receiver_started = 1;
+    else
+        fprintf(stderr, "weather receiver disabled: %s\n", strerror(errno));
     //播放开机动画
     show_startup_animation(&lcd);
     //界面显示，切换
-    result = ui_run(&lcd, &touch, &camera, &recorder);
+    result = ui_run(&lcd, &touch, &camera, &recorder, &remote_commands);
     if(result == -1) 
     {
         fprintf(stderr,"mian ui show error:%s\n",strerror(errno));
     }
     camera_close(&camera);
+    if (weather_receiver_started)
+        weather_receiver_stop();
+    weather_receiver_set_text_handler(NULL, NULL);
+    ui_remote_commands_destroy(&remote_commands);
     //最新修改
     recorder_destroy(&recorder);
     //最新修改

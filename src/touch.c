@@ -81,6 +81,27 @@ int touch_read_tap(Touch *touch, int *x, int *y)
         return -1;
     return touch_process_event(touch, &event, x, y);
 }
+
+// 读取一个触摸事件并返回当前坐标和按下状态，供需要拖动输入的界面使用。
+int touch_read_pointer(Touch *touch, int *x, int *y, int *pressed)
+{
+    struct input_event event;
+
+    memset(&event, 0, sizeof(event));
+    if (read(touch->fd, &event, sizeof(event)) != sizeof(event))
+        return -1;
+    (void)touch_process_event(touch, &event, NULL, NULL);
+
+    pthread_mutex_lock(&touch->mutex);
+    if (x != NULL)
+        *x = touch->touchsrceen_x;
+    if (y != NULL)
+        *y = touch->touchsrceen_y;
+    if (pressed != NULL)
+        *pressed = touch->touch_active;
+    pthread_mutex_unlock(&touch->mutex);
+    return 0;
+}
 //最新改动
 
 //最新改动

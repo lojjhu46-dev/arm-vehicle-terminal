@@ -80,6 +80,7 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: \
  /home/gec/workspace/Project/include/live_controls.h \
  /home/gec/workspace/Project/include/lvgl_file_browser.h \
  /home/gec/workspace/Project/include/playback.h \
+ /home/gec/workspace/Project/include/ui_remote_commands.h \
  /home/gec/workspace/Project/include/overlay.h \
  /home/gec/workspace/Project/include/record_indicator.h \
  /home/gec/workspace/Project/include/freetype_lcd.h

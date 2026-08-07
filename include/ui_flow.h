@@ -17,6 +17,7 @@
 #include "live_controls.h"
 #include "lvgl_file_browser.h"
 #include "playback.h"
+#include "ui_remote_commands.h"
 //最新改动
 #include "overlay.h"
 #include "record_indicator.h"
@@ -47,6 +48,7 @@ typedef struct {
 } CameraThreadContext;
 
 void show_startup_animation(Lcd *lcd); // 显示开机动画
-int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder); // 运行主 UI 循环
+int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
+           UiRemoteCommands *remote_commands); // 运行主 UI 循环
 
 #endif

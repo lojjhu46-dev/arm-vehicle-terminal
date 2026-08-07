@@ -43,6 +43,8 @@ set(SREC
     src/recorder.c 
     src/ui_flow.c
     src/main_weather.c
+    src/weather_receiver.c
+    src/ui_remote_commands.c
     src/lvgl_file_browser.c
     src/freetype_lcd.c
 )

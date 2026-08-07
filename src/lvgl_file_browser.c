@@ -36,7 +36,6 @@ typedef struct {
 typedef struct {
     Lcd *lcd;
     Touch *touch;
-    int pending_release;
     int x;
     int y;
 } BrowserInput;
@@ -468,24 +467,18 @@ static void browser_flush_cb(lv_display_t *display, const lv_area_t *area,
 static void browser_input_read_cb(lv_indev_t *indev, lv_indev_data_t *data)
 {
     BrowserInput *input = lv_indev_get_user_data(indev);
+    int pressed;
 
-    if (input->pending_release)
+    if (touch_read_pointer(input->touch, &input->x, &input->y, &pressed) == -1)
     {
         data->point.x = input->x;
         data->point.y = input->y;
         data->state = LV_INDEV_STATE_RELEASED;
-        input->pending_release = 0;
         return;
     }
-    if (touch_read_tap(input->touch, &input->x, &input->y) > 0)
-    {
-        data->point.x = input->x;
-        data->point.y = input->y;
-        data->state = LV_INDEV_STATE_PRESSED;
-        input->pending_release = 1;
-    }
-    else
-        data->state = LV_INDEV_STATE_RELEASED;
+    data->point.x = input->x;
+    data->point.y = input->y;
+    data->state = pressed ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
 }
 
 static void browser_create_ui(BrowserUi *ui)
@@ -551,7 +544,9 @@ static void browser_create_ui(BrowserUi *ui)
 }
 
 int lvgl_file_browser_run(Lcd *lcd, Touch *touch, const char *root_dir,
-                          LvglBrowserSelection *selection)
+                          LvglBrowserSelection *selection,
+                          LvglBrowserInterrupt interrupt,
+                          void *interrupt_data)
 {
     BrowserUi ui;
     BrowserInput input;
@@ -604,6 +599,12 @@ int lvgl_file_browser_run(Lcd *lcd, Touch *touch, const char *root_dir,
     lv_indev_set_read_cb(indev, browser_input_read_cb);
     while (!ui.done)
     {
+        if (interrupt != NULL && interrupt(interrupt_data))
+        {
+            ui.selection->result = LVGL_BROWSER_EXIT;
+            ui.done = 1;
+            continue;
+        }
         lv_timer_handler();
         usleep(5 * 1000);
     }

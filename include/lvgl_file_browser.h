@@ -14,7 +14,11 @@ typedef struct {
     char path[256];
 } LvglBrowserSelection;
 
+typedef int (*LvglBrowserInterrupt)(void *user_data);
+
 int lvgl_file_browser_run(Lcd *lcd, Touch *touch, const char *root_dir,
-                          LvglBrowserSelection *selection);
+                          LvglBrowserSelection *selection,
+                          LvglBrowserInterrupt interrupt,
+                          void *interrupt_data);
 
 #endif

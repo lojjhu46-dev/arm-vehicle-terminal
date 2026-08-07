@@ -211,6 +211,30 @@ src/camera.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/camera.c.s
 .PHONY : src/camera.c.s
 
+src/freetype_lcd.o: src/freetype_lcd.c.o
+.PHONY : src/freetype_lcd.o
+
+# target to build an object file
+src/freetype_lcd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/freetype_lcd.c.o
+.PHONY : src/freetype_lcd.c.o
+
+src/freetype_lcd.i: src/freetype_lcd.c.i
+.PHONY : src/freetype_lcd.i
+
+# target to preprocess a source file
+src/freetype_lcd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/freetype_lcd.c.i
+.PHONY : src/freetype_lcd.c.i
+
+src/freetype_lcd.s: src/freetype_lcd.c.s
+.PHONY : src/freetype_lcd.s
+
+# target to generate assembly for a file
+src/freetype_lcd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/freetype_lcd.c.s
+.PHONY : src/freetype_lcd.c.s
+
 src/image_convert.o: src/image_convert.c.o
 .PHONY : src/image_convert.o
 
@@ -354,6 +378,30 @@ src/main.s: src/main.c.s
 src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/main_weather.o: src/main_weather.c.o
+.PHONY : src/main_weather.o
+
+# target to build an object file
+src/main_weather.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/main_weather.c.o
+.PHONY : src/main_weather.c.o
+
+src/main_weather.i: src/main_weather.c.i
+.PHONY : src/main_weather.i
+
+# target to preprocess a source file
+src/main_weather.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/main_weather.c.i
+.PHONY : src/main_weather.c.i
+
+src/main_weather.s: src/main_weather.c.s
+.PHONY : src/main_weather.s
+
+# target to generate assembly for a file
+src/main_weather.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/main_weather.c.s
+.PHONY : src/main_weather.c.s
 
 src/overlay.o: src/overlay.c.o
 .PHONY : src/overlay.o
@@ -499,6 +547,54 @@ src/ui_flow.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/ui_flow.c.s
 .PHONY : src/ui_flow.c.s
 
+src/ui_remote_commands.o: src/ui_remote_commands.c.o
+.PHONY : src/ui_remote_commands.o
+
+# target to build an object file
+src/ui_remote_commands.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/ui_remote_commands.c.o
+.PHONY : src/ui_remote_commands.c.o
+
+src/ui_remote_commands.i: src/ui_remote_commands.c.i
+.PHONY : src/ui_remote_commands.i
+
+# target to preprocess a source file
+src/ui_remote_commands.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/ui_remote_commands.c.i
+.PHONY : src/ui_remote_commands.c.i
+
+src/ui_remote_commands.s: src/ui_remote_commands.c.s
+.PHONY : src/ui_remote_commands.s
+
+# target to generate assembly for a file
+src/ui_remote_commands.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/ui_remote_commands.c.s
+.PHONY : src/ui_remote_commands.c.s
+
+src/weather_receiver.o: src/weather_receiver.c.o
+.PHONY : src/weather_receiver.o
+
+# target to build an object file
+src/weather_receiver.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/weather_receiver.c.o
+.PHONY : src/weather_receiver.c.o
+
+src/weather_receiver.i: src/weather_receiver.c.i
+.PHONY : src/weather_receiver.i
+
+# target to preprocess a source file
+src/weather_receiver.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/weather_receiver.c.i
+.PHONY : src/weather_receiver.c.i
+
+src/weather_receiver.s: src/weather_receiver.c.s
+.PHONY : src/weather_receiver.s
+
+# target to generate assembly for a file
+src/weather_receiver.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/weather_receiver.c.s
+.PHONY : src/weather_receiver.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -516,6 +612,9 @@ help:
 	@echo "... src/camera.o"
 	@echo "... src/camera.i"
 	@echo "... src/camera.s"
+	@echo "... src/freetype_lcd.o"
+	@echo "... src/freetype_lcd.i"
+	@echo "... src/freetype_lcd.s"
 	@echo "... src/image_convert.o"
 	@echo "... src/image_convert.i"
 	@echo "... src/image_convert.s"
@@ -534,6 +633,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/main_weather.o"
+	@echo "... src/main_weather.i"
+	@echo "... src/main_weather.s"
 	@echo "... src/overlay.o"
 	@echo "... src/overlay.i"
 	@echo "... src/overlay.s"
@@ -552,6 +654,12 @@ help:
 	@echo "... src/ui_flow.o"
 	@echo "... src/ui_flow.i"
 	@echo "... src/ui_flow.s"
+	@echo "... src/ui_remote_commands.o"
+	@echo "... src/ui_remote_commands.i"
+	@echo "... src/ui_remote_commands.s"
+	@echo "... src/weather_receiver.o"
+	@echo "... src/weather_receiver.i"
+	@echo "... src/weather_receiver.s"
 .PHONY : help
 
 
