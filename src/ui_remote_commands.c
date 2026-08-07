@@ -4,6 +4,7 @@
 
 #include "ui_remote_commands.h"
 
+// 将命令请求重置为“未指定”，避免旧状态残留。
 static void clear_request(UiRemoteCommandRequest *request)
 {
     request->recording_target = -1;
@@ -11,8 +12,7 @@ static void clear_request(UiRemoteCommandRequest *request)
     request->take_photo = 0;
 }
 
-/* Accept a natural-language reply, but keep whitespace-padded protocol
- * commands invalid as they were before. */
+/* 接受自然语言回复中的动作短语，但仍拒绝仅由空白包围的协议命令。 */
 static int contains_natural_command(const char *message, const char *command)
 {
     const char *match = strstr(message, command);
@@ -35,6 +35,7 @@ static int contains_natural_command(const char *message, const char *command)
     return 0;
 }
 
+// 初始化远程命令邮箱及其互斥锁。
 int ui_remote_commands_init(UiRemoteCommands *commands)
 {
     if (commands == NULL || pthread_mutex_init(&commands->mutex, NULL) != 0)
@@ -44,6 +45,7 @@ int ui_remote_commands_init(UiRemoteCommands *commands)
     return 0;
 }
 
+// 销毁远程命令邮箱的同步资源。
 void ui_remote_commands_destroy(UiRemoteCommands *commands)
 {
     if (commands != NULL && commands->initialized)
@@ -53,6 +55,7 @@ void ui_remote_commands_destroy(UiRemoteCommands *commands)
     }
 }
 
+// 合并一条远程请求；未指定字段保留已有待执行值。
 void ui_remote_commands_post(UiRemoteCommands *commands,
                              const UiRemoteCommandRequest *request)
 {
@@ -68,6 +71,7 @@ void ui_remote_commands_post(UiRemoteCommands *commands,
     pthread_mutex_unlock(&commands->mutex);
 }
 
+// 取走并清空当前累计的远程命令请求。
 void ui_remote_commands_take(UiRemoteCommands *commands,
                              UiRemoteCommandRequest *request)
 {
@@ -82,6 +86,7 @@ void ui_remote_commands_take(UiRemoteCommands *commands,
     pthread_mutex_unlock(&commands->mutex);
 }
 
+// 判断文件浏览器是否应因远程实时画面请求而中断。
 int ui_remote_commands_has_live_request(UiRemoteCommands *commands)
 {
     int requested = 0;
@@ -95,6 +100,7 @@ int ui_remote_commands_has_live_request(UiRemoteCommands *commands)
     return requested;
 }
 
+// 解析 TCP 文本，将可识别动作投递给 UI 线程并生成协议回复。
 int ui_remote_commands_handle_text(const char *message, char *reply,
                                    size_t reply_size, void *user_data)
 {
@@ -106,9 +112,7 @@ int ui_remote_commands_handle_text(const char *message, char *reply,
     if (message == NULL || reply == NULL || reply_size == 0 || commands == NULL)
         return -1;
     clear_request(&request);
-    /* The AI client sends its natural-language reply to the board. Keep the
-     * exact protocol commands, while accepting the action phrase in a reply
-     * such as "已收到，开始录像。". */
+    /* AI 回复可含动作短语，例如“已收到，开始录像。”。 */
     if (contains_natural_command(message, "开始录像"))
     {
         request.recording_target = 1;

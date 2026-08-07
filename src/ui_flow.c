@@ -19,6 +19,7 @@ static void show_image_all_pages(Lcd *lcd, const char *filename)
 static time_t main_dashboard_minute = (time_t)-1;
 static unsigned long main_dashboard_weather_version;
 
+// 返回当前本地时间对应的分钟序号。
 static time_t current_minute(void)
 {
     struct timeval now;
@@ -28,12 +29,14 @@ static time_t current_minute(void)
     return (time_t)(now.tv_sec / 60);
 }
 
+// 判断时钟或天气版本是否要求重绘主界面。
 static int main_dashboard_refresh_due(void)
 {
     return main_dashboard_minute != current_minute() ||
            main_dashboard_weather_version != main_weather_version();
 }
 
+// 在主界面底图上叠加时间、日期和天气信息。
 static void draw_main_dashboard(Lcd *lcd)
 {
     static const char *const weekdays[] = {
@@ -87,6 +90,7 @@ static void draw_main_dashboard(Lcd *lcd)
     (void)lcd_show_page(lcd, 0);
 }
 
+// 依次刷写开机动画帧，结束后显示主界面。
 void show_startup_animation(Lcd *lcd)
 {
     char *frames[] = {
@@ -122,12 +126,36 @@ static int is_main_file_manager_touch(int x, int y)
 {
     return x > 195 && x < 310 && y > 160 && y < 305;
 }
+
+// 主界面右下角的“更多应用”入口。
+static int is_more_apps_touch(int x, int y)
+{
+    return x > 635 && x < 770 && y > 325 && y < 465;
+}
+
+// 扩展页底部中央的“去登录”按钮。
+static int is_expand_login_touch(int x, int y)
+{
+    return x > 345 && x < 585 && y > 375 && y < 435;
+}
+
 //最新改动
 
 #define UI_ACTION_RECORD_TOGGLE 0x01U
 #define UI_ACTION_PHOTO 0x02U
 #define UI_ACTION_RECORD_START 0x04U
 #define UI_ACTION_RECORD_STOP 0x08U
+
+#define BACK_BUTTON_X 5
+#define BACK_BUTTON_Y 5
+#define BACK_BUTTON_WIDTH 60
+#define BACK_BUTTON_HEIGHT 68
+
+typedef struct {
+    int *pixels;
+    int width;
+    int height;
+} BackButton;
 
 //最新改动
 // 获取 LCD 二值信号量，并在信号中断时继续等待。
@@ -151,6 +179,7 @@ static int ui_is_live(UiState *state)
     return live_mode;
 }
 
+// 在线程安全条件下读取触摸线程运行标志。
 static int ui_touch_running(UiState *state)
 {
     int running;
@@ -161,6 +190,68 @@ static int ui_touch_running(UiState *state)
     return running;
 }
 
+// 在线程安全条件下读取当前图片页面状态。
+static int ui_get_screen(UiState *state)
+{
+    int screen;
+
+    pthread_mutex_lock(&state->state_mutex);
+    screen = state->screen;
+    pthread_mutex_unlock(&state->state_mutex);
+    return screen;
+}
+
+// 切换图片页面状态，由主循环负责实际刷图。
+static void ui_set_screen(UiState *state, int screen)
+{
+    pthread_mutex_lock(&state->state_mutex);
+    state->screen = screen;
+    pthread_mutex_unlock(&state->state_mutex);
+}
+
+// 返回会员页面链路中的上一级页面。
+static int ui_previous_screen(int screen)
+{
+    switch (screen)
+    {
+    case UI_SCREEN_SANCTUARY:
+        return UI_SCREEN_LOGIN;
+    case UI_SCREEN_LOGIN:
+        return UI_SCREEN_EXPAND;
+    case UI_SCREEN_EXPAND:
+    default:
+        return UI_SCREEN_MAIN;
+    }
+}
+
+// 判断触摸点是否命中图片页面左上角返回按钮。
+static int is_back_button_touch(int x, int y)
+{
+    return x >= BACK_BUTTON_X && x < BACK_BUTTON_X + BACK_BUTTON_WIDTH &&
+           y >= BACK_BUTTON_Y && y < BACK_BUTTON_Y + BACK_BUTTON_HEIGHT;
+}
+
+// 处理登录页点击，并将短信发送或登录成功动作交给对应模块。
+static void ui_handle_member_login_tap(CameraThreadContext *context, int x, int y)
+{
+    MemberSmsRequest request;
+    MemberLoginAction action;
+
+    action = member_login_handle_tap(context->member_login, x, y, &request);
+    if (action == MEMBER_LOGIN_ACTION_SEND_SMS)
+    {
+        if (member_sms_worker_start(context->sms_worker, context->member_login,
+                                    &request) == -1)
+            member_login_set_sms_start_failed(context->member_login, &request);
+    }
+    else if (action == MEMBER_LOGIN_ACTION_SUCCESS)
+    {
+        member_login_reset(context->member_login);
+        ui_set_screen(context->state, UI_SCREEN_SANCTUARY);
+    }
+}
+
+// 读取是否有待执行的文件浏览器请求。
 static int ui_is_file_browser_requested(UiState *state)
 {
     int requested;
@@ -171,6 +262,7 @@ static int ui_is_file_browser_requested(UiState *state)
     return requested;
 }
 
+// 请求切换到文件浏览器，并停止触摸线程让 LVGL 独占输入。
 static void ui_request_file_browser(UiState *state)
 {
     pthread_mutex_lock(&state->state_mutex);
@@ -181,6 +273,7 @@ static void ui_request_file_browser(UiState *state)
     pthread_mutex_unlock(&state->state_mutex);
 }
 
+// 文件浏览器结束后恢复触摸线程及可选回放状态。
 static void ui_finish_file_browser(UiState *state, int playback)
 {
     pthread_mutex_lock(&state->state_mutex);
@@ -245,6 +338,7 @@ static void ui_set_recording(UiState *state, int recording)
 }
 //最新改动
 
+// 切换倒车辅助线并返回切换后的状态。
 static int ui_toggle_parking_guides(UiState *state)
 {
     int enabled;
@@ -256,6 +350,7 @@ static int ui_toggle_parking_guides(UiState *state)
     return enabled;
 }
 
+// 在线程安全条件下读取倒车辅助线开关。
 static int ui_parking_guides_enabled(UiState *state)
 {
     int enabled;
@@ -266,6 +361,7 @@ static int ui_parking_guides_enabled(UiState *state)
     return enabled;
 }
 
+// 按指定值更新倒车辅助线开关。
 static void ui_set_parking_guides(UiState *state, int enabled)
 {
     pthread_mutex_lock(&state->state_mutex);
@@ -273,6 +369,7 @@ static void ui_set_parking_guides(UiState *state, int enabled)
     pthread_mutex_unlock(&state->state_mutex);
 }
 
+// 将摄像头动作合并到待执行位图。
 static void ui_queue_action(UiState *state, unsigned int action)
 {
     pthread_mutex_lock(&state->state_mutex);
@@ -280,6 +377,7 @@ static void ui_queue_action(UiState *state, unsigned int action)
     pthread_mutex_unlock(&state->state_mutex);
 }
 
+// 取走摄像头线程待执行动作，确保每条动作只消费一次。
 static unsigned int ui_take_actions(UiState *state)
 {
     unsigned int actions;
@@ -291,7 +389,7 @@ static unsigned int ui_take_actions(UiState *state)
     return actions;
 }
 
-/* The UI thread converts mailbox entries into work for the camera thread. */
+// 将远程命令邮箱转换为 UI 状态和摄像头待执行动作。
 static void ui_apply_remote_commands(UiState *state, UiRemoteCommands *commands)
 {
     UiRemoteCommandRequest request;
@@ -318,8 +416,7 @@ static void ui_apply_remote_commands(UiState *state, UiRemoteCommands *commands)
     }
 }
 
-//最新改动
-// 在获得 LCD 信号量后刷新主界面图片。
+// 在 LCD 写入锁保护下刷主界面底图和动态信息。
 static void show_main_interface(Lcd *lcd, UiState *state)
 {
     lcd_sem_wait(state);
@@ -329,8 +426,7 @@ static void show_main_interface(Lcd *lcd, UiState *state)
 }
 //最新改动
 
-//最新改动
-// 持续读取完整点击，并将其路由到主界面或实时画面的对应按钮。
+// 持续读取完整点击，并按当前页面或实时画面分发操作。
 static void *touch_thread_main(void *argument)
 {
     CameraThreadContext *context = argument;
@@ -355,9 +451,37 @@ static void *touch_thread_main(void *argument)
             if (live_controls_hit_test(x, y) == LIVE_CONTROL_EXIT)
                 ui_stop_playback(context->state);
         }
-        else if (!ui_is_live(context->state) && is_camera_entry_touch(x, y))
+        else if (!ui_is_live(context->state) &&
+                 ui_get_screen(context->state) != UI_SCREEN_MAIN &&
+                 is_back_button_touch(x, y))
+        {
+            int screen = ui_get_screen(context->state);
+
+            if (screen == UI_SCREEN_LOGIN)
+                member_login_reset(context->member_login);
+            ui_set_screen(context->state, ui_previous_screen(screen));
+        }
+        else if (!ui_is_live(context->state) &&
+                 ui_get_screen(context->state) == UI_SCREEN_MAIN &&
+                 is_more_apps_touch(x, y))
+            ui_set_screen(context->state, UI_SCREEN_EXPAND);
+        else if (!ui_is_live(context->state) &&
+                 ui_get_screen(context->state) == UI_SCREEN_EXPAND &&
+                 is_expand_login_touch(x, y))
+        {
+            member_login_reset(context->member_login);
+            ui_set_screen(context->state, UI_SCREEN_LOGIN);
+        }
+        else if (!ui_is_live(context->state) &&
+                 ui_get_screen(context->state) == UI_SCREEN_LOGIN)
+            ui_handle_member_login_tap(context, x, y);
+        else if (!ui_is_live(context->state) &&
+                 ui_get_screen(context->state) == UI_SCREEN_MAIN &&
+                 is_camera_entry_touch(x, y))
             ui_set_live(context->state, 1);
-        else if (!ui_is_live(context->state) && is_main_file_manager_touch(x, y))
+        else if (!ui_is_live(context->state) &&
+                 ui_get_screen(context->state) == UI_SCREEN_MAIN &&
+                 is_main_file_manager_touch(x, y))
             ui_request_file_browser(context->state);
         else if (ui_is_live(context->state))
         {
@@ -603,11 +727,13 @@ static void *camera_thread_main(void *argument)
 //最新修改
 
 //最新修改
+// 查询远程实时请求，用于中断文件浏览器循环。
 static int ui_file_browser_interrupt(void *argument)
 {
     return ui_remote_commands_has_live_request(argument);
 }
 
+// 暂停普通触摸流程，运行 LVGL 浏览器并恢复后续页面状态。
 static int ui_run_file_browser(Lcd *lcd, Touch *touch, Recorder *recorder,
                                UiState *state, LiveControls *controls,
                                CameraThreadContext *camera_context,
@@ -641,6 +767,100 @@ static int ui_run_file_browser(Lcd *lcd, Touch *touch, Recorder *recorder,
     return 0;
 }
 
+// 返回指定图片页面对应的 JPEG 资源路径。
+static const char *ui_screen_image(int screen)
+{
+    switch (screen)
+    {
+    case UI_SCREEN_EXPAND:
+        return RESOURCE_DIR "/expand.jpg";
+    case UI_SCREEN_LOGIN:
+        return RESOURCE_DIR "/Menberslogin.jpg";
+    case UI_SCREEN_SANCTUARY:
+        return RESOURCE_DIR "/MembersSanctuary.jpg";
+    default:
+        return RESOURCE_DIR "/logo/mian_UI.jpeg";
+    }
+}
+
+// 加载并校验所有会员图片页面共用的返回按钮资源。
+static int back_button_init(BackButton *button)
+{
+    memset(button, 0, sizeof(*button));
+    if (read_JPEG_image(RESOURCE_DIR "/back.jpg", &button->pixels,
+                        &button->width, &button->height) == -1)
+        return -1;
+    if (button->width != BACK_BUTTON_WIDTH || button->height != BACK_BUTTON_HEIGHT)
+    {
+        free(button->pixels);
+        memset(button, 0, sizeof(*button));
+        return -1;
+    }
+    return 0;
+}
+
+// 释放返回按钮像素缓冲。
+static void back_button_destroy(BackButton *button)
+{
+    free(button->pixels);
+    memset(button, 0, sizeof(*button));
+}
+
+// 将返回按钮绘制到图片页面左上角。
+static void draw_back_button(int *framebuffer, const BackButton *button)
+{
+    for (int y = 0; y < button->height; ++y)
+    {
+        for (int x = 0; x < button->width; ++x)
+            framebuffer[(BACK_BUTTON_Y + y) * LCD_WIDTH + BACK_BUTTON_X + x] =
+                button->pixels[y * button->width + x];
+    }
+}
+
+// 用 FreeType 将登录状态快照叠加到登录图片的输入栏。
+static void draw_member_login_fields(int *framebuffer,
+                                     const MemberLoginSnapshot *snapshot)
+{
+    freetype_set_lcd((unsigned int *)framebuffer);
+    freetype_set_size(22);
+    if (snapshot->phone[0] != '\0')
+        lcd_draw_text(420, 134, snapshot->phone, 0xe8edf7);
+    if (snapshot->code[0] != '\0')
+        lcd_draw_text(420, 188, snapshot->code, 0xe8edf7);
+    if (snapshot->status[0] != '\0')
+    {
+        freetype_set_size(15);
+        lcd_draw_text(384, 278, snapshot->status, 0xffc36d);
+    }
+}
+
+// 刷写会员图片页面；登录页额外叠加返回按钮和输入状态。
+static void show_screen_image(Lcd *lcd, UiState *state, int screen,
+                              const BackButton *back_button,
+                              MemberLogin *member_login,
+                              unsigned long *login_version)
+{
+    MemberLoginSnapshot login_snapshot;
+    int draw_login = screen == UI_SCREEN_LOGIN;
+
+    if (draw_login)
+        member_login_snapshot(member_login, &login_snapshot);
+    lcd_sem_wait(state);
+    for (int page = 0; page < lcd_page_count(lcd); ++page)
+    {
+        int *framebuffer = lcd_page_pixels(lcd, page);
+
+        read_JPEG_file(ui_screen_image(screen), framebuffer);
+        draw_back_button(framebuffer, back_button);
+        if (draw_login)
+            draw_member_login_fields(framebuffer, &login_snapshot);
+    }
+    (void)lcd_show_page(lcd, 0);
+    sem_post(&state->lcd_sem);
+    if (draw_login && login_version != NULL)
+        *login_version = login_snapshot.version;
+}
+
 // 初始化同步对象并协调触摸与三页摄像头线程生命周期。
 int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
            UiRemoteCommands *remote_commands)
@@ -649,8 +869,13 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
     CameraThreadContext camera_context;
     LiveControls controls;
     RecordIndicator indicator;
+    BackButton back_button;
+    MemberLogin member_login;
+    MemberSmsWorker sms_worker;
     pthread_t touch_thread;
     int touch_thread_running = 0;
+    int displayed_screen = UI_SCREEN_MAIN;
+    unsigned long displayed_login_version = 0;
 
     memset(&state, 0, sizeof(state));
     if (sem_init(&state.lcd_sem, 0, 1) == -1 ||
@@ -658,6 +883,7 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
         return -1;
 
     state.touch_running = 1;
+    state.screen = UI_SCREEN_MAIN;
     state.parking_guides_enabled = 1;
     if (live_controls_init(&controls) == -1)
     {
@@ -675,6 +901,37 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
         sem_destroy(&state.lcd_sem);
         return -1;
     }
+    if (back_button_init(&back_button) == -1)
+    {
+        fprintf(stderr, "missing or invalid back-button asset: %s/back.jpg\n",
+                RESOURCE_DIR);
+        record_indicator_destroy(&indicator);
+        live_controls_destroy(&controls);
+        pthread_mutex_destroy(&state.state_mutex);
+        sem_destroy(&state.lcd_sem);
+        return -1;
+    }
+    if (member_login_init(&member_login) == -1)
+    {
+        fprintf(stderr, "failed to initialize member login\n");
+        back_button_destroy(&back_button);
+        record_indicator_destroy(&indicator);
+        live_controls_destroy(&controls);
+        pthread_mutex_destroy(&state.state_mutex);
+        sem_destroy(&state.lcd_sem);
+        return -1;
+    }
+    if (member_sms_worker_init(&sms_worker) == -1)
+    {
+        fprintf(stderr, "failed to initialize member SMS worker\n");
+        member_login_destroy(&member_login);
+        back_button_destroy(&back_button);
+        record_indicator_destroy(&indicator);
+        live_controls_destroy(&controls);
+        pthread_mutex_destroy(&state.state_mutex);
+        sem_destroy(&state.lcd_sem);
+        return -1;
+    }
     memset(&camera_context, 0, sizeof(camera_context));
     camera_context.lcd = lcd;
     camera_context.touch = touch;
@@ -683,9 +940,14 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
     camera_context.controls = &controls;
     camera_context.indicator = &indicator;
     camera_context.state = &state;
+    camera_context.member_login = &member_login;
+    camera_context.sms_worker = &sms_worker;
 
     if (pthread_create(&touch_thread, NULL, touch_thread_main, &camera_context) != 0)
     {
+        member_sms_worker_destroy(&sms_worker);
+        member_login_destroy(&member_login);
+        back_button_destroy(&back_button);
         record_indicator_destroy(&indicator);
         live_controls_destroy(&controls);
         pthread_mutex_destroy(&state.state_mutex);
@@ -697,8 +959,27 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
     for (;;)
     {
         pthread_t camera_thread;
+        int screen;
+        MemberLoginSnapshot login_snapshot;
 
         ui_apply_remote_commands(&state, remote_commands);
+        screen = ui_get_screen(&state);
+        if (screen == UI_SCREEN_LOGIN)
+            member_login_snapshot(&member_login, &login_snapshot);
+        /* 登录输入变化也需要重新刷底图，才能清除旧数字和状态提示。 */
+        if (!ui_is_live(&state) && !ui_is_playback(&state) &&
+            !ui_is_file_browser_requested(&state) &&
+            (screen != displayed_screen ||
+             (screen == UI_SCREEN_LOGIN &&
+              login_snapshot.version != displayed_login_version)))
+        {
+            if (screen == UI_SCREEN_MAIN)
+                show_main_interface(lcd, &state);
+            else
+                show_screen_image(lcd, &state, screen, &back_button,
+                                  &member_login, &displayed_login_version);
+            displayed_screen = screen;
+        }
         while (!ui_is_live(&state) && !ui_is_playback(&state) &&
                !ui_is_file_browser_requested(&state))
         {
@@ -706,10 +987,21 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
             if (ui_is_live(&state) || ui_is_playback(&state) ||
                 ui_is_file_browser_requested(&state))
                 break;
+            if (ui_get_screen(&state) != UI_SCREEN_MAIN)
+                break;
             if (main_dashboard_refresh_due())
                 show_main_interface(lcd, &state);
             else
                 usleep(250 * 1000);
+        }
+
+        if (!ui_is_live(&state) && !ui_is_playback(&state) &&
+            !ui_is_file_browser_requested(&state) &&
+            ui_get_screen(&state) != UI_SCREEN_MAIN)
+        {
+            /* 图片页面没有独立线程，以短轮询等待触摸或短信状态变化。 */
+            usleep(50 * 1000);
+            continue;
         }
 
         if (ui_is_playback(&state))
@@ -762,6 +1054,7 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
         }
         if (!ui_is_live(&state))
             show_main_interface(lcd, &state);
+        displayed_screen = UI_SCREEN_MAIN;
         touch_reset_position(touch);
     }
 }

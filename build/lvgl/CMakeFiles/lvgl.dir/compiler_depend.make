@@ -6,7 +6,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_group.c.o: /home/gec/workspace/lvgl_project
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -230,7 +230,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj.c.o: /home/gec/workspace/lvgl_project/l
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -398,7 +398,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj_class.c.o: /home/gec/workspace/lvgl_pro
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_class.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -547,7 +547,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj_draw.c.o: /home/gec/workspace/lvgl_proj
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -678,7 +678,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj_event.c.o: /home/gec/workspace/lvgl_pro
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_event_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_event.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -827,7 +827,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj_id_builtin.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_class.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -1046,7 +1046,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj_pos.c.o: /home/gec/workspace/lvgl_proje
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -1289,7 +1289,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj_property.c.o: /home/gec/workspace/lvgl_
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -1428,7 +1428,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj_scroll.c.o: /home/gec/workspace/lvgl_pr
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_scroll.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -1564,7 +1564,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj_style.c.o: /home/gec/workspace/lvgl_pro
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -1801,7 +1801,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj_style_gen.c.o: /home/gec/workspace/lvgl
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -1933,7 +1933,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_obj_tree.c.o: /home/gec/workspace/lvgl_proj
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -2176,7 +2176,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_observer.c.o: /home/gec/workspace/lvgl_proj
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_observer.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -2310,7 +2310,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_refr.c.o: /home/gec/workspace/lvgl_project/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_refr.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -2535,7 +2535,7 @@ lvgl/CMakeFiles/lvgl.dir/src/debugging/monkey/lv_monkey.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/monkey/lv_monkey_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/monkey/lv_monkey.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -2580,7 +2580,7 @@ lvgl/CMakeFiles/lvgl.dir/src/debugging/sysmon/lv_sysmon.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/sysmon/lv_sysmon.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_timer.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/tick/lv_tick.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -2721,53 +2721,53 @@ lvgl/CMakeFiles/lvgl.dir/src/debugging/test/lv_test_display.c.o: /home/gec/works
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/debugging/test/lv_test_fs.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test_fs.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test_fs.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/debugging/test/lv_test_helpers.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test_helpers.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test_helpers.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/debugging/test/lv_test_indev.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test_indev.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/debugging/test/lv_test_indev_gesture.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test_indev_gesture.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/debugging/test/lv_test_screenshot_compare.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test_screenshot_compare.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/debugging/vg_lite_tvg/vg_lite_matrix.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/vg_lite_tvg/vg_lite_matrix.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/debugging/vg_lite_tvg/vg_lite_tvg.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/vg_lite_tvg/vg_lite_tvg.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/display/lv_display.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -3022,14 +3022,14 @@ lvgl/CMakeFiles/lvgl.dir/src/display/lv_display.c.o: /home/gec/workspace/lvgl_pr
 lvgl/CMakeFiles/lvgl.dir/src/draw/convert/helium/lv_draw_buf_convert_helium.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/convert/helium/lv_draw_buf_convert_helium.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/convert/lv_draw_buf_convert.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/convert/lv_draw_buf_convert.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/convert/lv_draw_buf_convert.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_color.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_assert.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_log.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -3072,55 +3072,55 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/convert/lv_draw_buf_convert.c.o: /home/gec/wor
 lvgl/CMakeFiles/lvgl.dir/src/draw/convert/neon/lv_draw_buf_convert_neon.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/convert/neon/lv_draw_buf_convert_neon.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/dma2d/lv_draw_dma2d.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/dma2d/lv_draw_dma2d.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/dma2d/lv_draw_dma2d_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/dma2d/lv_draw_dma2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/dma2d/lv_draw_dma2d_fill.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/dma2d/lv_draw_dma2d_fill.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/dma2d/lv_draw_dma2d_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/dma2d/lv_draw_dma2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/dma2d/lv_draw_dma2d_img.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/dma2d/lv_draw_dma2d_img.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/dma2d/lv_draw_dma2d_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/dma2d/lv_draw_dma2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/espressif/ppa/lv_draw_ppa.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/espressif/ppa/lv_draw_ppa_buf.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa_buf.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/espressif/ppa/lv_draw_ppa_fill.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa_fill.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/espressif/ppa/lv_draw_ppa_img.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa_img.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/espressif/ppa/lv_draw_ppa.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/eve/lv_draw_eve.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve.c \
@@ -3128,69 +3128,69 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/eve/lv_draw_eve.c.o: /home/gec/workspace/lvgl_
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/eve/lv_draw_eve_arc.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_arc.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/eve/lv_draw_eve_fill.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_fill.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/eve/lv_draw_eve_image.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_image.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/eve/lv_draw_eve_letter.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_letter.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/eve/lv_draw_eve_line.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_line.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/eve/lv_draw_eve_ram_g.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_ram_g.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/eve/lv_draw_eve_triangle.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_triangle.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/eve/lv_eve.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_eve.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/eve/lv_draw_eve.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -3430,14 +3430,14 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_3d.c.o: /home/gec/workspace/lvgl_proje
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_3d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_arc.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_arc.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -3595,7 +3595,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_blur.c.o: /home/gec/workspace/lvgl_pro
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -3702,7 +3702,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_buf.c.o: /home/gec/workspace/lvgl_proj
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -3932,7 +3932,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_image.c.o: /home/gec/workspace/lvgl_pr
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_image.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -4097,7 +4097,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_label.c.o: /home/gec/workspace/lvgl_pr
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_label.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -4331,7 +4331,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_line.c.o: /home/gec/workspace/lvgl_pro
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -4489,7 +4489,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_mask.c.o: /home/gec/workspace/lvgl_pro
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_mask.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -4650,7 +4650,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_rect.c.o: /home/gec/workspace/lvgl_pro
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_rect.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -4813,7 +4813,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_triangle.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_rect.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -4975,7 +4975,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_draw_vector.c.o: /home/gec/workspace/lvgl_p
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_array.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -5081,7 +5081,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/lv_image_decoder.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -5310,7 +5310,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -5335,104 +5335,104 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_3d.c.o: /home/gec/worksp
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_arc.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_arc.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_border.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_border.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_box_shadow.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_box_shadow.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_fill.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_fill.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_grad.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_grad.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_image.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_image.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_label.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_label.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_layer.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_layer.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_line.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_line.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_mask_rect.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_mask_rect.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_triangle.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_triangle.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_draw_nanovg_vector.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_vector.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_draw_nanovg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_nanovg_fbo_cache.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_nanovg_fbo_cache.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_nanovg_fbo_cache.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_nanovg_image_cache.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_nanovg_image_cache.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_nanovg_image_cache.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nanovg/lv_nanovg_utils.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_nanovg_utils.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nanovg/lv_nanovg_utils.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_refr.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -5563,73 +5563,73 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_arc.c.o: /home/gec/w
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_border.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_border.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_fill.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_fill.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_img.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_img.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_label.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_label.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_layer.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_layer.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_line.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_line.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_stm32_hal.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_stm32_hal.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_triangle.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_triangle.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_utils.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_utils.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_draw_nema_gfx_vector.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_vector.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nema_gfx/lv_nema_gfx_path.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nema_gfx/lv_nema_gfx_path.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_refr.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -5760,158 +5760,158 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/g2d/lv_draw_buf_g2d.c.o: /home/gec/workspa
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_draw_g2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/g2d/lv_draw_g2d.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_draw_g2d.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_draw_g2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/g2d/lv_draw_g2d_fill.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_draw_g2d_fill.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_draw_g2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/g2d/lv_draw_g2d_img.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_draw_g2d_img.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_draw_g2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/g2d/lv_g2d_buf_map.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_g2d_buf_map.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_g2d_buf_map.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/g2d/lv_g2d_utils.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_g2d_utils.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_g2d_utils.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/pxp/lv_draw_buf_pxp.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_draw_buf_pxp.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_draw_pxp.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/pxp/lv_draw_pxp.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_draw_pxp.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_draw_pxp.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/pxp/lv_draw_pxp_fill.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_draw_pxp_fill.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_draw_pxp.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/pxp/lv_draw_pxp_img.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_draw_pxp_img.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_draw_pxp.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/pxp/lv_draw_pxp_layer.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_draw_pxp_layer.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_draw_pxp.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/pxp/lv_pxp_cfg.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_pxp_cfg.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_pxp_cfg.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/pxp/lv_pxp_osa.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_pxp_osa.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_pxp_osa.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/nxp/pxp/lv_pxp_utils.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_pxp_utils.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/pxp/lv_pxp_utils.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/opengles/lv_draw_opengles.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/opengles/lv_draw_opengles.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/opengles/lv_draw_opengles.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/renesas/dave2d/lv_draw_dave2d.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/renesas/dave2d/lv_draw_dave2d_arc.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_arc.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/renesas/dave2d/lv_draw_dave2d_border.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_border.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/renesas/dave2d/lv_draw_dave2d_fill.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_fill.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/renesas/dave2d/lv_draw_dave2d_image.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_image.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/renesas/dave2d/lv_draw_dave2d_label.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_label.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/renesas/dave2d/lv_draw_dave2d_line.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_line.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/renesas/dave2d/lv_draw_dave2d_mask_rectangle.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_mask_rectangle.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/renesas/dave2d/lv_draw_dave2d_triangle.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_triangle.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/renesas/dave2d/lv_draw_dave2d_utils.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d_utils.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/renesas/dave2d/lv_draw_dave2d.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/sdl/lv_draw_sdl.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sdl/lv_draw_sdl.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -6014,7 +6014,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/snapshot/lv_snapshot.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -6171,7 +6171,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/lv_draw_sw_blend.c.o: /home/gec/works
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -6313,7 +6313,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/lv_draw_sw_blend_to_a8.c.o: /home/gec
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -6474,7 +6474,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/lv_draw_sw_blend_to_al88.c.o: /home/g
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -6635,7 +6635,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888.c.o: /ho
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -6796,7 +6796,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/lv_draw_sw_blend_to_argb8888_premulti
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -6956,7 +6956,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/lv_draw_sw_blend_to_i1.c.o: /home/gec
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -7117,7 +7117,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/lv_draw_sw_blend_to_l8.c.o: /home/gec
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -7278,7 +7278,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565.c.o: /home
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -7439,7 +7439,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565_swapped.c.
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -7600,7 +7600,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/lv_draw_sw_blend_to_rgb888.c.o: /home
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -7759,13 +7759,13 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb888.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb888.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb888.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -7779,7 +7779,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/riscv_v/lv_draw_sw_blend_riscv_v_to_r
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/blend/riscv_v/lv_draw_sw_blend_riscv_v_to_rgb888.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -7787,7 +7787,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw.c.o: /home/gec/workspace/lvgl_pr
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -8006,7 +8006,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_arc.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -8151,7 +8151,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_blur.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -8323,7 +8323,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_border.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -8499,7 +8499,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_box_shadow.c.o: /home/gec/worksp
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -8717,7 +8717,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_fill.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -8895,7 +8895,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_grad.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw_grad.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_color.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_assert.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_log.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -8972,7 +8972,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_img.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -9207,7 +9207,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_letter.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw_mask.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -9387,7 +9387,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_line.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -9569,7 +9569,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_mask.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw_mask.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -9794,7 +9794,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_mask_rect.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -9938,7 +9938,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_transform.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -10095,7 +10095,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_triangle.c.o: /home/gec/workspac
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw_mask.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -10240,7 +10240,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_utils.c.o: /home/gec/workspace/l
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/lv_draw_sw_utils.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -10293,7 +10293,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/sw/lv_draw_sw_vector.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -10422,117 +10422,117 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_buf_vg_lite.c.o: /home/gec/wor
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_arc.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_arc.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_border.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_border.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_box_shadow.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_box_shadow.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_fill.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_fill.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_img.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_img.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_label.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_layer.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_layer.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_line.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_line.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_mask_rect.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_mask_rect.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_triangle.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_triangle.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_draw_vg_lite_vector.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite_vector.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_draw_vg_lite.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_vg_lite_bitmap_font_cache.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_bitmap_font_cache.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_bitmap_font_cache.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_vg_lite_decoder.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_decoder.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_vg_lite_grad.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_grad.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_grad.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_vg_lite_math.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_math.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_math.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_vg_lite_path.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_path.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_path.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_utils.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_vg_lite_pending.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_pending.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_pending.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -10558,13 +10558,13 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_vg_lite_stroke.c.o: /home/gec/works
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_stroke.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_utils.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_vg_lite_utils.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_utils.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_utils.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/display/drm/lv_linux_drm.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/drm/lv_linux_drm.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -10572,7 +10572,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/drm/lv_linux_drm.c.o: /home/gec/wor
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -10619,7 +10619,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/drm/lv_linux_drm_common.c.o: /home/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -10666,7 +10666,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/drm/lv_linux_drm_egl.c.o: /home/gec
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -10713,7 +10713,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/fb/lv_linux_fbdev.c.o: /home/gec/wo
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -10758,7 +10758,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/ft81x/lv_ft81x.c.o: /home/gec/works
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/ft81x/lv_ft81x.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/display/ili9341/lv_ili9341.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/ili9341/lv_ili9341.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -10767,7 +10767,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/ili9341/lv_ili9341.c.o: /home/gec/w
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -10814,7 +10814,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/lcd/lv_lcd_generic_mipi.c.o: /home/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -10861,7 +10861,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/lovyan_gfx/lv_lovyan_gfx.cpp.o: /ho
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -10919,7 +10919,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/nv3007/lv_nv3007.c.o: /home/gec/wor
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -10968,7 +10968,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/nxp_elcdif/lv_nxp_elcdif.c.o: /home
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -11409,7 +11409,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/renesas_glcdc/lv_renesas_glcdc.c.o:
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -11457,7 +11457,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/st7735/lv_st7735.c.o: /home/gec/wor
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -11505,7 +11505,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/st7789/lv_st7789.c.o: /home/gec/wor
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -11553,7 +11553,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/st7796/lv_st7796.c.o: /home/gec/wor
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -11597,7 +11597,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/st7796/lv_st7796.c.o: /home/gec/wor
 lvgl/CMakeFiles/lvgl.dir/src/drivers/display/st_ltdc/lv_st_ltdc.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/st_ltdc/lv_st_ltdc.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/display/tft_espi/lv_tft_espi.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/tft_espi/lv_tft_espi.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -11605,7 +11605,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/tft_espi/lv_tft_espi.cpp.o: /home/g
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -11652,7 +11652,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/draw/eve/lv_draw_eve_display.c.o: /home/gec
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/draw/eve/lv_draw_eve_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/evdev/lv_evdev.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/evdev/lv_evdev.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -11661,7 +11661,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/evdev/lv_evdev.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -11702,7 +11702,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/libinput/lv_libinput.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -11840,7 +11840,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/libinput/lv_xkb.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/libinput/lv_xkb_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/libinput/lv_xkb.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_cache.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/nuttx/lv_nuttx_cache.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -11849,7 +11849,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_cache.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -12286,7 +12286,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_entry.c.o: /home/gec/workspa
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/nuttx/lv_nuttx_entry.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -12344,7 +12344,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_fbdev.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -12389,7 +12389,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_image_cache.c.o: /home/gec/w
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/nuttx/lv_nuttx_image_cache.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdbool.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_global.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -12917,7 +12917,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_lcd.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -12964,7 +12964,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_libuv.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -13683,7 +13683,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_mouse.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -13723,7 +13723,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_profiler.c.o: /home/gec/work
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/nuttx/lv_nuttx_profiler.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_touchscreen.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/nuttx/lv_nuttx_touchscreen.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -13731,7 +13731,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_touchscreen.c.o: /home/gec/w
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -13772,43 +13772,43 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/assets/lv_opengles_shader.c.o: /ho
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/assets/lv_opengles_shader.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/opengl_shader/lv_opengl_shader_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/glad/src/egl.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/glad/src/egl.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/glad/src/gl.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/glad/src/gl.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/glad/src/gles2.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/glad/src/gles2.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/lv_opengles_debug.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_debug.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_debug.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/lv_opengles_driver.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_driver.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_driver.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/lv_opengles_egl.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_egl.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_egl.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -13822,24 +13822,24 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/lv_opengles_glfw.c.o: /home/gec/wo
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_glfw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/lv_opengles_texture.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_texture.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_texture.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/opengl_shader/lv_opengl_shader_manager.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/opengl_shader/lv_opengl_shader_manager.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/opengl_shader/lv_opengl_shader_program.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/opengl_shader/lv_opengl_shader_program.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/opengl_shader/lv_opengl_shader_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/qnx/lv_qnx.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/qnx/lv_qnx.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -13847,7 +13847,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/qnx/lv_qnx.c.o: /home/gec/workspace/lvgl_pr
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -13899,7 +13899,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/qnx/lv_qnx.c.o: /home/gec/workspace/lvgl_pr
 lvgl/CMakeFiles/lvgl.dir/src/drivers/sdl/lv_sdl_egl.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/sdl/lv_sdl_egl.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/sdl/lv_sdl_keyboard.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/sdl/lv_sdl_keyboard.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -13908,7 +13908,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/sdl/lv_sdl_keyboard.c.o: /home/gec/workspac
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -13964,7 +13964,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/sdl/lv_sdl_mouse.c.o: /home/gec/workspace/l
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -14020,7 +14020,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/sdl/lv_sdl_mousewheel.c.o: /home/gec/worksp
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -14074,7 +14074,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/sdl/lv_sdl_sw.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/sdl/lv_sdl_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -14132,7 +14132,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/sdl/lv_sdl_texture.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/sdl/lv_sdl_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -14191,7 +14191,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/sdl/lv_sdl_window.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -14247,7 +14247,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/uefi/lv_uefi_context.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -14688,7 +14688,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/uefi/lv_uefi_display.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -15129,7 +15129,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/uefi/lv_uefi_indev_keyboard.c.o: /home/gec/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -15574,7 +15574,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/uefi/lv_uefi_indev_pointer.c.o: /home/gec/w
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -16019,7 +16019,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/uefi/lv_uefi_indev_touch.c.o: /home/gec/wor
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -16464,7 +16464,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/uefi/lv_uefi_private.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -16902,19 +16902,19 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wayland.c.o: /home/gec/workspace
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wayland_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_egl_backend.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wl_egl_backend.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wayland_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_g2d_backend.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wl_g2d_backend.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wayland_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_keyboard.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wl_keyboard.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -16922,7 +16922,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_keyboard.c.o: /home/gec/works
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -17056,7 +17056,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_pointer.c.o: /home/gec/worksp
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -17188,13 +17188,13 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_seat.c.o: /home/gec/workspace
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wayland.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_shm_backend.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wl_shm_backend.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wayland_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_touch.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wl_touch.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -17202,7 +17202,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_touch.c.o: /home/gec/workspac
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -17336,7 +17336,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_window.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -17381,7 +17381,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/wayland/lv_wl_xdg_shell.c.o: /home/gec/work
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/wayland/lv_wayland_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/drivers/windows/lv_windows_context.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/windows/lv_windows_context.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -17389,7 +17389,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/windows/lv_windows_context.c.o: /home/gec/w
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -17444,7 +17444,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/windows/lv_windows_display.c.o: /home/gec/w
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -17499,7 +17499,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/windows/lv_windows_input.c.o: /home/gec/wor
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -17554,7 +17554,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/x11/lv_x11_display.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -17611,7 +17611,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/x11/lv_x11_input.c.o: /home/gec/workspace/l
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/display/lv_display.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -17669,7 +17669,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/binfont_loader/lv_binfont_loader.c.o: /home/ge
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -18114,7 +18114,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/fmt_txt/lv_font_fmt_txt.c.o: /home/gec/workspa
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/lv_font.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -18348,7 +18348,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/font_manager/lv_font_manager.c.o: /home/gec/wo
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/font_manager/lv_font_manager.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/lv_font.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -18397,7 +18397,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/font_manager/lv_font_manager_recycle.c.o: /hom
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/font_manager/lv_font_manager_recycle.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -18425,7 +18425,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/imgfont/lv_imgfont.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -18863,7 +18863,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font.c.o: /home/gec/workspace/lvgl_project/
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/lv_font.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -18925,7 +18925,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_dejavu_16_persian_hebrew.c.o: /home/ge
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -19344,7 +19344,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_10.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -19763,7 +19763,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_12.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -20182,7 +20182,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_14.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -20601,7 +20601,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_14_aligned.c.o: /home/gec/w
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -21020,7 +21020,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_16.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -21439,7 +21439,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_18.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -21858,7 +21858,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_20.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -22277,7 +22277,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_22.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -22696,7 +22696,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_24.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -23115,7 +23115,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_26.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -23534,7 +23534,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_28.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -23953,7 +23953,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_28_compressed.c.o: /home/ge
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -24372,7 +24372,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_30.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -24791,7 +24791,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_32.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -25210,7 +25210,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_34.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -25629,7 +25629,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_36.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -26048,7 +26048,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_38.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -26467,7 +26467,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_40.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -26886,7 +26886,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_42.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -27305,7 +27305,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_44.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -27724,7 +27724,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_46.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -28143,7 +28143,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_48.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -28562,7 +28562,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_montserrat_8.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -28981,7 +28981,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_source_han_sans_sc_14_cjk.c.o: /home/g
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -29400,7 +29400,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_source_han_sans_sc_16_cjk.c.o: /home/g
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -29819,7 +29819,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_unscii_16.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -30238,7 +30238,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/lv_font_unscii_8.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -30656,7 +30656,7 @@ lvgl/CMakeFiles/lvgl.dir/src/indev/lv_gridnav.c.o: /home/gec/workspace/lvgl_proj
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_gridnav.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -30788,7 +30788,7 @@ lvgl/CMakeFiles/lvgl.dir/src/indev/lv_indev.c.o: /home/gec/workspace/lvgl_projec
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -31031,7 +31031,7 @@ lvgl/CMakeFiles/lvgl.dir/src/indev/lv_indev_gesture.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_group.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -31169,7 +31169,7 @@ lvgl/CMakeFiles/lvgl.dir/src/indev/lv_indev_scroll.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_scroll.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -31308,7 +31308,7 @@ lvgl/CMakeFiles/lvgl.dir/src/layouts/flex/lv_flex.c.o: /home/gec/workspace/lvgl_
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/layouts/flex/lv_flex.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -31448,7 +31448,7 @@ lvgl/CMakeFiles/lvgl.dir/src/layouts/grid/lv_grid.c.o: /home/gec/workspace/lvgl_
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/layouts/grid/lv_grid.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -31477,7 +31477,7 @@ lvgl/CMakeFiles/lvgl.dir/src/layouts/lv_layout.c.o: /home/gec/workspace/lvgl_pro
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/layouts/lv_layout.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -31700,12 +31700,12 @@ lvgl/CMakeFiles/lvgl.dir/src/layouts/lv_layout.c.o: /home/gec/workspace/lvgl_pro
 lvgl/CMakeFiles/lvgl.dir/src/libs/FT800-FT813/EVE_commands.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/FT800-FT813/EVE_commands.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/FT800-FT813/EVE_supplemental.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/FT800-FT813/EVE_supplemental.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/barcode/code128.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/barcode/code128.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -31713,7 +31713,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/barcode/code128.c.o: /home/gec/workspace/lvgl_
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -32152,7 +32152,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/barcode/lv_barcode.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_class.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -32610,7 +32610,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/bin_decoder/lv_bin_decoder.c.o: /home/gec/work
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -32833,7 +32833,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/bmp/lv_bmp.c.o: /home/gec/workspace/lvgl_proje
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -33293,14 +33293,14 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/ffmpeg/lv_ffmpeg.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/ffmpeg/lv_ffmpeg_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/ffmpeg/lv_ffmpeg.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_freetype.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/lv_freetype.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/lv_freetype_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/lv_freetype.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_freetype_glyph.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/lv_freetype_glyph.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -33309,7 +33309,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_freetype_glyph.c.o: /home/gec/work
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -33752,7 +33752,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_freetype_image.c.o: /home/gec/work
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -34193,7 +34193,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_freetype_outline.c.o: /home/gec/wo
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_event_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_event.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -34640,7 +34640,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_ftsystem.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -35076,7 +35076,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_ftsystem.c.o: /home/gec/workspace/
 lvgl/CMakeFiles/lvgl.dir/src/libs/frogfs/src/decomp_raw.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/frogfs/src/decomp_raw.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -35112,7 +35112,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/frogfs/src/decomp_raw.c.o: /home/gec/workspace
 lvgl/CMakeFiles/lvgl.dir/src/libs/frogfs/src/frogfs.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/frogfs/src/frogfs.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_arduino_esp_littlefs.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/fsdrv/lv_fs_arduino_esp_littlefs.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -35120,7 +35120,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_arduino_esp_littlefs.cpp.o: /home/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -35561,7 +35561,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_arduino_sd.cpp.o: /home/gec/worksp
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -36005,7 +36005,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_fatfs.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -36444,7 +36444,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_frogfs.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -36883,7 +36883,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_littlefs.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -37321,7 +37321,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_memfs.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_fs_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_fs.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -37764,7 +37764,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_posix.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -38203,7 +38203,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_stdio.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -38642,7 +38642,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_uefi.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -39081,7 +39081,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/fsdrv/lv_fs_win32.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -39518,91 +39518,91 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/gif/gif.c.o: /home/gec/workspace/lvgl_project/
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gif/AnimatedGIF.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_data.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_data_animations.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_animations.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_data_cache.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_cache.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_data_injest.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_injest.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_data_mesh.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_mesh.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_data_primitive.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_primitive.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_data_shader.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_shader.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_data_skin.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_skin.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_data_texture.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_texture.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_model_node.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_model_node.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_uniform_locations.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_uniform_locations.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_environment/lv_gltf_ibl_sampler.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_environment/lv_gltf_ibl_sampler.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_environment/lv_gltf_environment_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_view/assets/chromatic.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_view/assets/chromatic.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_view/assets/lv_gltf_view_shader.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_view/assets/lv_gltf_view_shader.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_view/assets/lv_gltf_view_shader.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/opengl_shader/lv_opengl_shader_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_view/lv_gltf_view_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h
 
@@ -39610,44 +39610,44 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_view/lv_gltf_view.cpp.o: /home/gec/w
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_view/lv_gltf_view_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_view/lv_gltf_view_render.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_view/lv_gltf_view_render.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_view/lv_gltf_view_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_view/lv_gltf_view_shader.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_view/lv_gltf_view_shader.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/gltf_view/lv_gltf_view_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/math/lv_3dmath.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/math/lv_3dmath.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/math/lv_3dmath.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/math/lv_gltf_math.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/math/lv_gltf_math.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gltf/math/lv_gltf_math.hpp \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/gstreamer/lv_gstreamer.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gstreamer/lv_gstreamer.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/gstreamer/lv_gstreamer_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/libjpeg_turbo/lv_libjpeg_turbo.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/libjpeg_turbo/lv_libjpeg_turbo.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -40107,7 +40107,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/libpng/lv_libpng.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -40567,7 +40567,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/libwebp/lv_libwebp.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -41029,7 +41029,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/lodepng/lodepng.c.o: /home/gec/workspace/lvgl_
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -41467,7 +41467,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/lodepng/lv_lodepng.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -41994,12 +41994,12 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/lodepng/lv_lodepng.c.o: /home/gec/workspace/lv
 lvgl/CMakeFiles/lvgl.dir/src/libs/lz4/lz4.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/lz4/lz4.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/nanovg/nanovg.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/nanovg/nanovg.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/qrcode/lv_qrcode.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/lv_qrcode.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -42007,7 +42007,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/qrcode/lv_qrcode.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_class.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -42164,7 +42164,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/qrcode/qrcodegen.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -42602,7 +42602,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/rle/lv_rle.c.o: /home/gec/workspace/lvgl_proje
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_string.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -42634,7 +42634,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/rlottie/lv_rlottie.c.o: /home/gec/workspace/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -43072,14 +43072,14 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/svg/lv_svg.c.o: /home/gec/workspace/lvgl_proje
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/svg/lv_svg.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/svg/lv_svg_decoder.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/svg/lv_svg_decoder.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -43538,7 +43538,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/svg/lv_svg_parser.c.o: /home/gec/workspace/lvg
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/svg/lv_svg_parser.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/svg/lv_svg_render.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/svg/lv_svg_render.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -43546,7 +43546,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/svg/lv_svg_render.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -43984,242 +43984,242 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/svg/lv_svg_token.c.o: /home/gec/workspace/lvgl
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/svg/lv_svg_token.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgAccessor.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgAccessor.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgAnimation.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgAnimation.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgCanvas.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgCanvas.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgCapi.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgCapi.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgCompressor.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgCompressor.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgFill.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgFill.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgGlCanvas.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgGlCanvas.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgInitializer.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgInitializer.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgLoader.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgLoader.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgLottieAnimation.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgLottieAnimation.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgLottieBuilder.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgLottieBuilder.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgLottieExpressions.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgLottieExpressions.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgLottieInterpolator.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgLottieInterpolator.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgLottieLoader.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgLottieLoader.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgLottieModel.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgLottieModel.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgLottieModifier.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgLottieModifier.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgLottieParser.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgLottieParser.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgLottieParserHandler.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgLottieParserHandler.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgMath.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgMath.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgPaint.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgPaint.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgPicture.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgPicture.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgRawLoader.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgRawLoader.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgRender.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgRender.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSaver.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSaver.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgScene.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgScene.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgShape.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgShape.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgStr.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgStr.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSvgCssStyle.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSvgCssStyle.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSvgLoader.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSvgLoader.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSvgPath.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSvgPath.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSvgSceneBuilder.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSvgSceneBuilder.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSvgUtil.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSvgUtil.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwCanvas.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwCanvas.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwFill.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwFill.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwImage.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwImage.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwMath.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwMath.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwMemPool.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwMemPool.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwPostEffect.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwPostEffect.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwRaster.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwRaster.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwRenderer.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwRenderer.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwRle.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwRle.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwShape.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwShape.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgSwStroke.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgSwStroke.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgTaskScheduler.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgTaskScheduler.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgText.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgText.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgWgCanvas.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgWgCanvas.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/thorvg/tvgXmlParser.cpp.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/thorvg/tvgXmlParser.cpp \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/tiny_ttf/lv_tiny_ttf.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/tiny_ttf/lv_tiny_ttf.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -44228,7 +44228,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/tiny_ttf/lv_tiny_ttf.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -44667,7 +44667,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/tjpgd/lv_tjpgd.c.o: /home/gec/workspace/lvgl_p
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -45126,55 +45126,55 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/tjpgd/tjpgd.c.o: /home/gec/workspace/lvgl_proj
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/tjpgd/tjpgd.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/tjpgd/tjpgdcnf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/vg_lite_driver/VGLite/vg_lite.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/vg_lite_driver/VGLite/vg_lite.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/vg_lite_driver/VGLite/vg_lite_image.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/vg_lite_driver/VGLite/vg_lite_image.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/vg_lite_driver/VGLite/vg_lite_matrix.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/vg_lite_driver/VGLite/vg_lite_matrix.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/vg_lite_driver/VGLite/vg_lite_path.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/vg_lite_driver/VGLite/vg_lite_path.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/vg_lite_driver/VGLite/vg_lite_stroke.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/vg_lite_driver/VGLite/vg_lite_stroke.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/vg_lite_driver/VGLiteKernel/vg_lite_kernel.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/vg_lite_driver/VGLiteKernel/vg_lite_kernel.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/vg_lite_driver/lv_vg_lite_hal/lv_vg_lite_hal.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/vg_lite_driver/lv_vg_lite_hal/lv_vg_lite_hal.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/libs/vg_lite_driver/lv_vg_lite_hal/vg_lite_os.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/vg_lite_driver/lv_vg_lite_hal/vg_lite_os.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/lv_init.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_timer_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_timer.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/tick/lv_tick.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -45474,7 +45474,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/cache/class/lv_cache_lru_ll.c.o: /home/gec/wor
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/lv_cache_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -45519,7 +45519,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/cache/class/lv_cache_lru_rb.c.o: /home/gec/wor
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/lv_cache_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -45567,7 +45567,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/cache/class/lv_cache_sc_da.c.o: /home/gec/work
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/lv_cache_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -45613,7 +45613,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/cache/instance/lv_image_cache.c.o: /home/gec/w
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -45842,7 +45842,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/cache/instance/lv_image_header_cache.c.o: /hom
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -46071,7 +46071,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/cache/lv_cache.c.o: /home/gec/workspace/lvgl_p
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/lv_cache.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -46125,7 +46125,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/cache/lv_cache_entry.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/lv_cache_entry.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -46160,7 +46160,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_anim.c.o: /home/gec/workspace/lvgl_project/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_anim_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_anim.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -46388,7 +46388,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_anim_timeline.c.o: /home/gec/workspace/lvgl
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_anim_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_anim.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -46429,7 +46429,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_anim_timeline.c.o: /home/gec/workspace/lvgl
 lvgl/CMakeFiles/lvgl.dir/src/misc/lv_area.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_area.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_global.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -46658,7 +46658,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_array.c.o: /home/gec/workspace/lvgl_project
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_array.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -46691,7 +46691,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_async.c.o: /home/gec/workspace/lvgl_project
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_async.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -46728,7 +46728,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_bidi.c.o: /home/gec/workspace/lvgl_project/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_bidi_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_bidi.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -46786,7 +46786,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_circle_buf.c.o: /home/gec/workspace/lvgl_pr
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_assert.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_log.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -46819,7 +46819,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_color.c.o: /home/gec/workspace/lvgl_project
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_color.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_assert.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_log.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -46856,7 +46856,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_color_op.c.o: /home/gec/workspace/lvgl_proj
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_color_op.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_assert.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_log.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -46891,7 +46891,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_event.c.o: /home/gec/workspace/lvgl_project
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_event_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_event.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -47120,7 +47120,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_fs.c.o: /home/gec/workspace/lvgl_project/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_fs_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_fs.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -47351,7 +47351,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_grad.c.o: /home/gec/workspace/lvgl_project/
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_grad.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_color.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_assert.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_log.h \
@@ -47388,7 +47388,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_iter.c.o: /home/gec/workspace/lvgl_project/
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_assert.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_log.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -47421,7 +47421,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_ll.c.o: /home/gec/workspace/lvgl_project/lv
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ll.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -47451,7 +47451,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_log.c.o: /home/gec/workspace/lvgl_project/l
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_log.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -47477,7 +47477,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_lru.c.o: /home/gec/workspace/lvgl_project/l
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_lru.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -47511,7 +47511,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_math.c.o: /home/gec/workspace/lvgl_project/
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_math.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -47736,14 +47736,14 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_matrix.c.o: /home/gec/workspace/lvgl_projec
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_matrix.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/misc/lv_palette.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_palette.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_palette.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_color.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_assert.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_log.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -47778,7 +47778,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_pending.c.o: /home/gec/workspace/lvgl_proje
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_pending.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -47811,7 +47811,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_profiler_builtin.c.o: /home/gec/workspace/l
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_profiler_builtin_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_profiler_builtin.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lvgl.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lvgl.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
@@ -48342,7 +48342,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_profiler_builtin_posix.c.o: /home/gec/works
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_profiler_builtin_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_profiler_builtin.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/misc/lv_rb.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_rb.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -48350,7 +48350,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_rb.c.o: /home/gec/workspace/lvgl_project/lv
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_rb.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -48384,7 +48384,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_style.c.o: /home/gec/workspace/lvgl_project
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_style.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/lv_font.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -48612,7 +48612,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_style_gen.c.o: /home/gec/workspace/lvgl_pro
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_style.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/lv_font.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -48686,7 +48686,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_text.c.o: /home/gec/workspace/lvgl_project/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_text_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_text.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -48780,7 +48780,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_text_ap.c.o: /home/gec/workspace/lvgl_proje
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_bidi.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
@@ -48873,7 +48873,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_timer.c.o: /home/gec/workspace/lvgl_project
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_timer_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_timer.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/tick/lv_tick.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -49104,7 +49104,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_tree.c.o: /home/gec/workspace/lvgl_project/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_tree.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -49137,7 +49137,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/lv_utils.c.o: /home/gec/workspace/lvgl_project
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_utils.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -49201,7 +49201,7 @@ lvgl/CMakeFiles/lvgl.dir/src/osal/lv_cmsis_rtos2.c.o: /home/gec/workspace/lvgl_p
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -49231,7 +49231,7 @@ lvgl/CMakeFiles/lvgl.dir/src/osal/lv_freertos.c.o: /home/gec/workspace/lvgl_proj
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -49261,7 +49261,7 @@ lvgl/CMakeFiles/lvgl.dir/src/osal/lv_linux.c.o: /home/gec/workspace/lvgl_project
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -49496,7 +49496,7 @@ lvgl/CMakeFiles/lvgl.dir/src/osal/lv_mqx.c.o: /home/gec/workspace/lvgl_project/l
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -49526,7 +49526,7 @@ lvgl/CMakeFiles/lvgl.dir/src/osal/lv_os.c.o: /home/gec/workspace/lvgl_project/lv
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -49750,7 +49750,7 @@ lvgl/CMakeFiles/lvgl.dir/src/osal/lv_os.c.o: /home/gec/workspace/lvgl_project/lv
 lvgl/CMakeFiles/lvgl.dir/src/osal/lv_os_none.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_none.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -49787,7 +49787,7 @@ lvgl/CMakeFiles/lvgl.dir/src/osal/lv_pthread.c.o: /home/gec/workspace/lvgl_proje
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -49817,7 +49817,7 @@ lvgl/CMakeFiles/lvgl.dir/src/osal/lv_rtthread.c.o: /home/gec/workspace/lvgl_proj
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -49847,7 +49847,7 @@ lvgl/CMakeFiles/lvgl.dir/src/osal/lv_sdl2.c.o: /home/gec/workspace/lvgl_project/
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -49877,7 +49877,7 @@ lvgl/CMakeFiles/lvgl.dir/src/osal/lv_windows.c.o: /home/gec/workspace/lvgl_proje
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/osal/lv_os.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -49909,7 +49909,7 @@ lvgl/CMakeFiles/lvgl.dir/src/others/file_explorer/lv_file_explorer.c.o: /home/ge
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -50049,7 +50049,7 @@ lvgl/CMakeFiles/lvgl.dir/src/others/fragment/lv_fragment.c.o: /home/gec/workspac
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/others/fragment/lv_fragment.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -50182,7 +50182,7 @@ lvgl/CMakeFiles/lvgl.dir/src/others/fragment/lv_fragment_manager.c.o: /home/gec/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/others/fragment/lv_fragment.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -50313,13 +50313,13 @@ lvgl/CMakeFiles/lvgl.dir/src/others/translation/lv_translation.c.o: /home/gec/wo
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/others/translation/lv_translation.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/stdlib/builtin/lv_mem_core_builtin.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/builtin/lv_mem_core_builtin.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_mem.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_string.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -50346,23 +50346,23 @@ lvgl/CMakeFiles/lvgl.dir/src/stdlib/builtin/lv_mem_core_builtin.c.o: /home/gec/w
 lvgl/CMakeFiles/lvgl.dir/src/stdlib/builtin/lv_sprintf_builtin.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/builtin/lv_sprintf_builtin.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/stdlib/builtin/lv_string_builtin.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/builtin/lv_string_builtin.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/stdlib/builtin/lv_tlsf.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/builtin/lv_tlsf.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/stdlib/clib/lv_mem_core_clib.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/clib/lv_mem_core_clib.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_mem.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_string.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -50409,7 +50409,7 @@ lvgl/CMakeFiles/lvgl.dir/src/stdlib/clib/lv_mem_core_clib.c.o: /home/gec/workspa
 lvgl/CMakeFiles/lvgl.dir/src/stdlib/clib/lv_sprintf_clib.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/clib/lv_sprintf_clib.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
@@ -50444,7 +50444,7 @@ lvgl/CMakeFiles/lvgl.dir/src/stdlib/clib/lv_sprintf_clib.c.o: /home/gec/workspac
 lvgl/CMakeFiles/lvgl.dir/src/stdlib/clib/lv_string_clib.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/clib/lv_string_clib.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_string.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -50478,7 +50478,7 @@ lvgl/CMakeFiles/lvgl.dir/src/stdlib/lv_mem.c.o: /home/gec/workspace/lvgl_project
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_mem_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_mem.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_string.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -50705,7 +50705,7 @@ lvgl/CMakeFiles/lvgl.dir/src/stdlib/micropython/lv_mem_core_micropython.c.o: /ho
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_mem.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_string.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -50733,7 +50733,7 @@ lvgl/CMakeFiles/lvgl.dir/src/stdlib/rtthread/lv_mem_core_rtthread.c.o: /home/gec
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_mem.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_string.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -50760,18 +50760,18 @@ lvgl/CMakeFiles/lvgl.dir/src/stdlib/rtthread/lv_mem_core_rtthread.c.o: /home/gec
 lvgl/CMakeFiles/lvgl.dir/src/stdlib/rtthread/lv_sprintf_rtthread.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/rtthread/lv_sprintf_rtthread.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/stdlib/rtthread/lv_string_rtthread.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/rtthread/lv_string_rtthread.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/stdlib/uefi/lv_mem_core_uefi.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/uefi/lv_mem_core_uefi.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_mem.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_string.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -50801,7 +50801,7 @@ lvgl/CMakeFiles/lvgl.dir/src/themes/default/lv_theme_default.c.o: /home/gec/work
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -51239,7 +51239,7 @@ lvgl/CMakeFiles/lvgl.dir/src/themes/lv_theme.c.o: /home/gec/workspace/lvgl_proje
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/lv_theme_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/lv_theme.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -51690,7 +51690,7 @@ lvgl/CMakeFiles/lvgl.dir/src/themes/mono/lv_theme_mono.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/lv_theme_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/lv_theme.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -52136,7 +52136,7 @@ lvgl/CMakeFiles/lvgl.dir/src/themes/simple/lv_theme_simple.c.o: /home/gec/worksp
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/lv_theme_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/lv_theme.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -52582,7 +52582,7 @@ lvgl/CMakeFiles/lvgl.dir/src/tick/lv_tick.c.o: /home/gec/workspace/lvgl_project/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/tick/lv_tick_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/tick/lv_tick.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -52806,7 +52806,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/3dtexture/lv_3dtexture.c.o: /home/gec/works
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/3dtexture/lv_3dtexture_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/3dtexture/lv_3dtexture.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/animimage/lv_animimage.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/animimage/lv_animimage.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -52815,7 +52815,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/animimage/lv_animimage.c.o: /home/gec/works
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -52962,7 +52962,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/arc/lv_arc.c.o: /home/gec/workspace/lvgl_pr
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -53102,7 +53102,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/arclabel/lv_arclabel.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -53236,7 +53236,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/bar/lv_bar.c.o: /home/gec/workspace/lvgl_pr
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -53380,7 +53380,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/button/lv_button.c.o: /home/gec/workspace/l
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -53518,7 +53518,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/buttonmatrix/lv_buttonmatrix.c.o: /home/gec
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -53657,7 +53657,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/calendar/lv_calendar.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -54126,7 +54126,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/calendar/lv_calendar_chinese.c.o: /home/gec
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -54263,7 +54263,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/calendar/lv_calendar_header_arrow.c.o: /hom
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_class.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -54396,7 +54396,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/calendar/lv_calendar_header_dropdown.c.o: /
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_class.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -54530,7 +54530,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/canvas/lv_canvas.c.o: /home/gec/workspace/l
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -54674,7 +54674,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/chart/lv_chart.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -54810,7 +54810,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/checkbox/lv_checkbox.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/checkbox/lv_checkbox_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/checkbox/lv_checkbox.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -54949,7 +54949,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/dropdown/lv_dropdown.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -55087,7 +55087,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/gif/lv_gif.c.o: /home/gec/workspace/lvgl_pr
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/gif/lv_gif.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/image/lv_image.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/image/lv_image.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -55095,7 +55095,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/image/lv_image.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -55269,7 +55269,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/imagebutton/lv_imagebutton.c.o: /home/gec/w
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/imagebutton/lv_imagebutton.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -55431,7 +55431,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/ime/lv_ime_pinyin.c.o: /home/gec/workspace/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -55570,7 +55570,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/keyboard/lv_keyboard.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -55711,7 +55711,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/label/lv_label.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_label.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -55903,7 +55903,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/led/lv_led.c.o: /home/gec/workspace/lvgl_pr
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/led/lv_led.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -56040,7 +56040,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/line/lv_line.c.o: /home/gec/workspace/lvgl_
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -56177,7 +56177,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/list/lv_list.c.o: /home/gec/workspace/lvgl_
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_class.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -56332,7 +56332,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/lottie/lv_lottie.c.o: /home/gec/workspace/l
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/lottie/lv_lottie_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/menu/lv_menu.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/menu/lv_menu.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -56340,7 +56340,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/menu/lv_menu.c.o: /home/gec/workspace/lvgl_
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -56478,7 +56478,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/msgbox/lv_msgbox.c.o: /home/gec/workspace/l
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/msgbox/lv_msgbox.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -56617,7 +56617,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_animimage_properties.c.o: /home
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/animimage/lv_animimage.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/image/lv_image.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -56756,25 +56756,25 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_arc_properties.c.o: /home/gec/w
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/arc/lv_arc.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_bar_properties.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/lv_bar_properties.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/bar/lv_bar.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_buttonmatrix_properties.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/lv_buttonmatrix_properties.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_chart_properties.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/lv_chart_properties.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/chart/lv_chart.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -56907,7 +56907,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_checkbox_properties.c.o: /home/
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/checkbox/lv_checkbox.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -57040,13 +57040,13 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_dropdown_properties.c.o: /home/
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/dropdown/lv_dropdown.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_image_properties.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/lv_image_properties.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/image/lv_image.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -57185,13 +57185,13 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_keyboard_properties.c.o: /home/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/lv_keyboard.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_label_properties.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/lv_label_properties.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/label/lv_label.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -57334,7 +57334,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_led_properties.c.o: /home/gec/w
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/led/lv_led.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -57466,7 +57466,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_line_properties.c.o: /home/gec/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/line/lv_line.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -57598,7 +57598,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_menu_properties.c.o: /home/gec/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/menu/lv_menu.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -57730,7 +57730,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_obj_properties.c.o: /home/gec/w
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -57862,7 +57862,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_roller_properties.c.o: /home/ge
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/roller/lv_roller.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -57993,20 +57993,20 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_scale_properties.c.o: /home/gec
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/scale/lv_scale.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_slider_properties.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/lv_slider_properties.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/slider/lv_slider.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/bar/lv_bar.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_span_properties.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/lv_span_properties.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/span/lv_span.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -58145,7 +58145,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_spinbox_properties.c.o: /home/g
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/lv_textarea.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/label/lv_label.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -58287,7 +58287,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_spinner_properties.c.o: /home/g
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/spinner/lv_spinner.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_style_properties.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/lv_style_properties.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -58295,7 +58295,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_style_properties.c.o: /home/gec
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_property.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -58371,14 +58371,14 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_switch_properties.c.o: /home/ge
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/lv_switch.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_table_properties.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/lv_table_properties.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/table/lv_table.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/label/lv_label.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -58521,7 +58521,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_tabview_properties.c.o: /home/g
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/tabview/lv_tabview.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -58656,7 +58656,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_textarea_properties.c.o: /home/
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/lv_textarea.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/label/lv_label.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -58800,7 +58800,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/roller/lv_roller.c.o: /home/gec/workspace/l
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/roller/lv_roller.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -58953,7 +58953,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/scale/lv_scale.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/scale/lv_scale_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/scale/lv_scale.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -59092,7 +59092,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/slider/lv_slider.c.o: /home/gec/workspace/l
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -59237,7 +59237,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/span/lv_span.c.o: /home/gec/workspace/lvgl_
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -59402,7 +59402,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/spinbox/lv_spinbox.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -59551,14 +59551,14 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/spinner/lv_spinner.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/spinner/lv_spinner_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/spinner/lv_spinner.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h
+  /home/gec/workspace/Project/lv_conf.h
 
 lvgl/CMakeFiles/lvgl.dir/src/widgets/switch/lv_switch.c.o: /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/lv_switch.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/lv_switch_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/lv_switch.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
@@ -59696,7 +59696,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/table/lv_table.c.o: /home/gec/workspace/lvg
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/table/lv_table.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/label/lv_label.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -59848,7 +59848,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/tabview/lv_tabview.c.o: /home/gec/workspace
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -60298,7 +60298,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/textarea/lv_textarea.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -60444,7 +60444,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/tileview/lv_tileview.c.o: /home/gec/workspa
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -60589,7 +60589,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/win/lv_win.c.o: /home/gec/workspace/lvgl_pr
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_private.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
-  ../lv_conf.h \
+  /home/gec/workspace/Project/lv_conf.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
   /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
@@ -61966,15 +61966,9 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/win/lv_win.c.o: /home/gec/workspace/lvgl_pr
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/ili9341/lv_ili9341.h:
 
-/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_g2d_utils.h:
+/home/gec/workspace/Project/lv_conf.h:
 
-/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/vg_lite_driver/VGLiteKernel/vg_lite_kernel.c:
-
-/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_text.h:
-
-/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/lv_font.h:
-
-/usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdbool.h:
+/usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/limits.h:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/layouts/lv_layout.h:
 
@@ -62021,8 +62015,6 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/win/lv_win.c.o: /home/gec/workspace/lvgl_pr
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_class.c:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_mask.h:
-
-../lv_conf.h:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_image_decoder_private.h:
 
@@ -62110,6 +62102,16 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/win/lv_win.c.o: /home/gec/workspace/lvgl_pr
 
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/posix2_lim.h:
 
+/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/nxp/g2d/lv_g2d_utils.h:
+
+/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/vg_lite_driver/VGLiteKernel/vg_lite_kernel.c:
+
+/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_text.h:
+
+/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/lv_font.h:
+
+/usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdbool.h:
+
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_debug.h:
 
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/cdefs.h:
@@ -62129,8 +62131,6 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/win/lv_win.c.o: /home/gec/workspace/lvgl_pr
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/test/lv_test_fs.h:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_triangle.h:
-
-/usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/limits.h:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_profiler_builtin.c:
 

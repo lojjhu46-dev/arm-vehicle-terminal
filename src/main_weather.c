@@ -52,6 +52,7 @@ static const char *const weather_labels[MAIN_WEATHER_COUNT] = {
     "霾"
 };
 
+// 释放已加载的全部天气图标像素缓冲。
 static void free_icons(void)
 {
     for (int i = 0; i < MAIN_WEATHER_COUNT; ++i)
@@ -61,6 +62,7 @@ static void free_icons(void)
     }
 }
 
+// 加载天气图标并建立默认天气快照。
 int main_weather_init(void)
 {
     if (context.initialized)
@@ -96,6 +98,7 @@ int main_weather_init(void)
     return 0;
 }
 
+// 销毁天气缓存和其互斥锁。
 void main_weather_destroy(void)
 {
     if (!context.initialized)
@@ -105,6 +108,7 @@ void main_weather_destroy(void)
     pthread_mutex_destroy(&context.mutex);
 }
 
+// 校验并原子替换当前天气，递增版本号通知界面刷新。
 int main_weather_set(const MainWeather *weather)
 {
     size_t city_length;
@@ -125,6 +129,7 @@ int main_weather_set(const MainWeather *weather)
     return 0;
 }
 
+// 读取一份一致的天气快照及可选版本号。
 int main_weather_get(MainWeather *weather, unsigned long *version)
 {
     if (!context.initialized || weather == NULL)
@@ -138,6 +143,7 @@ int main_weather_get(MainWeather *weather, unsigned long *version)
     return 0;
 }
 
+// 获取天气版本号，供主界面判断是否需要重绘。
 unsigned long main_weather_version(void)
 {
     unsigned long version = 0;
@@ -150,6 +156,7 @@ unsigned long main_weather_version(void)
     return version;
 }
 
+// 将天气枚举转换为用户可见的中文标签。
 const char *main_weather_label(MainWeatherType type)
 {
     if (type < 0 || type >= MAIN_WEATHER_COUNT)
@@ -157,6 +164,7 @@ const char *main_weather_label(MainWeatherType type)
     return weather_labels[type];
 }
 
+// 将当前天气图标复制到所有 framebuffer 页面，避免翻页后图标丢失。
 int main_weather_draw_icon(Lcd *lcd, const MainWeather *weather)
 {
     int *icon;

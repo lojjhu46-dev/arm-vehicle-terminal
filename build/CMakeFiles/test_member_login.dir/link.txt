@@ -1,0 +1,1 @@
+/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc CMakeFiles/test_member_login.dir/tests/test_member_login.c.o CMakeFiles/test_member_login.dir/src/member_login.c.o -o test_member_login  -lpthread 

@@ -14,6 +14,8 @@
 #include "app_config.h"
 #include "image_convert.h"
 #include "jpeg_codec.h"
+#include "member_login.h"
+#include "member_sms.h"
 #include "live_controls.h"
 #include "lvgl_file_browser.h"
 #include "playback.h"
@@ -34,7 +36,15 @@ typedef struct {
     int playback_mode;             // 1 表示正在播放历史录像。
     int touch_running;             // 触摸线程运行标志：1 继续读取，0 请求退出。
     int file_browser_requested;    // 文件管理按钮已请求交给主线程运行 LVGL。
+    int screen;                   // 图片页面：主界面、扩展页、登录页或会员中心。
 } UiState;
+
+enum {
+    UI_SCREEN_MAIN = 0,
+    UI_SCREEN_EXPAND,
+    UI_SCREEN_LOGIN,
+    UI_SCREEN_SANCTUARY
+};
 
 // 摄像头线程的运行上下文，集中传递线程需要访问的模块对象。
 typedef struct {
@@ -45,6 +55,8 @@ typedef struct {
     LiveControls *controls;        // 实时画面侧边控制栏图标。
     RecordIndicator *indicator;    // 录像红点和 REC 图标资源。
     UiState *state;                // 与其他线程共享的界面状态和同步对象。
+    MemberLogin *member_login;     // 会员登录输入和验证码状态。
+    MemberSmsWorker *sms_worker;   // 后台短信发送任务。
 } CameraThreadContext;
 
 void show_startup_animation(Lcd *lcd); // 显示开机动画

@@ -45,6 +45,7 @@ static WeatherReceiverContext receiver = {
     .listen_fd = -1
 };
 
+// 跳过 JSON 语法允许的空白字符。
 static void json_skip_whitespace(JsonCursor *cursor)
 {
     while (cursor->position < cursor->end &&
@@ -52,6 +53,7 @@ static void json_skip_whitespace(JsonCursor *cursor)
         ++cursor->position;
 }
 
+// 消费一个指定的 JSON 分隔符。
 static int json_expect(JsonCursor *cursor, char expected)
 {
     json_skip_whitespace(cursor);
@@ -61,6 +63,7 @@ static int json_expect(JsonCursor *cursor, char expected)
     return 0;
 }
 
+// 解析 JSON 字符串到固定缓冲，支持常用转义序列。
 static int json_parse_string(JsonCursor *cursor, char *output, size_t output_size)
 {
     size_t length = 0;
@@ -123,6 +126,7 @@ static int json_parse_string(JsonCursor *cursor, char *output, size_t output_siz
     return -1;
 }
 
+// 解析一个 JSON 数字并移动游标。
 static int json_parse_number(JsonCursor *cursor, double *value)
 {
     char *end_pointer;
@@ -139,6 +143,7 @@ static int json_parse_number(JsonCursor *cursor, double *value)
     return 0;
 }
 
+// 匹配 true、false 或 null 等固定 JSON 字面量。
 static int json_parse_literal(JsonCursor *cursor, const char *literal)
 {
     size_t length = strlen(literal);
@@ -151,6 +156,7 @@ static int json_parse_literal(JsonCursor *cursor, const char *literal)
     return 0;
 }
 
+// 递归跳过未知字段的任意 JSON 值，限制嵌套深度防止恶意输入。
 static int json_skip_value(JsonCursor *cursor, int depth)
 {
     double ignored_number;
@@ -210,6 +216,7 @@ static int json_skip_value(JsonCursor *cursor, int depth)
     }
 }
 
+// 检查指定区间是否全部为十进制数字。
 static int digits_at(const char *text, size_t offset, size_t length)
 {
     for (size_t i = 0; i < length; ++i)
@@ -220,6 +227,7 @@ static int digits_at(const char *text, size_t offset, size_t length)
     return 1;
 }
 
+// 校验小时预报时间是否为受支持的 ISO 8601 小时格式。
 static int valid_hour_time(const char *text)
 {
     int month;
@@ -244,6 +252,7 @@ static int valid_hour_time(const char *text)
            hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59;
 }
 
+// 解析一条小时预报对象，并要求 time、text、temp_c 字段完整。
 static int parse_hourly_object(JsonCursor *cursor, WeatherHourly *hour)
 {
     char key[16];
@@ -298,6 +307,7 @@ static int parse_hourly_object(JsonCursor *cursor, WeatherHourly *hour)
     return 0;
 }
 
+// 解析并校验恰好 24 条小时预报数据。
 static int parse_hours(JsonCursor *cursor, WeatherForecast *forecast)
 {
     int count = 0;
@@ -324,6 +334,7 @@ static int parse_hours(JsonCursor *cursor, WeatherForecast *forecast)
     return count == WEATHER_HOUR_COUNT ? 0 : -1;
 }
 
+// 解析 weather.hourly.v1 报文，提取城市、坐标和小时预报。
 int weather_receiver_parse_hourly_json(const char *json, WeatherForecast *forecast)
 {
     JsonCursor cursor;
@@ -390,8 +401,12 @@ int weather_receiver_parse_hourly_json(const char *json, WeatherForecast *foreca
                 return -1;
             has_hours = 1;
         }
-        else if (json_skip_value(&cursor, 0) == -1)
-            return -1;
+        else
+        {
+            /* 允许协议扩展字段，但必须完整跳过其值以保持游标同步。 */
+            if (json_skip_value(&cursor, 0) == -1)
+                return -1;
+        }
     }
     json_skip_whitespace(&cursor);
     if (cursor.position != cursor.end || !has_type || !has_city ||
@@ -406,6 +421,7 @@ int weather_receiver_parse_hourly_json(const char *json, WeatherForecast *foreca
     return 0;
 }
 
+// 根据预报文本映射到主界面支持的天气图标类型。
 static MainWeatherType weather_type_from_text(const char *text)
 {
     if (strstr(text, "雷") != NULL)
@@ -435,6 +451,7 @@ static MainWeatherType weather_type_from_text(const char *text)
     return MAIN_WEATHER_CLOUDY;
 }
 
+// 生成当前本地小时的比较键，格式为 YYYY-MM-DDTHH。
 static int current_hour_key(char key[14])
 {
     time_t now = time(NULL);
@@ -448,6 +465,7 @@ static int current_hour_key(char key[14])
     return strftime(key, 14, "%Y-%m-%dT%H", &utc_plus_eight) == 13 ? 0 : -1;
 }
 
+// 查找当前小时；未命中时选择最近的未来小时或最后一条记录。
 static int forecast_hour_index(const WeatherForecast *forecast, const char hour[14])
 {
     int exact_index = -1;
@@ -475,6 +493,7 @@ static int forecast_hour_index(const WeatherForecast *forecast, const char hour[
     return latest_index;
 }
 
+// 从缓存预报选择当前小时，并同步更新主界面天气。
 static void weather_receiver_apply_current_hour(void)
 {
     WeatherForecast forecast;
@@ -530,6 +549,7 @@ static void weather_receiver_apply_current_hour(void)
     pthread_mutex_unlock(&receiver.mutex);
 }
 
+// 原子替换预报缓存后立即应用当前小时。
 static void weather_receiver_store_forecast(const WeatherForecast *forecast)
 {
     pthread_mutex_lock(&receiver.mutex);
@@ -542,6 +562,7 @@ static void weather_receiver_store_forecast(const WeatherForecast *forecast)
     weather_receiver_apply_current_hour();
 }
 
+// 将协议回复完整发送给客户端。
 static int send_reply(int client_fd, const char *reply)
 {
     size_t sent = 0;
@@ -569,6 +590,7 @@ static int send_reply(int client_fd, const char *reply)
     return 0;
 }
 
+// 读取到客户端 EOF 为止，拒绝超过协议上限的请求体。
 static int receive_payload(int client_fd, char payload[WEATHER_RECEIVER_MAX_PAYLOAD + 1])
 {
     size_t length = 0;
@@ -599,6 +621,7 @@ static int receive_payload(int client_fd, char payload[WEATHER_RECEIVER_MAX_PAYL
     }
 }
 
+// 将非 JSON 文本交给可选命令处理器，并生成标准回复。
 static void handle_text_payload(const char *payload, char reply[WEATHER_REPLY_SIZE])
 {
     WeatherTextHandler handler;
@@ -619,6 +642,7 @@ static void handle_text_payload(const char *payload, char reply[WEATHER_REPLY_SI
         snprintf(reply, WEATHER_REPLY_SIZE, "%s", "ERROR text handler failed\n");
 }
 
+// 区分天气 JSON 与普通文本请求，并在同一连接上回复结果。
 static void handle_client(int client_fd)
 {
     char payload[WEATHER_RECEIVER_MAX_PAYLOAD + 1];
@@ -655,6 +679,7 @@ static void handle_client(int client_fd)
     close(client_fd);
 }
 
+// 在线程安全条件下读取接收服务运行标志。
 static int receiver_is_running(void)
 {
     int running;
@@ -665,6 +690,7 @@ static int receiver_is_running(void)
     return running;
 }
 
+// TCP 监听线程：轮询监听套接字并串行处理每个客户端。
 static void *weather_receiver_thread(void *argument)
 {
     (void)argument;
@@ -703,6 +729,7 @@ static void *weather_receiver_thread(void *argument)
     return NULL;
 }
 
+// 创建监听套接字和后台接收线程。
 int weather_receiver_start(void)
 {
     struct sockaddr_in address;
@@ -755,6 +782,7 @@ int weather_receiver_start(void)
     return 0;
 }
 
+// 停止监听并等待接收线程退出。
 void weather_receiver_stop(void)
 {
     pthread_t thread;
@@ -786,6 +814,7 @@ void weather_receiver_stop(void)
     pthread_mutex_unlock(&receiver.mutex);
 }
 
+// 设置普通文本请求的上层处理回调。
 void weather_receiver_set_text_handler(WeatherTextHandler handler, void *user_data)
 {
     pthread_mutex_lock(&receiver.mutex);

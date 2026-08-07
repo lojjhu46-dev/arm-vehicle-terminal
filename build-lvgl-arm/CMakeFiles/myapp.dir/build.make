@@ -209,10 +209,38 @@ CMakeFiles/myapp.dir/src/jpeg_codec.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/jpeg_codec.c.s"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gec/workspace/Project/src/jpeg_codec.c -o CMakeFiles/myapp.dir/src/jpeg_codec.c.s
 
+CMakeFiles/myapp.dir/src/member_login.c.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/src/member_login.c.o: ../src/member_login.c
+CMakeFiles/myapp.dir/src/member_login.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/myapp.dir/src/member_login.c.o"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/member_login.c.o -MF CMakeFiles/myapp.dir/src/member_login.c.o.d -o CMakeFiles/myapp.dir/src/member_login.c.o -c /home/gec/workspace/Project/src/member_login.c
+
+CMakeFiles/myapp.dir/src/member_login.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/myapp.dir/src/member_login.c.i"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gec/workspace/Project/src/member_login.c > CMakeFiles/myapp.dir/src/member_login.c.i
+
+CMakeFiles/myapp.dir/src/member_login.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/member_login.c.s"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gec/workspace/Project/src/member_login.c -o CMakeFiles/myapp.dir/src/member_login.c.s
+
+CMakeFiles/myapp.dir/src/member_sms.c.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/src/member_sms.c.o: ../src/member_sms.c
+CMakeFiles/myapp.dir/src/member_sms.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/myapp.dir/src/member_sms.c.o"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/member_sms.c.o -MF CMakeFiles/myapp.dir/src/member_sms.c.o.d -o CMakeFiles/myapp.dir/src/member_sms.c.o -c /home/gec/workspace/Project/src/member_sms.c
+
+CMakeFiles/myapp.dir/src/member_sms.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/myapp.dir/src/member_sms.c.i"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gec/workspace/Project/src/member_sms.c > CMakeFiles/myapp.dir/src/member_sms.c.i
+
+CMakeFiles/myapp.dir/src/member_sms.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/myapp.dir/src/member_sms.c.s"
+	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gec/workspace/Project/src/member_sms.c -o CMakeFiles/myapp.dir/src/member_sms.c.s
+
 CMakeFiles/myapp.dir/src/recorder.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/recorder.c.o: ../src/recorder.c
 CMakeFiles/myapp.dir/src/recorder.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/myapp.dir/src/recorder.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/myapp.dir/src/recorder.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/recorder.c.o -MF CMakeFiles/myapp.dir/src/recorder.c.o.d -o CMakeFiles/myapp.dir/src/recorder.c.o -c /home/gec/workspace/Project/src/recorder.c
 
 CMakeFiles/myapp.dir/src/recorder.c.i: cmake_force
@@ -226,7 +254,7 @@ CMakeFiles/myapp.dir/src/recorder.c.s: cmake_force
 CMakeFiles/myapp.dir/src/ui_flow.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/ui_flow.c.o: ../src/ui_flow.c
 CMakeFiles/myapp.dir/src/ui_flow.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/myapp.dir/src/ui_flow.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/myapp.dir/src/ui_flow.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/ui_flow.c.o -MF CMakeFiles/myapp.dir/src/ui_flow.c.o.d -o CMakeFiles/myapp.dir/src/ui_flow.c.o -c /home/gec/workspace/Project/src/ui_flow.c
 
 CMakeFiles/myapp.dir/src/ui_flow.c.i: cmake_force
@@ -240,7 +268,7 @@ CMakeFiles/myapp.dir/src/ui_flow.c.s: cmake_force
 CMakeFiles/myapp.dir/src/main_weather.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/main_weather.c.o: ../src/main_weather.c
 CMakeFiles/myapp.dir/src/main_weather.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/myapp.dir/src/main_weather.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/myapp.dir/src/main_weather.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/main_weather.c.o -MF CMakeFiles/myapp.dir/src/main_weather.c.o.d -o CMakeFiles/myapp.dir/src/main_weather.c.o -c /home/gec/workspace/Project/src/main_weather.c
 
 CMakeFiles/myapp.dir/src/main_weather.c.i: cmake_force
@@ -254,7 +282,7 @@ CMakeFiles/myapp.dir/src/main_weather.c.s: cmake_force
 CMakeFiles/myapp.dir/src/weather_receiver.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/weather_receiver.c.o: ../src/weather_receiver.c
 CMakeFiles/myapp.dir/src/weather_receiver.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/myapp.dir/src/weather_receiver.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/myapp.dir/src/weather_receiver.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/weather_receiver.c.o -MF CMakeFiles/myapp.dir/src/weather_receiver.c.o.d -o CMakeFiles/myapp.dir/src/weather_receiver.c.o -c /home/gec/workspace/Project/src/weather_receiver.c
 
 CMakeFiles/myapp.dir/src/weather_receiver.c.i: cmake_force
@@ -268,7 +296,7 @@ CMakeFiles/myapp.dir/src/weather_receiver.c.s: cmake_force
 CMakeFiles/myapp.dir/src/ui_remote_commands.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/ui_remote_commands.c.o: ../src/ui_remote_commands.c
 CMakeFiles/myapp.dir/src/ui_remote_commands.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/myapp.dir/src/ui_remote_commands.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/myapp.dir/src/ui_remote_commands.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/ui_remote_commands.c.o -MF CMakeFiles/myapp.dir/src/ui_remote_commands.c.o.d -o CMakeFiles/myapp.dir/src/ui_remote_commands.c.o -c /home/gec/workspace/Project/src/ui_remote_commands.c
 
 CMakeFiles/myapp.dir/src/ui_remote_commands.c.i: cmake_force
@@ -282,7 +310,7 @@ CMakeFiles/myapp.dir/src/ui_remote_commands.c.s: cmake_force
 CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: ../src/lvgl_file_browser.c
 CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o -MF CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o.d -o CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o -c /home/gec/workspace/Project/src/lvgl_file_browser.c
 
 CMakeFiles/myapp.dir/src/lvgl_file_browser.c.i: cmake_force
@@ -296,7 +324,7 @@ CMakeFiles/myapp.dir/src/lvgl_file_browser.c.s: cmake_force
 CMakeFiles/myapp.dir/src/freetype_lcd.c.o: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/src/freetype_lcd.c.o: ../src/freetype_lcd.c
 CMakeFiles/myapp.dir/src/freetype_lcd.c.o: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/myapp.dir/src/freetype_lcd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/myapp.dir/src/freetype_lcd.c.o"
 	/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/myapp.dir/src/freetype_lcd.c.o -MF CMakeFiles/myapp.dir/src/freetype_lcd.c.o.d -o CMakeFiles/myapp.dir/src/freetype_lcd.c.o -c /home/gec/workspace/Project/src/freetype_lcd.c
 
 CMakeFiles/myapp.dir/src/freetype_lcd.c.i: cmake_force
@@ -319,6 +347,8 @@ myapp_OBJECTS = \
 "CMakeFiles/myapp.dir/src/overlay.c.o" \
 "CMakeFiles/myapp.dir/src/record_indicator.c.o" \
 "CMakeFiles/myapp.dir/src/jpeg_codec.c.o" \
+"CMakeFiles/myapp.dir/src/member_login.c.o" \
+"CMakeFiles/myapp.dir/src/member_sms.c.o" \
 "CMakeFiles/myapp.dir/src/recorder.c.o" \
 "CMakeFiles/myapp.dir/src/ui_flow.c.o" \
 "CMakeFiles/myapp.dir/src/main_weather.c.o" \
@@ -340,6 +370,8 @@ myapp: CMakeFiles/myapp.dir/src/playback.c.o
 myapp: CMakeFiles/myapp.dir/src/overlay.c.o
 myapp: CMakeFiles/myapp.dir/src/record_indicator.c.o
 myapp: CMakeFiles/myapp.dir/src/jpeg_codec.c.o
+myapp: CMakeFiles/myapp.dir/src/member_login.c.o
+myapp: CMakeFiles/myapp.dir/src/member_sms.c.o
 myapp: CMakeFiles/myapp.dir/src/recorder.c.o
 myapp: CMakeFiles/myapp.dir/src/ui_flow.c.o
 myapp: CMakeFiles/myapp.dir/src/main_weather.c.o
@@ -351,7 +383,7 @@ myapp: CMakeFiles/myapp.dir/build.make
 myapp: lvgl/lib/liblvgl.a
 myapp: /home/gec/workspace/freetype/freetype_arm/lib/libfreetype.a
 myapp: CMakeFiles/myapp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable myapp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gec/workspace/Project/build-lvgl-arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable myapp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myapp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

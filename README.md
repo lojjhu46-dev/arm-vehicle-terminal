@@ -15,6 +15,10 @@
 - 12 种居中天气图标及线程安全的动态天气状态接口
 - 主界面时间按分钟自动刷新，天气状态变化后自动刷新
 - 只在文件管理入口启动的 LVGL 文件浏览器
+- 会员扩展页、图片登录页和会员中心页的页面跳转
+- 登录页手机号/短信验证码数字键盘输入与 FreeType 数字叠加
+- 后台短信验证码请求、验证码校验和登录失败提示
+- 三个会员页面左上角返回按钮及逐级返回主界面
 
 ## 硬件与运行环境
 
@@ -103,6 +107,16 @@ cd /root/workspace
 
 UI 主循环每 `250ms` 检查一次，但只有跨分钟或天气版本变化时才重绘主界面，因此时间显示按分钟更新。天气默认值为深圳 `23℃`、晴转多云；其他模块可通过 `include/main_weather.h` 中的 `main_weather_set()` 更新城市、温度和天气类型。
 
+### 会员扩展与登录
+
+主界面右下角的“更多应用”入口约命中 LCD 坐标 `x=635..769`、`y=325..464`，点击后直接刷出 `resource/expand.jpg`。扩展页底部中央的“去登录”按钮进入 `resource/Menberslogin.jpg`；登录页的“登录”按钮只有在验证码校验成功后才会进入 `resource/MembersSanctuary.jpg`。
+
+三个图片页面都使用 framebuffer 刷图，不使用 LVGL。左上角的 `resource/back.jpg`（由提供的 `back.png` 转换而来）按以下顺序返回：会员中心 → 登录页 → 扩展页 → 主界面。
+
+登录页使用 `src/member_login.c` 维护输入状态，数字键盘布局与图片一致：手机号限定 11 位，短信验证码限定 4 位；点击手机号或验证码输入框切换焦点，左下角按键退格，右下角按键执行登录校验。已输入的手机号和验证码会通过 FreeType 在对应输入栏显示，发送中、发送失败、验证码错误等状态显示在登录按钮下方。
+
+点击“获取验证码”后，`src/member_sms.c` 在后台线程调用参考登录工程使用的互亿无线 HTTP 接口（`api.ihuyi.com:80`）。服务商账号和密码当前以 C 源码常量配置在该文件中；部署前应轮换为自己的凭据。网络请求不会阻塞触摸读取线程，但需要开发板具备 DNS 和外网访问能力。登录态仅保存在当前进程内，程序重启后不会自动恢复。
+
 ### 实时画面
 
 实时画面中央显示 640×480 摄像头图像，两侧显示控制按钮：
@@ -188,6 +202,8 @@ GET /weather/v1/hourly/{latitude}/{longitude}?hours=24&localTime=true&lang=zh
 ├── src/
 │   ├── main.c              # 设备初始化、资源释放和程序入口
 │   ├── ui_flow.c           # 主界面、触摸线程、摄像头线程和回放流程
+│   ├── member_login.c      # 会员登录输入、验证码状态和校验逻辑
+│   ├── member_sms.c        # 短信服务请求及后台发送线程
 │   ├── main_weather.c      # 天气资源缓存、状态接口和图标绘制
 │   ├── weather_receiver.c  # TCP 文本/24小时天气接收、缓存和整点切换
 │   ├── ui_remote_commands.c # 远程文本指令邮箱及精确匹配处理器
@@ -205,6 +221,10 @@ GET /weather/v1/hourly/{latitude}/{longitude}?hours=24&localTime=true&lang=zh
 │   └── record_indicator.c   # REC 图标和录像红点
 ├── resource/               # 开机动画、主界面和实时控制按钮图片
 │   ├── Weather/             # 12 张主界面天气 JPEG 和原始天气图集
+│   ├── expand.jpg           # 会员扩展页
+│   ├── Menberslogin.jpg     # 会员登录页（文件名按现有资源保留）
+│   ├── MembersSanctuary.jpg # 会员中心页
+│   ├── back.jpg             # 图片页返回按钮
 │   └── fonts/               # SIMHEI.TTF 字库
 ├── scripts/
 │   └── generate_weather_assets.sh # 天气图标裁剪和背景合成脚本
@@ -213,7 +233,7 @@ GET /weather/v1/hourly/{latitude}/{longitude}?hours=24&localTime=true&lang=zh
 └── build-lvgl-arm/         # LVGL/FreeType ARM 构建产物
 ```
 
-`lv_conf.h` 只启用浏览器所需的 LVGL 软件绘制、对象、按钮、标签和图片，并关闭 Linux framebuffer、evdev 及 LVGL 文件式 JPEG 解码。浏览器复用已有 `Lcd` 和 `Touch` 对象，不会再次打开 `/dev/fb0` 或 `/dev/input/event0`。
+`lv_conf.h` 只启用浏览器所需的 LVGL 软件绘制、对象、按钮、标签和图片，并关闭 Linux framebuffer、evdev 及 LVGL 文件式 JPEG 解码。浏览器复用已有 `Lcd` 和 `Touch` 对象，不会再次打开 `/dev/fb0` 或 `/dev/input/event0`。会员扩展和登录页面不使用 LVGL，只在已有 framebuffer 上刷 JPEG 并叠加 FreeType 文本。
 
 模块间的主要数据流为：
 
@@ -229,7 +249,20 @@ UI 使用触摸线程接收点击，摄像头线程负责采集、显示、录�
 
 ## 测试与验证
 
-`tests/` 中包含图像转换、LCD 页面计算、按钮命中、辅助线、回放排序、录像队列和公共头文件等测试源码。当前 CMake 文件只定义主程序目标，没有自动注册测试目标；测试需要在目标架构或对应的交叉编译环境中单独编译链接。
+`tests/` 中包含图像转换、LCD 页面计算、按钮命中、辅助线、回放排序、录像队列、公共头文件和会员登录状态测试源码。`test_member_login` 只在 CMake 检测到的编译器名称不包含 `arm-linux` 时注册为 CTest 测试；ARM 交叉构建不会尝试在宿主机执行 ARM 测试二进制。
+
+在具备项目依赖的宿主构建中可运行：
+
+```sh
+cmake -S . -B build-host \
+  -DCMAKE_C_COMPILER=gcc \
+  -DLVGL_ROOT_DIR=/path/to/lvgl \
+  -DFREETYPE_ROOT_DIR=/path/to/freetype_arm
+cmake --build build-host --target test_member_login
+ctest --test-dir build-host --output-on-failure
+```
+
+会员登录测试不访问真实短信服务；它直接模拟短信完成结果以验证输入和状态机。真实短信请求只能在开发板或具备网络的运行环境中验证。
 
 不连接真实设备时无法完成完整运行验证，因为程序依赖 `/dev/fb0`、`/dev/input/event0` 和 `/dev/video7`。部署到开发板后，建议按以下顺序检查：
 
@@ -244,6 +277,8 @@ test -w /root/workspace
 
 - 设备节点、屏幕尺寸、摄像头尺寸和存储路径主要是编译期常量，尚未提供命令行或配置文件覆盖。
 - 文件浏览器不提供删除、重命名、搜索或 PNG 解码。
+- 会员登录不保存登录态，不实现账号数据库、注册页、短信倒计时或发送频率限制。
+- 短信接口当前使用 HTTP 明文传输，服务商凭据位于 `src/member_sms.c`，不应直接复用到生产环境。
 - 和风天气 API 尚未接入，当前天气数据不会自动从网络更新。
 - `wifi.png`、`settings.png`、`audio_recording.png`、`lock_file.png` 等资源目前未接入主 UI 流程。
 - 程序依赖从包含 `resource/` 的目录启动；直接从其他目录运行会导致资源加载失败。

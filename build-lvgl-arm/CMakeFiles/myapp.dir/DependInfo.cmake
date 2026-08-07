@@ -17,6 +17,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gec/workspace/Project/src/lvgl_file_browser.c" "CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o" "gcc" "CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o.d"
   "/home/gec/workspace/Project/src/main.c" "CMakeFiles/myapp.dir/src/main.c.o" "gcc" "CMakeFiles/myapp.dir/src/main.c.o.d"
   "/home/gec/workspace/Project/src/main_weather.c" "CMakeFiles/myapp.dir/src/main_weather.c.o" "gcc" "CMakeFiles/myapp.dir/src/main_weather.c.o.d"
+  "/home/gec/workspace/Project/src/member_login.c" "CMakeFiles/myapp.dir/src/member_login.c.o" "gcc" "CMakeFiles/myapp.dir/src/member_login.c.o.d"
+  "/home/gec/workspace/Project/src/member_sms.c" "CMakeFiles/myapp.dir/src/member_sms.c.o" "gcc" "CMakeFiles/myapp.dir/src/member_sms.c.o.d"
   "/home/gec/workspace/Project/src/overlay.c" "CMakeFiles/myapp.dir/src/overlay.c.o" "gcc" "CMakeFiles/myapp.dir/src/overlay.c.o.d"
   "/home/gec/workspace/Project/src/playback.c" "CMakeFiles/myapp.dir/src/playback.c.o" "gcc" "CMakeFiles/myapp.dir/src/playback.c.o.d"
   "/home/gec/workspace/Project/src/record_indicator.c" "CMakeFiles/myapp.dir/src/record_indicator.c.o" "gcc" "CMakeFiles/myapp.dir/src/record_indicator.c.o.d"

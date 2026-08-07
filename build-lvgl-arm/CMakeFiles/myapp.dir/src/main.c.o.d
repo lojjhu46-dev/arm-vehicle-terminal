@@ -82,6 +82,8 @@ CMakeFiles/myapp.dir/src/main.c.o: /home/gec/workspace/Project/src/main.c \
  /home/gec/workspace/Project/include/app_config.h \
  /home/gec/workspace/Project/include/image_convert.h \
  /home/gec/workspace/Project/include/jpeg_codec.h \
+ /home/gec/workspace/Project/include/member_login.h \
+ /home/gec/workspace/Project/include/member_sms.h \
  /home/gec/workspace/Project/include/live_controls.h \
  /home/gec/workspace/Project/include/lvgl_file_browser.h \
  /home/gec/workspace/Project/include/playback.h \

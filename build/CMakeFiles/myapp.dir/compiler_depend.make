@@ -856,6 +856,8 @@ CMakeFiles/myapp.dir/src/main.c.o: ../src/main.c \
   ../include/app_config.h \
   ../include/image_convert.h \
   ../include/jpeg_codec.h \
+  ../include/member_login.h \
+  ../include/member_sms.h \
   ../include/live_controls.h \
   ../include/lvgl_file_browser.h \
   ../include/playback.h \
@@ -912,6 +914,115 @@ CMakeFiles/myapp.dir/src/main_weather.c.o: ../src/main_weather.c \
   ../include/jmorecfg.h \
   ../include/main_weather.h \
   ../include/lcd.h
+
+CMakeFiles/myapp.dir/src/member_login.c.o: ../src/member_login.c \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/wordsize.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/gnu/stubs.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h \
+  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/types.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/typesizes.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/libio.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/_G_config.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/wchar.h \
+  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdarg.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdlib.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/waitflags.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/waitstatus.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/endian.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/types.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/time.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/select.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/select.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sigset.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/time.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/sysmacros.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/alloca.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/string.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/unistd.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/posix_opt.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/environments.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/confname.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/getopt.h \
+  ../include/member_login.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/setjmp.h
+
+CMakeFiles/myapp.dir/src/member_sms.c.o: ../src/member_sms.c \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/ctype.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/wordsize.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/gnu/stubs.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/types.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/typesizes.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/endian.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/errno.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/errno.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/linux/errno.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm/errno.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm-generic/errno.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm-generic/errno-base.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/netdb.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/netinet/in.h \
+  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/wchar.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/socket.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/uio.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/types.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/time.h \
+  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/uio.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/socket.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/socket_type.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sockaddr.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm/socket.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm/sockios.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/in.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/netdb.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/libio.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/_G_config.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/wchar.h \
+  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdarg.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdlib.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/string.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/unistd.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/posix_opt.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/environments.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/confname.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/getopt.h \
+  ../include/member_sms.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/time.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/setjmp.h \
+  ../include/member_login.h
 
 CMakeFiles/myapp.dir/src/overlay.c.o: ../src/overlay.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
@@ -1234,6 +1345,8 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: ../src/ui_flow.c \
   ../include/app_config.h \
   ../include/image_convert.h \
   ../include/jpeg_codec.h \
+  ../include/member_login.h \
+  ../include/member_sms.h \
   ../include/live_controls.h \
   ../include/lvgl_file_browser.h \
   ../include/playback.h \
@@ -1244,15 +1357,21 @@ CMakeFiles/myapp.dir/src/ui_flow.c.o: ../src/ui_flow.c \
 
 CMakeFiles/myapp.dir/src/ui_remote_commands.c.o: ../src/ui_remote_commands.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
-  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/ctype.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/wordsize.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/gnu/stubs.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h \
-  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/types.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/typesizes.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/endian.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
+  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
+  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/libio.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/_G_config.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/wchar.h \
@@ -1260,13 +1379,8 @@ CMakeFiles/myapp.dir/src/ui_remote_commands.c.o: ../src/ui_remote_commands.c \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/string.h \
-  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
   ../include/ui_remote_commands.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
-  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/endian.h \
-  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h \
-  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap.h \
-  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/time.h \
   /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \
@@ -1367,6 +1481,16 @@ CMakeFiles/myapp.dir/src/weather_receiver.c.o: ../src/weather_receiver.c \
 
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/math-vector.h:
 
+/usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/arpa/inet.h:
+
+../src/weather_receiver.c:
+
+../src/recorder.c:
+
+../src/playback.c:
+
+../src/overlay.c:
+
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm/sockios.h:
 
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/asm/socket.h:
@@ -1380,16 +1504,6 @@ CMakeFiles/myapp.dir/src/weather_receiver.c.o: ../src/weather_receiver.c \
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/socket.h:
 
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/netinet/in.h:
-
-/usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/arpa/inet.h:
-
-../src/weather_receiver.c:
-
-../src/recorder.c:
-
-../src/playback.c:
-
-../src/overlay.c:
 
 ../include/weather_receiver.h:
 
@@ -1462,6 +1576,8 @@ CMakeFiles/myapp.dir/src/weather_receiver.c.o: ../src/weather_receiver.c \
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/st_ltdc/lv_st_ltdc.h:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/st7796/lv_st7796.h:
+
+/usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/netdb.h:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/nv3007/lv_nv3007.h:
 
@@ -1639,6 +1755,8 @@ CMakeFiles/myapp.dir/src/weather_receiver.c.o: ../src/weather_receiver.c \
 
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/ctype.h:
 
+../include/member_login.h:
+
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/st7789/lv_st7789.h:
 
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h:
@@ -1700,6 +1818,8 @@ CMakeFiles/myapp.dir/src/weather_receiver.c.o: ../src/weather_receiver.c \
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/opengles/lv_opengles_texture.h:
 
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/fcntl.h:
+
+../src/member_login.c:
 
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/getopt.h:
 
@@ -1846,6 +1966,8 @@ CMakeFiles/myapp.dir/src/weather_receiver.c.o: ../src/weather_receiver.c \
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/lv_draw_buf.h:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/arclabel/lv_arclabel.h:
+
+/usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/netdb.h:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/qnx/lv_qnx.h:
 
@@ -2013,6 +2135,8 @@ CMakeFiles/myapp.dir/src/weather_receiver.c.o: ../src/weather_receiver.c \
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/arc/lv_arc.h:
 
+../include/member_sms.h:
+
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/bar/lv_bar.h:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/led/lv_led.h:
@@ -2036,6 +2160,8 @@ CMakeFiles/myapp.dir/src/weather_receiver.c.o: ../src/weather_receiver.c \
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/spinbox/lv_spinbox.h:
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/lv_switch.h:
+
+../src/member_sms.c:
 
 /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/_G_config.h:
 

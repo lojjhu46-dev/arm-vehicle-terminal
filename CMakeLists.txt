@@ -40,6 +40,8 @@ set(SREC
     src/overlay.c 
     src/record_indicator.c 
     src/jpeg_codec.c 
+    src/member_login.c
+    src/member_sms.c
     src/recorder.c 
     src/ui_flow.c
     src/main_weather.c
@@ -73,3 +75,18 @@ target_link_libraries(${TARGET}
     m
     dl
 )
+
+if(NOT CMAKE_C_COMPILER MATCHES "arm-linux")
+    include(CTest)
+    if(BUILD_TESTING)
+        add_executable(test_member_login
+            tests/test_member_login.c
+            src/member_login.c
+        )
+        target_include_directories(test_member_login PRIVATE
+            ${CMAKE_CURRENT_SOURCE_DIR}/include
+        )
+        target_link_libraries(test_member_login pthread)
+        add_test(NAME member_login COMMAND test_member_login)
+    endif()
+endif()

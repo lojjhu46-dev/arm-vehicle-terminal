@@ -403,6 +403,54 @@ src/main_weather.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/main_weather.c.s
 .PHONY : src/main_weather.c.s
 
+src/member_login.o: src/member_login.c.o
+.PHONY : src/member_login.o
+
+# target to build an object file
+src/member_login.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/member_login.c.o
+.PHONY : src/member_login.c.o
+
+src/member_login.i: src/member_login.c.i
+.PHONY : src/member_login.i
+
+# target to preprocess a source file
+src/member_login.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/member_login.c.i
+.PHONY : src/member_login.c.i
+
+src/member_login.s: src/member_login.c.s
+.PHONY : src/member_login.s
+
+# target to generate assembly for a file
+src/member_login.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/member_login.c.s
+.PHONY : src/member_login.c.s
+
+src/member_sms.o: src/member_sms.c.o
+.PHONY : src/member_sms.o
+
+# target to build an object file
+src/member_sms.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/member_sms.c.o
+.PHONY : src/member_sms.c.o
+
+src/member_sms.i: src/member_sms.c.i
+.PHONY : src/member_sms.i
+
+# target to preprocess a source file
+src/member_sms.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/member_sms.c.i
+.PHONY : src/member_sms.c.i
+
+src/member_sms.s: src/member_sms.c.s
+.PHONY : src/member_sms.s
+
+# target to generate assembly for a file
+src/member_sms.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/member_sms.c.s
+.PHONY : src/member_sms.c.s
+
 src/overlay.o: src/overlay.c.o
 .PHONY : src/overlay.o
 
@@ -636,6 +684,12 @@ help:
 	@echo "... src/main_weather.o"
 	@echo "... src/main_weather.i"
 	@echo "... src/main_weather.s"
+	@echo "... src/member_login.o"
+	@echo "... src/member_login.i"
+	@echo "... src/member_login.s"
+	@echo "... src/member_sms.o"
+	@echo "... src/member_sms.i"
+	@echo "... src/member_sms.s"
 	@echo "... src/overlay.o"
 	@echo "... src/overlay.i"
 	@echo "... src/overlay.s"

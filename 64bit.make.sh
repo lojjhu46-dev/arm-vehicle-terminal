@@ -226,3 +226,5 @@ else
 fi
 
 printf 'Done: %s/myapp\n' "$BUILD_DIR"
+
+scp /home/gec/workspace/Project/build/myapp root@192.168.33.60:/root/workspace

@@ -65,6 +65,7 @@ struct BrowserUi {
 
 static void browser_entry_event_cb(lv_event_t *event);
 
+// 返回单调时钟毫秒值，供 LVGL 驱动动画与定时器。
 static uint32_t browser_tick_get(void)
 {
     struct timespec now;
@@ -74,6 +75,7 @@ static uint32_t browser_tick_get(void)
     return (uint32_t)(now.tv_sec * 1000ULL + now.tv_nsec / 1000000ULL);
 }
 
+// 判断规范化路径是否仍在允许浏览的根目录内。
 static int path_is_within(const char *root_dir, const char *candidate)
 {
     size_t root_length = strlen(root_dir);
@@ -83,6 +85,7 @@ static int path_is_within(const char *root_dir, const char *candidate)
     return candidate[root_length] == '\0' || candidate[root_length] == '/';
 }
 
+// 复制路径并拒绝超过浏览器固定缓冲区的输入。
 static int copy_path(char destination[BROWSER_PATH_SIZE], const char *source)
 {
     if (strlen(source) >= BROWSER_PATH_SIZE)
@@ -91,6 +94,7 @@ static int copy_path(char destination[BROWSER_PATH_SIZE], const char *source)
     return 0;
 }
 
+// 解析真实路径并拦截符号链接或路径跳转到根目录外的情况。
 static int resolve_existing_path(const BrowserUi *ui, const char *candidate,
                                  char resolved[BROWSER_PATH_SIZE])
 {
@@ -102,6 +106,7 @@ static int resolve_existing_path(const BrowserUi *ui, const char *candidate,
     return copy_path(resolved, absolute);
 }
 
+// 判断普通文件名是否为可预览的 JPEG。
 static int is_jpeg_name(const char *name)
 {
     size_t length = strlen(name);
@@ -113,6 +118,7 @@ static int is_jpeg_name(const char *name)
     return length >= 5 && strcasecmp(name + length - 5, ".jpeg") == 0;
 }
 
+// 校验录像会话目录的 YYYY-MM-DD_HH-MM-SS 命名格式。
 static int is_session_name(const char *name)
 {
     static const int separators[] = {4, 7, 10, 13, 16};
@@ -133,6 +139,7 @@ static int is_session_name(const char *name)
     return 1;
 }
 
+// 校验录像帧的 frame<number>.jpg 命名及编号范围。
 static int is_frame_name(const char *name)
 {
     int number;
@@ -147,6 +154,7 @@ static int is_frame_name(const char *name)
     return strcmp(name, expected) == 0;
 }
 
+// 检查录像会话中是否至少有一帧位于受限根目录内。
 static int session_has_frames(const BrowserUi *ui, const char *session_dir)
 {
     DIR *directory;
@@ -174,6 +182,7 @@ static int session_has_frames(const BrowserUi *ui, const char *session_dir)
     return 0;
 }
 
+// 排序目录项：目录优先，其次按名称不区分大小写排序。
 static int compare_entries(const void *left, const void *right)
 {
     const BrowserEntry *first = left;
@@ -184,11 +193,13 @@ static int compare_entries(const void *left, const void *right)
     return strcasecmp(first->name, second->name);
 }
 
+// 更新底部状态栏，空指针表示清空文本。
 static void browser_set_status(BrowserUi *ui, const char *message)
 {
     lv_label_set_text(ui->status_label, message != NULL ? message : "");
 }
 
+// 释放当前照片的原始像素和 LVGL RGB 数据。
 static void browser_free_photo(BrowserUi *ui)
 {
     free(ui->photo_pixels);
@@ -201,11 +212,13 @@ static void browser_free_photo(BrowserUi *ui)
     memset(&ui->photo_descriptor, 0, sizeof(ui->photo_descriptor));
 }
 
+// 将当前目录显示到顶部路径标签。
 static void browser_set_path_label(BrowserUi *ui)
 {
     lv_label_set_text(ui->path_label, ui->current_dir);
 }
 
+// 切回文件列表，并根据是否在根目录更新返回按钮状态。
 static void browser_show_list(BrowserUi *ui)
 {
     browser_free_photo(ui);
@@ -220,6 +233,7 @@ static void browser_show_list(BrowserUi *ui)
         lv_obj_clear_state(ui->back_button, LV_STATE_DISABLED);
 }
 
+// 解码 JPEG 并转换为 LVGL RGB888 所需的 BGR 字节序。
 static int browser_load_photo(BrowserUi *ui, const char *path)
 {
     size_t pixel_count;
@@ -262,6 +276,7 @@ static int browser_load_photo(BrowserUi *ui, const char *path)
     return 0;
 }
 
+// 创建照片控件，按可视区域等比例缩放并显示。
 static void browser_show_photo(BrowserUi *ui, const char *path)
 {
     lv_obj_t *image;
@@ -301,6 +316,7 @@ static void browser_show_photo(BrowserUi *ui, const char *path)
     browser_set_status(ui, NULL);
 }
 
+// 扫描当前目录，过滤不安全项后生成可滚动的 LVGL 列表。
 static void browser_show_directory(BrowserUi *ui)
 {
     DIR *directory;
@@ -366,6 +382,7 @@ static void browser_show_directory(BrowserUi *ui)
     browser_show_list(ui);
 }
 
+// 从照片预览返回列表，或从子目录返回父目录。
 static void browser_go_parent(BrowserUi *ui)
 {
     char *slash;
@@ -390,6 +407,7 @@ static void browser_go_parent(BrowserUi *ui)
     browser_show_directory(ui);
 }
 
+// 处理目录项点击：进入目录、启动录像回放或打开照片。
 static void browser_entry_event_cb(lv_event_t *event)
 {
     BrowserEntry *entry = lv_event_get_user_data(event);
@@ -424,11 +442,13 @@ static void browser_entry_event_cb(lv_event_t *event)
     browser_show_photo(ui, resolved);
 }
 
+// 转发 LVGL 返回按钮事件。
 static void browser_back_event_cb(lv_event_t *event)
 {
     browser_go_parent(lv_event_get_user_data(event));
 }
 
+// 标记浏览器结束并返回主 UI。
 static void browser_exit_event_cb(lv_event_t *event)
 {
     BrowserUi *ui = lv_event_get_user_data(event);
@@ -437,6 +457,7 @@ static void browser_exit_event_cb(lv_event_t *event)
     ui->done = 1;
 }
 
+// 将 LVGL RGB888 脏区域转换为 framebuffer 像素并翻页显示。
 static void browser_flush_cb(lv_display_t *display, const lv_area_t *area,
                              uint8_t *color_p)
 {
@@ -464,6 +485,7 @@ static void browser_flush_cb(lv_display_t *display, const lv_area_t *area,
     lv_display_flush_ready(display);
 }
 
+// 将项目触摸驱动的坐标和按压状态适配为 LVGL 指针输入。
 static void browser_input_read_cb(lv_indev_t *indev, lv_indev_data_t *data)
 {
     BrowserInput *input = lv_indev_get_user_data(indev);
@@ -481,6 +503,7 @@ static void browser_input_read_cb(lv_indev_t *indev, lv_indev_data_t *data)
     data->state = pressed ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
 }
 
+// 创建文件列表、图片预览、路径栏和操作按钮。
 static void browser_create_ui(BrowserUi *ui)
 {
     lv_obj_t *label;
@@ -543,6 +566,7 @@ static void browser_create_ui(BrowserUi *ui)
     lv_screen_load(ui->screen);
 }
 
+// 运行受限于 root_dir 的模态文件浏览器，直到退出或选择回放。
 int lvgl_file_browser_run(Lcd *lcd, Touch *touch, const char *root_dir,
                           LvglBrowserSelection *selection,
                           LvglBrowserInterrupt interrupt,
@@ -588,7 +612,7 @@ int lvgl_file_browser_run(Lcd *lcd, Touch *touch, const char *root_dir,
     lv_display_set_user_data(display, &ui);
     browser_create_ui(&ui);
 
-    /* Render the first directory before installing the blocking touch reader. */
+    /* 先渲染首帧，再安装可能阻塞读取触摸设备的输入回调。 */
     lv_refr_now(display);
     indev = lv_indev_create();
     if (indev == NULL)
