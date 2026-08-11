@@ -4,7 +4,7 @@ lvgl/CMakeFiles/lvgl.dir/src/themes/simple/lv_theme_simple.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../lv_theme_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../misc/lv_ext_data.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../lv_theme.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../core/../lv_conf_internal.h \
@@ -211,6 +211,8 @@ lvgl/CMakeFiles/lvgl.dir/src/themes/simple/lv_theme_simple.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/widgets/button/../../core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/widgets/buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/widgets/buttonmatrix/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/widgets/buttonmatrix/../../core/lv_obj.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/widgets/buttonmatrix/../../core/lv_obj_property.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/widgets/calendar/lv_calendar.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/widgets/calendar/../buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/widgets/canvas/lv_canvas.h \
@@ -338,6 +340,9 @@ lvgl/CMakeFiles/lvgl.dir/src/themes/simple/lv_theme_simple.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/libs/libjpeg_turbo/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/libs/freetype/lv_freetype.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/libs/freetype/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/libs/freetype/../../misc/lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/libs/freetype/../../misc/lv_event.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/libs/freetype/../../misc/lv_color.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/libs/rlottie/lv_rlottie.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/libs/rlottie/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/themes/simple/../../../src/libs/ffmpeg/lv_ffmpeg.h \

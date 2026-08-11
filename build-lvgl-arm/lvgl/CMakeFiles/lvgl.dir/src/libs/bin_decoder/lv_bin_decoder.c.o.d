@@ -4,7 +4,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/bin_decoder/lv_bin_decoder.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/bin_decoder/../../draw/lv_image_decoder_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/bin_decoder/../../draw/lv_image_decoder.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/bin_decoder/../../draw/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/bin_decoder/../../draw/lv_draw_buf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/bin_decoder/../../draw/../misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/bin_decoder/../../draw/../misc/../lv_conf_internal.h \

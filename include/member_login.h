@@ -52,6 +52,11 @@ typedef struct {
 int member_login_init(MemberLogin *login);
 void member_login_destroy(MemberLogin *login);
 void member_login_reset(MemberLogin *login);
+int member_login_set_input(MemberLogin *login, MemberLoginField field,
+                           const char *value);
+MemberLoginAction member_login_request_sms(MemberLogin *login,
+                                           MemberSmsRequest *request);
+MemberLoginAction member_login_submit(MemberLogin *login);
 MemberLoginAction member_login_handle_tap(MemberLogin *login, int x, int y,
                                           MemberSmsRequest *request);
 void member_login_complete_sms(MemberLogin *login, const MemberSmsRequest *request,

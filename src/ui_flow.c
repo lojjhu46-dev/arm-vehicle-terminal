@@ -278,7 +278,7 @@ static void ui_finish_file_browser(UiState *state, int playback)
 {
     pthread_mutex_lock(&state->state_mutex);
     state->file_browser_requested = 0;
-    state->touch_running = 1;
+    state->touch_running = 0;
     state->playback_mode = playback;
     state->live_mode = 0;
     pthread_mutex_unlock(&state->state_mutex);
@@ -738,7 +738,8 @@ static int ui_run_file_browser(Lcd *lcd, Touch *touch, Recorder *recorder,
                                UiState *state, LiveControls *controls,
                                CameraThreadContext *camera_context,
                                pthread_t *touch_thread, int *touch_thread_running,
-                               UiRemoteCommands *remote_commands)
+                               UiRemoteCommands *remote_commands,
+                               LvglRuntime *runtime, LvglUi *lvgl_ui)
 {
     LvglBrowserSelection selection;
 
@@ -750,19 +751,29 @@ static int ui_run_file_browser(Lcd *lcd, Touch *touch, Recorder *recorder,
         *touch_thread_running = 0;
     }
     touch_reset_position(touch);
-    if (lvgl_file_browser_run(lcd, touch, RECORD_ROOT_DIR, &selection,
+    if (lvgl_file_browser_run(runtime, RECORD_ROOT_DIR, &selection,
                               ui_file_browser_interrupt, remote_commands) == -1)
         memset(&selection, 0, sizeof(selection));
     ui_finish_file_browser(state, selection.result == LVGL_BROWSER_PLAYBACK);
     ui_apply_remote_commands(state, remote_commands);
-    if (pthread_create(touch_thread, NULL, touch_thread_main, camera_context) != 0)
-        return -1;
-    *touch_thread_running = 1;
-    touch_reset_position(touch);
     if (selection.result == LVGL_BROWSER_PLAYBACK && !ui_is_live(state))
+    {
+        pthread_mutex_lock(&state->state_mutex);
+        state->touch_running = 1;
+        pthread_mutex_unlock(&state->state_mutex);
+        if (pthread_create(touch_thread, NULL, touch_thread_main, camera_context) != 0)
+            return -1;
+        *touch_thread_running = 1;
+        touch_reset_position(touch);
         playback_run(lcd, state, controls, selection.path, 0, remote_commands);
+        pthread_mutex_lock(&state->state_mutex);
+        state->touch_running = 0;
+        pthread_mutex_unlock(&state->state_mutex);
+        pthread_join(*touch_thread, NULL);
+        *touch_thread_running = 0;
+    }
     if (!ui_is_live(state))
-        show_main_interface(lcd, state);
+        lvgl_ui_show_main(lvgl_ui);
     touch_reset_position(touch);
     return 0;
 }
@@ -861,7 +872,36 @@ static void show_screen_image(Lcd *lcd, UiState *state, int screen,
         *login_version = login_snapshot.version;
 }
 
-// 初始化同步对象并协调触摸与三页摄像头线程生命周期。
+// 在实时预览和回放期间启用旧的原始触摸线程；静态页面由 LVGL 独占输入。
+static int start_dynamic_touch(UiState *state, pthread_t *thread,
+                               CameraThreadContext *context, int *running)
+{
+    pthread_mutex_lock(&state->state_mutex);
+    state->touch_running = 1;
+    pthread_mutex_unlock(&state->state_mutex);
+    if (pthread_create(thread, NULL, touch_thread_main, context) != 0)
+    {
+        pthread_mutex_lock(&state->state_mutex);
+        state->touch_running = 0;
+        pthread_mutex_unlock(&state->state_mutex);
+        return -1;
+    }
+    *running = 1;
+    return 0;
+}
+
+static void stop_dynamic_touch(UiState *state, pthread_t *thread, int *running)
+{
+    if (!*running)
+        return;
+    pthread_mutex_lock(&state->state_mutex);
+    state->touch_running = 0;
+    pthread_mutex_unlock(&state->state_mutex);
+    pthread_join(*thread, NULL);
+    *running = 0;
+}
+
+// 初始化静态 LVGL 页面，并在动态画面期间保留原有 framebuffer 工作流。
 int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
            UiRemoteCommands *remote_commands)
 {
@@ -869,69 +909,57 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
     CameraThreadContext camera_context;
     LiveControls controls;
     RecordIndicator indicator;
-    BackButton back_button;
     MemberLogin member_login;
     MemberSmsWorker sms_worker;
+    LvglRuntime runtime;
+    LvglUi lvgl_ui;
     pthread_t touch_thread;
     int touch_thread_running = 0;
-    int displayed_screen = UI_SCREEN_MAIN;
-    unsigned long displayed_login_version = 0;
+    int controls_initialized = 0;
+    int indicator_initialized = 0;
+    int login_initialized = 0;
+    int sms_initialized = 0;
+    int runtime_initialized = 0;
+    int lvgl_ui_initialized = 0;
+    int result = -1;
 
     memset(&state, 0, sizeof(state));
+    memset(&runtime, 0, sizeof(runtime));
+    memset(&lvgl_ui, 0, sizeof(lvgl_ui));
+    memset(&controls, 0, sizeof(controls));
+    memset(&indicator, 0, sizeof(indicator));
+    memset(&member_login, 0, sizeof(member_login));
+    memset(&sms_worker, 0, sizeof(sms_worker));
     if (sem_init(&state.lcd_sem, 0, 1) == -1 ||
         pthread_mutex_init(&state.state_mutex, NULL) != 0)
         return -1;
-
-    state.touch_running = 1;
     state.screen = UI_SCREEN_MAIN;
     state.parking_guides_enabled = 1;
     if (live_controls_init(&controls) == -1)
-    {
-        fprintf(stderr, "missing live-control assets in %s; deploy the resource directory\n",
-                RESOURCE_DIR);
-        pthread_mutex_destroy(&state.state_mutex);
-        sem_destroy(&state.lcd_sem);
-        return -1;
-    }
+        goto cleanup;
+    controls_initialized = 1;
     if (record_indicator_init(&indicator) == -1)
-    {
-        fprintf(stderr, "missing REC asset in %s\n", RESOURCE_DIR);
-        live_controls_destroy(&controls);
-        pthread_mutex_destroy(&state.state_mutex);
-        sem_destroy(&state.lcd_sem);
-        return -1;
-    }
-    if (back_button_init(&back_button) == -1)
-    {
-        fprintf(stderr, "missing or invalid back-button asset: %s/back.jpg\n",
-                RESOURCE_DIR);
-        record_indicator_destroy(&indicator);
-        live_controls_destroy(&controls);
-        pthread_mutex_destroy(&state.state_mutex);
-        sem_destroy(&state.lcd_sem);
-        return -1;
-    }
+        goto cleanup;
+    indicator_initialized = 1;
     if (member_login_init(&member_login) == -1)
-    {
-        fprintf(stderr, "failed to initialize member login\n");
-        back_button_destroy(&back_button);
-        record_indicator_destroy(&indicator);
-        live_controls_destroy(&controls);
-        pthread_mutex_destroy(&state.state_mutex);
-        sem_destroy(&state.lcd_sem);
-        return -1;
-    }
+        goto cleanup;
+    login_initialized = 1;
     if (member_sms_worker_init(&sms_worker) == -1)
+        goto cleanup;
+    sms_initialized = 1;
+    if (lvgl_runtime_init(&runtime, lcd, touch) == -1)
     {
-        fprintf(stderr, "failed to initialize member SMS worker\n");
-        member_login_destroy(&member_login);
-        back_button_destroy(&back_button);
-        record_indicator_destroy(&indicator);
-        live_controls_destroy(&controls);
-        pthread_mutex_destroy(&state.state_mutex);
-        sem_destroy(&state.lcd_sem);
-        return -1;
+        fprintf(stderr, "[UI] LVGL runtime initialization failed\n");
+        goto cleanup;
     }
+    runtime_initialized = 1;
+    if (lvgl_ui_init(&lvgl_ui, &runtime, &member_login, &sms_worker) == -1)
+    {
+        fprintf(stderr, "[UI] LVGL UI initialization failed\n");
+        goto cleanup;
+    }
+    lvgl_ui_initialized = 1;
+
     memset(&camera_context, 0, sizeof(camera_context));
     camera_context.lcd = lcd;
     camera_context.touch = touch;
@@ -942,120 +970,102 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
     camera_context.state = &state;
     camera_context.member_login = &member_login;
     camera_context.sms_worker = &sms_worker;
-
-    if (pthread_create(&touch_thread, NULL, touch_thread_main, &camera_context) != 0)
-    {
-        member_sms_worker_destroy(&sms_worker);
-        member_login_destroy(&member_login);
-        back_button_destroy(&back_button);
-        record_indicator_destroy(&indicator);
-        live_controls_destroy(&controls);
-        pthread_mutex_destroy(&state.state_mutex);
-        sem_destroy(&state.lcd_sem);
-        return -1;
-    }
-    touch_thread_running = 1;
+    lvgl_ui_play_startup(&lvgl_ui);
 
     for (;;)
     {
         pthread_t camera_thread;
-        int screen;
-        MemberLoginSnapshot login_snapshot;
+        LvglUiAction action;
 
         ui_apply_remote_commands(&state, remote_commands);
-        screen = ui_get_screen(&state);
-        if (screen == UI_SCREEN_LOGIN)
-            member_login_snapshot(&member_login, &login_snapshot);
-        /* 登录输入变化也需要重新刷底图，才能清除旧数字和状态提示。 */
         if (!ui_is_live(&state) && !ui_is_playback(&state) &&
-            !ui_is_file_browser_requested(&state) &&
-            (screen != displayed_screen ||
-             (screen == UI_SCREEN_LOGIN &&
-              login_snapshot.version != displayed_login_version)))
+            !ui_is_file_browser_requested(&state))
         {
-            if (screen == UI_SCREEN_MAIN)
-                show_main_interface(lcd, &state);
-            else
-                show_screen_image(lcd, &state, screen, &back_button,
-                                  &member_login, &displayed_login_version);
-            displayed_screen = screen;
-        }
-        while (!ui_is_live(&state) && !ui_is_playback(&state) &&
-               !ui_is_file_browser_requested(&state))
-        {
-            ui_apply_remote_commands(&state, remote_commands);
-            if (ui_is_live(&state) || ui_is_playback(&state) ||
-                ui_is_file_browser_requested(&state))
-                break;
-            if (ui_get_screen(&state) != UI_SCREEN_MAIN)
-                break;
-            if (main_dashboard_refresh_due())
-                show_main_interface(lcd, &state);
-            else
-                usleep(250 * 1000);
-        }
-
-        if (!ui_is_live(&state) && !ui_is_playback(&state) &&
-            !ui_is_file_browser_requested(&state) &&
-            ui_get_screen(&state) != UI_SCREEN_MAIN)
-        {
-            /* 图片页面没有独立线程，以短轮询等待触摸或短信状态变化。 */
-            usleep(50 * 1000);
+            lvgl_ui_process(&lvgl_ui);
+            action = lvgl_ui_take_action(&lvgl_ui);
+            if (action == LVGL_UI_ACTION_ENTER_LIVE)
+                ui_set_live(&state, 1);
+            else if (action == LVGL_UI_ACTION_OPEN_FILE_BROWSER)
+                ui_request_file_browser(&state);
+            usleep(5 * 1000);
             continue;
         }
+
+        if (ui_is_file_browser_requested(&state))
+        {
+            lvgl_runtime_set_input_enabled(&runtime, 1);
+            if (ui_run_file_browser(lcd, touch, recorder, &state, &controls,
+                                    &camera_context, &touch_thread,
+                                    &touch_thread_running, remote_commands,
+                                    &runtime, &lvgl_ui) == -1)
+                goto cleanup;
+            continue;
+        }
+
+        lvgl_runtime_set_input_enabled(&runtime, 0);
+        touch_reset_position(touch);
+        if (start_dynamic_touch(&state, &touch_thread, &camera_context,
+                                &touch_thread_running) == -1)
+            goto cleanup;
 
         if (ui_is_playback(&state))
         {
-            touch_reset_position(touch);
             playback_run(lcd, &state, &controls, RECORDINGS_DIR, 1,
                          remote_commands);
-            if (!ui_is_live(&state))
-                show_main_interface(lcd, &state);
-            continue;
-        }
-        if (ui_is_file_browser_requested(&state))
-        {
-            if (ui_run_file_browser(lcd, touch, recorder, &state, &controls,
-                                    &camera_context, &touch_thread,
-                                    &touch_thread_running, remote_commands) == -1)
-                return -1;
+            stop_dynamic_touch(&state, &touch_thread, &touch_thread_running);
+            lvgl_runtime_set_input_enabled(&runtime, 1);
+            lvgl_ui_show_main(&lvgl_ui);
             continue;
         }
 
-        touch_reset_position(touch);
-        if (pthread_create(&camera_thread, NULL, camera_thread_main, &camera_context) != 0)
+        if (pthread_create(&camera_thread, NULL, camera_thread_main,
+                           &camera_context) != 0)
         {
             ui_set_live(&state, 0);
-            return -1;
+            stop_dynamic_touch(&state, &touch_thread, &touch_thread_running);
+            lvgl_runtime_set_input_enabled(&runtime, 1);
+            goto cleanup;
         }
-
         while (ui_is_live(&state))
         {
             ui_apply_remote_commands(&state, remote_commands);
             usleep(10 * 1000);
         }
-
         pthread_join(camera_thread, NULL);
-        if (ui_is_file_browser_requested(&state))
-        {
-            if (ui_run_file_browser(lcd, touch, recorder, &state, &controls,
-                                    &camera_context, &touch_thread,
-                                    &touch_thread_running, remote_commands) == -1)
-                return -1;
-            continue;
-        }
         recorder_stop_session(recorder);
         recorder_wait_idle(recorder);
-        if (ui_is_playback(&state))
+
+        if (ui_is_file_browser_requested(&state))
         {
-            touch_reset_position(touch);
+            stop_dynamic_touch(&state, &touch_thread, &touch_thread_running);
+            lvgl_runtime_set_input_enabled(&runtime, 1);
+            continue;
+        }
+        if (ui_is_playback(&state))
             playback_run(lcd, &state, &controls, RECORDINGS_DIR, 1,
                          remote_commands);
-        }
-        if (!ui_is_live(&state))
-            show_main_interface(lcd, &state);
-        displayed_screen = UI_SCREEN_MAIN;
+        stop_dynamic_touch(&state, &touch_thread, &touch_thread_running);
+        lvgl_runtime_set_input_enabled(&runtime, 1);
+        lvgl_ui_show_main(&lvgl_ui);
         touch_reset_position(touch);
     }
+
+cleanup:
+    stop_dynamic_touch(&state, &touch_thread, &touch_thread_running);
+    if (lvgl_ui_initialized)
+        lvgl_ui_destroy(&lvgl_ui);
+    if (runtime_initialized)
+        lvgl_runtime_destroy(&runtime);
+    if (sms_initialized)
+        member_sms_worker_destroy(&sms_worker);
+    if (login_initialized)
+        member_login_destroy(&member_login);
+    if (indicator_initialized)
+        record_indicator_destroy(&indicator);
+    if (controls_initialized)
+        live_controls_destroy(&controls);
+    pthread_mutex_destroy(&state.state_mutex);
+    sem_destroy(&state.lcd_sem);
+    return result;
 }
 //最新修改

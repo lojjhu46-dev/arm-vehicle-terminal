@@ -164,12 +164,12 @@ const char *main_weather_label(MainWeatherType type)
     return weather_labels[type];
 }
 
-// 将当前天气图标复制到所有 framebuffer 页面，避免翻页后图标丢失。
-int main_weather_draw_icon(Lcd *lcd, const MainWeather *weather)
+// 将当前天气图标复制到一个紧凑的 96x64 像素缓冲。
+int main_weather_copy_icon_pixels(int *pixels, const MainWeather *weather)
 {
     int *icon;
 
-    if (!context.initialized || lcd == NULL || weather == NULL ||
+    if (!context.initialized || pixels == NULL || weather == NULL ||
         weather->type < 0 || weather->type >= MAIN_WEATHER_COUNT)
         return -1;
 
@@ -177,16 +177,37 @@ int main_weather_draw_icon(Lcd *lcd, const MainWeather *weather)
     icon = context.icons[weather->type];
     pthread_mutex_unlock(&context.mutex);
 
+    memcpy(pixels, icon, MAIN_WEATHER_ICON_W * MAIN_WEATHER_ICON_H *
+                         sizeof(*pixels));
+    return 0;
+}
+
+// 将当前天气图标绘制到 800x480 主界面背景的固定位置。
+int main_weather_draw_icon_pixels(int *pixels, const MainWeather *weather)
+{
+    int icon_pixels[MAIN_WEATHER_ICON_W * MAIN_WEATHER_ICON_H];
+
+    if (pixels == NULL || main_weather_copy_icon_pixels(icon_pixels, weather) == -1)
+        return -1;
+    for (int y = 0; y < MAIN_WEATHER_ICON_H; ++y)
+    {
+        memcpy(pixels + (MAIN_WEATHER_ICON_Y + y) * LCD_WIDTH +
+                   MAIN_WEATHER_ICON_X,
+               icon_pixels + y * MAIN_WEATHER_ICON_W,
+               MAIN_WEATHER_ICON_W * sizeof(*pixels));
+    }
+    return 0;
+}
+
+// 将当前天气图标复制到所有 framebuffer 页面，避免翻页后图标丢失。
+int main_weather_draw_icon(Lcd *lcd, const MainWeather *weather)
+{
+    if (lcd == NULL)
+        return -1;
     for (int page = 0; page < lcd_page_count(lcd); ++page)
     {
-        int *destination = lcd_page_pixels(lcd, page);
-        for (int y = 0; y < MAIN_WEATHER_ICON_H; ++y)
-        {
-            memcpy(destination + (MAIN_WEATHER_ICON_Y + y) * LCD_WIDTH +
-                       MAIN_WEATHER_ICON_X,
-                   icon + y * MAIN_WEATHER_ICON_W,
-                   MAIN_WEATHER_ICON_W * sizeof(*destination));
-        }
+        if (main_weather_draw_icon_pixels(lcd_page_pixels(lcd, page), weather) == -1)
+            return -1;
     }
     return 0;
 }

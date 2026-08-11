@@ -4,7 +4,7 @@ lvgl/CMakeFiles/lvgl.dir/src/misc/cache/instance/lv_image_cache.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/instance/../../../draw/lv_image_decoder_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/instance/../../../draw/lv_image_decoder.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/instance/../../../draw/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/instance/../../../draw/lv_draw_buf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/instance/../../../draw/../misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/cache/instance/../../../draw/../misc/../lv_conf_internal.h \

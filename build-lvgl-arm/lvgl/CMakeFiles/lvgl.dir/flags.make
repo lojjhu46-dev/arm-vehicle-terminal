@@ -4,21 +4,21 @@
 # compile ASM with /usr/local/arm/5.4.0/usr/bin/arm-linux-gcc
 # compile C with /usr/local/arm/5.4.0/usr/bin/arm-linux-gcc
 # compile CXX with /usr/local/arm/5.4.0/usr/bin/arm-linux-c++
-ASM_DEFINES = -DLV_CONF_PATH=\"/home/gec/workspace/Project/lv_conf.h\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE
+ASM_DEFINES = -DLV_CONF_PATH=\"/home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE
 
-ASM_INCLUDES = -isystem /home/gec/workspace/Project -isystem /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl -isystem /home/gec/workspace/Project/build-lvgl-arm/lvgl
+ASM_INCLUDES = -I/home/gec/workspace/freetype/freetype_arm/include -isystem /home/gec/workspace/PROJECT_LVGL/Project -isystem /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl -isystem /home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm/lvgl
 
 ASM_FLAGS = 
 
-C_DEFINES = -DLV_CONF_PATH=\"/home/gec/workspace/Project/lv_conf.h\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE
+C_DEFINES = -DLV_CONF_PATH=\"/home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE
 
-C_INCLUDES = -isystem /home/gec/workspace/Project -isystem /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl -isystem /home/gec/workspace/Project/build-lvgl-arm/lvgl
+C_INCLUDES = -I/home/gec/workspace/freetype/freetype_arm/include -isystem /home/gec/workspace/PROJECT_LVGL/Project -isystem /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl -isystem /home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm/lvgl
 
 C_FLAGS = 
 
-CXX_DEFINES = -DLV_CONF_PATH=\"/home/gec/workspace/Project/lv_conf.h\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE
+CXX_DEFINES = -DLV_CONF_PATH=\"/home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE
 
-CXX_INCLUDES = -isystem /home/gec/workspace/Project -isystem /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl -isystem /home/gec/workspace/Project/build-lvgl-arm/lvgl
+CXX_INCLUDES = -I/home/gec/workspace/freetype/freetype_arm/include -isystem /home/gec/workspace/PROJECT_LVGL/Project -isystem /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl -isystem /home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm/lvgl
 
 CXX_FLAGS = 
 

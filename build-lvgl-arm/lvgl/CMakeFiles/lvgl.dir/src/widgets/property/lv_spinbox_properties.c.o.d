@@ -5,7 +5,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_spinbox_properties.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/../spinbox/../textarea/lv_textarea.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/../spinbox/../textarea/../label/lv_label.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/../spinbox/../textarea/../label/../../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/../spinbox/../textarea/../label/../../misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/../spinbox/../textarea/../label/../../misc/../lv_conf_internal.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \

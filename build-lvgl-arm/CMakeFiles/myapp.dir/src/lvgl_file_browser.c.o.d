@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: \
- /home/gec/workspace/Project/src/lvgl_file_browser.c \
+ /home/gec/workspace/PROJECT_LVGL/Project/src/lvgl_file_browser.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/ctype.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -60,7 +60,7 @@ CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_init.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdbool.h \
@@ -215,6 +215,8 @@ CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj_property.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/lv_calendar.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/canvas/lv_canvas.h \
@@ -342,6 +344,9 @@ CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/lv_freetype.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_event.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_color.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/rlottie/lv_rlottie.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/ffmpeg/lv_ffmpeg.h \
@@ -455,14 +460,15 @@ CMakeFiles/myapp.dir/src/lvgl_file_browser.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_api_map_v9_2.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_api_map_v9_3.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/lv_api_map_v9_4.h \
- /home/gec/workspace/Project/include/app_config.h \
- /home/gec/workspace/Project/include/jpeg_codec.h \
- /home/gec/workspace/Project/include/jpeglib.h \
- /home/gec/workspace/Project/include/jconfig.h \
- /home/gec/workspace/Project/include/jmorecfg.h \
- /home/gec/workspace/Project/include/lvgl_file_browser.h \
- /home/gec/workspace/Project/include/lcd.h \
- /home/gec/workspace/Project/include/touch.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/app_config.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jpeg_codec.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jpeglib.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jconfig.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jmorecfg.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/lvgl_file_browser.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/lcd.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/lvgl_runtime.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/touch.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \

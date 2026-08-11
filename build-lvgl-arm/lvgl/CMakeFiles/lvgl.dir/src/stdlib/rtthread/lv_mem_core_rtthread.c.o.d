@@ -3,7 +3,7 @@ lvgl/CMakeFiles/lvgl.dir/src/stdlib/rtthread/lv_mem_core_rtthread.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/rtthread/../lv_mem.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/rtthread/../../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/rtthread/../lv_string.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/rtthread/../../misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/rtthread/../../misc/../lv_conf_internal.h \

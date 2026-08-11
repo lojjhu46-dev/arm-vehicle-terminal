@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/gec/workspace/Project/build-lvgl-arm")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

@@ -8,20 +8,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/blend/helium/lv_blend_helium.S" "/home/gec/workspace/Project/build-lvgl-arm/lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/helium/lv_blend_helium.S.o"
+  "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/sw/blend/helium/lv_blend_helium.S" "/home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm/lvgl/CMakeFiles/lvgl.dir/src/draw/sw/blend/helium/lv_blend_helium.S.o"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
-  "LV_CONF_PATH=\"/home/gec/workspace/Project/lv_conf.h\""
+  "LV_CONF_PATH=\"/home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h\""
   "LV_KCONFIG_IGNORE"
   "LV_LVGL_H_INCLUDE_SIMPLE"
   )
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "/home/gec/workspace/Project"
+  "/home/gec/workspace/freetype/freetype_arm/include"
+  "/home/gec/workspace/PROJECT_LVGL/Project"
   "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl"
   "lvgl"
   )

@@ -1,7 +1,15 @@
 #!/bin/bash
 
+#请重新清理旧构建并编译、部署：
+
+#cd /home/gec/workspace/PROJECT_LVGL/Project
+#CLEAN_BUILD=1 DEPLOY=1 ./64bit.make.sh
+
 # Sourcing a build script must not apply `set -e` or `exit` to the caller's
 # shell. Re-run it as a child process and only return its status to the caller.
+
+#GENERATE_WEATHER_ASSETS=0 DEPLOY=0 BUILD_DIR=build JOBS=2 ./64bit.make.sh
+
 if [[ "${BASH_SOURCE[0]}" != "$0" ]]; then
     _64BIT_MAKE_SCRIPT=${BASH_SOURCE[0]}
     case "$_64BIT_MAKE_SCRIPT" in
@@ -24,6 +32,7 @@ if [ "$SCRIPT_DIR" = "$0" ]; then
     SCRIPT_DIR=.
 fi
 PROJECT_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR" && pwd)
+WORKSPACE_ROOT=$(CDPATH= cd -- "$PROJECT_ROOT/../.." && pwd)
 
 die()
 {
@@ -116,6 +125,9 @@ Environment overrides:
   ARM_TOOLCHAIN_BIN=...          Directory containing arm-linux-gcc/c++
   CMAKE_C_COMPILER=...           C compiler command or absolute path
   CMAKE_CXX_COMPILER=...         C++ compiler command or absolute path
+  LVGL_ROOT_DIR=...              LVGL 9 source directory
+  FREETYPE_ROOT_DIR=...          ARM FreeType SDK directory
+  LV_BUILD_CONF_PATH=...         LVGL configuration header
 EOF
 }
 
@@ -127,9 +139,11 @@ esac
 
 BUILD_DIR=$(make_project_path "${BUILD_DIR:-$PROJECT_ROOT/build-lvgl-arm}")
 LVGL_ROOT_DIR=$(make_project_path \
-    "${LVGL_ROOT_DIR:-$PROJECT_ROOT/../lvgl_project/lv_port_pc_vscode/lvgl}")
+    "${LVGL_ROOT_DIR:-$WORKSPACE_ROOT/lvgl_project/lv_port_pc_vscode/lvgl}")
 FREETYPE_ROOT_DIR=$(make_project_path \
-    "${FREETYPE_ROOT_DIR:-$PROJECT_ROOT/../freetype/freetype_arm}")
+    "${FREETYPE_ROOT_DIR:-$WORKSPACE_ROOT/freetype/freetype_arm}")
+LV_BUILD_CONF_PATH=$(make_project_path \
+    "${LV_BUILD_CONF_PATH:-$PROJECT_ROOT/lv_conf.h}")
 
 if [ -z "${CMAKE_C_COMPILER:-}" ]; then
     if [ -x "$ARM_TOOLCHAIN_BIN/arm-linux-gcc" ]; then
@@ -168,10 +182,14 @@ REMOTE_ROOT=${REMOTE_ROOT:-/root/workspace}
 
 [ -d "$PROJECT_ROOT/src" ] || die "Project source directory is missing: $PROJECT_ROOT/src"
 [ -d "$LVGL_ROOT_DIR" ] || die "LVGL directory is missing: $LVGL_ROOT_DIR"
+[ -f "$LVGL_ROOT_DIR/lvgl.h" ] || die "LVGL header is missing: $LVGL_ROOT_DIR/lvgl.h"
+[ -f "$LV_BUILD_CONF_PATH" ] || die "LVGL configuration is missing: $LV_BUILD_CONF_PATH"
 [ -f "$FREETYPE_ROOT_DIR/include/ft2build.h" ] || \
     die "FreeType headers are missing under: $FREETYPE_ROOT_DIR"
 [ -f "$FREETYPE_ROOT_DIR/lib/libfreetype.a" ] || \
     die "FreeType ARM library is missing under: $FREETYPE_ROOT_DIR"
+[ -f "$PROJECT_ROOT/resource/fonts/SIMHEI.TTF" ] || \
+    die "UI font is missing: $PROJECT_ROOT/resource/fonts/SIMHEI.TTF"
 [ -f "$PROJECT_ROOT/scripts/generate_weather_assets.sh" ] || \
     die 'Weather asset generator is missing'
 
@@ -209,6 +227,7 @@ cmake_args=(
     "-DCMAKE_CXX_COMPILER=$CXX_COMPILER_PATH"
     "-DLVGL_ROOT_DIR=$LVGL_ROOT_DIR"
     "-DFREETYPE_ROOT_DIR=$FREETYPE_ROOT_DIR"
+    "-DLV_BUILD_CONF_PATH=$LV_BUILD_CONF_PATH"
 )
 "$CMAKE_BIN" "${cmake_args[@]}"
 
@@ -226,5 +245,3 @@ else
 fi
 
 printf 'Done: %s/myapp\n' "$BUILD_DIR"
-
-scp /home/gec/workspace/Project/build/myapp root@192.168.33.60:/root/workspace

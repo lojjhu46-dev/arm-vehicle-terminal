@@ -57,7 +57,7 @@ build-lvgl-arm/myapp
 
 CMake 配置会编译 `src/` 下的模块和 LVGL，并链接 FreeType、JPEG、pthread、数学库和动态加载库。交叉编译环境中至少需要安装：
 
-- CMake 3.13 或更高版本（`CMakeLists.txt` 声明的最低版本为 3.5，但当前构建配置使用了较新的 CMake 命令）
+- CMake 3.15 或更高版本（`CMakeLists.txt` 使用目录级附加清理文件来实现完整的 `make clean`）
 - ARM GCC 交叉编译器，命令名为 `arm-linux-gcc`，或在构建命令中替换为实际编译器名称
 - GNU make
 - LVGL 9.5 源码目录；可通过 `LVGL_ROOT_DIR` 指向本机的 LVGL checkout
@@ -182,13 +182,13 @@ GET /weather/v1/hourly/{latitude}/{longitude}?hours=24&localTime=true&lang=zh
 
 请求必须使用 HTTPS、控制台分配的专属 API Host，以及 JWT `Authorization: Bearer <token>` 或 API Key 鉴权。返回数据中的 `hours[]` 提供 `condition.text`、`condition.code` 和 `temperature.value` 等字段，可映射到 `main_weather_set()`。旧版 `/v7/weather/{hours}` 城市小时预报已标记为即将弃用，不应作为新实现的接口。
 
-当前工程不直接请求和风天气。外部客户端负责 TLS、DNS、鉴权和 JSON 响应处理，再将固定格式的 24 小时预报经 TCP 下发到板端；板端只负责校验、缓存和显示。详细接口以[和风天气小时天气预报文档](https://dev.qweather.com/docs/api/weather/weather-hourly-forecast/)为准。
+当前工程不直接请求和风天气。外部客户端负责 TLS、DNS、鉴权和 JSON 响应处理，再将固定格式的 24 小时预报经 TCP 下发到板端；板端只负责校验并立即显示选中的单条天气。详细接口以[和风天气小时天气预报文档](https://dev.qweather.com/docs/api/weather/weather-hourly-forecast/)为准。
 
 ### TCP 天气接收
 
 程序启动后会在 TCP `0.0.0.0:8080` 监听。客户端发送 UTF-8 文本后必须执行 `shutdown(SHUT_WR)`；服务端读取到 EOF 才处理该请求，回复文本并关闭连接。
 
-以 `{` 开头的数据按 `weather.hourly.v1` 解析，要求包含城市、坐标和恰好 24 条 `time`、`text`、`temp_c` 小时数据。预报缓存在内存中，收到后立即使用当前 `+08:00` 小时的数据；如果当前小时不在缓存中，则使用最近未来小时，全部过期时使用最新一条；每到下一个整点再从缓存中切换主界面天气图标、文字和温度。服务端会将收到的 JSON、解析结果和状态栏更新结果打印到终端。协议外的 JSON、超出 8KB 的请求和无效字段会收到 `ERROR` 回复。
+以 `{` 开头的数据按 `weather.hourly.v1` 解析，要求包含城市、坐标和恰好 24 条 `time`、`text`、`temp_c` 小时数据。接收器会在完整校验报文的同时仅保留一条天气快照：优先当前 `+08:00` 小时，其次最早未来小时，全部过期时取最新过去项，并立即更新主界面天气图标、文字和温度。跨小时更新依赖下一次有效报文，不会保留旧预报。服务端会将收到的 JSON、解析结果和状态栏更新结果打印到终端。协议外的 JSON、超出 8KB 的请求和无效字段会收到 `ERROR` 回复。
 
 不以 `{` 开头的数据视为普通 AI 文本。固件识别以下五条 UTF-8 文本指令及包含对应动作短语的 AI 回复：`开始录像`、`停止录像`、`拍照`、`开启倒车线`、`关闭倒车线`。带空格或换行的孤立指令仍不会匹配；识别成功后回复 `OK command accepted`，其余文本仍会记录并回复 `OK text received`。录像、拍照和倒车线操作由 UI/摄像头线程执行，不在 TCP 接收线程直接访问设备。
 
@@ -205,7 +205,7 @@ GET /weather/v1/hourly/{latitude}/{longitude}?hours=24&localTime=true&lang=zh
 │   ├── member_login.c      # 会员登录输入、验证码状态和校验逻辑
 │   ├── member_sms.c        # 短信服务请求及后台发送线程
 │   ├── main_weather.c      # 天气资源缓存、状态接口和图标绘制
-│   ├── weather_receiver.c  # TCP 文本/24小时天气接收、缓存和整点切换
+│   ├── weather_receiver.c  # TCP 文本/24小时天气接收和单条快照更新
 │   ├── ui_remote_commands.c # 远程文本指令邮箱及精确匹配处理器
 │   ├── freetype_lcd.c      # FreeType LCD 文字绘制封装
 │   ├── camera.c            # V4L2 摄像头及 MMAP 缓冲区

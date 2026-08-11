@@ -2,7 +2,7 @@
 #define LVGL_FILE_BROWSER_H
 
 #include "lcd.h"
-#include "touch.h"
+#include "lvgl_runtime.h"
 
 typedef enum {
     LVGL_BROWSER_EXIT,
@@ -16,7 +16,7 @@ typedef struct {
 
 typedef int (*LvglBrowserInterrupt)(void *user_data);
 
-int lvgl_file_browser_run(Lcd *lcd, Touch *touch, const char *root_dir,
+int lvgl_file_browser_run(LvglRuntime *runtime, const char *root_dir,
                           LvglBrowserSelection *selection,
                           LvglBrowserInterrupt interrupt,
                           void *interrupt_data);

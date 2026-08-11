@@ -5,7 +5,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/display/lcd/lv_lcd_generic_mipi.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/lcd/../../../display/lv_display.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/lcd/../../../display/../misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/display/lcd/../../../display/../misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \

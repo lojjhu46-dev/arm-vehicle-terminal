@@ -4,7 +4,7 @@ lvgl/CMakeFiles/lvgl.dir/src/stdlib/lv_mem.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_mem_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_mem.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/lv_string.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/../misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/stdlib/../misc/../lv_conf_internal.h \

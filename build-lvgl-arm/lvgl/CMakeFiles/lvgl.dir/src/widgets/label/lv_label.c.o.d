@@ -6,7 +6,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/label/lv_label.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/label/../../draw/lv_draw_label.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/label/../../draw/lv_draw.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/label/../../draw/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/label/../../draw/../misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/label/../../draw/../misc/../lv_conf_internal.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \

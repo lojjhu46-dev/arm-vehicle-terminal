@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/ui_remote_commands.c.o: \
- /home/gec/workspace/Project/src/ui_remote_commands.c \
+ /home/gec/workspace/PROJECT_LVGL/Project/src/ui_remote_commands.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/ctype.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -23,7 +23,7 @@ CMakeFiles/myapp.dir/src/ui_remote_commands.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/string.h \
- /home/gec/workspace/Project/include/ui_remote_commands.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/ui_remote_commands.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/time.h \

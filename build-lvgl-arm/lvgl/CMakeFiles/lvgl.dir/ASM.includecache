@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/gec/workspace/Project/lv_conf.h
+/home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h
 
 /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lv_conf.h
 my_include.h

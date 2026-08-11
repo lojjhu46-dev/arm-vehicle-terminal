@@ -7,7 +7,6 @@
 #include <string.h>
 #include <strings.h>
 #include <sys/stat.h>
-#include <time.h>
 #include <unistd.h>
 
 #include <lvgl.h>
@@ -18,7 +17,6 @@
 
 #define BROWSER_PATH_SIZE 256
 #define BROWSER_MAX_ENTRIES 128
-#define BROWSER_DRAW_BUFFER_BYTES (LCD_WIDTH * LCD_HEIGHT * 3)
 #define BROWSER_HEADER_HEIGHT 58
 #define BROWSER_STATUS_Y 450
 #define BROWSER_LIST_Y 60
@@ -32,13 +30,6 @@ typedef struct {
     char name[NAME_MAX + 1];
     int is_directory;
 } BrowserEntry;
-
-typedef struct {
-    Lcd *lcd;
-    Touch *touch;
-    int x;
-    int y;
-} BrowserInput;
 
 struct BrowserUi {
     Lcd *lcd;
@@ -66,15 +57,6 @@ struct BrowserUi {
 static void browser_entry_event_cb(lv_event_t *event);
 
 // 返回单调时钟毫秒值，供 LVGL 驱动动画与定时器。
-static uint32_t browser_tick_get(void)
-{
-    struct timespec now;
-
-    if (clock_gettime(CLOCK_MONOTONIC, &now) != 0)
-        return 0;
-    return (uint32_t)(now.tv_sec * 1000ULL + now.tv_nsec / 1000000ULL);
-}
-
 // 判断规范化路径是否仍在允许浏览的根目录内。
 static int path_is_within(const char *root_dir, const char *candidate)
 {
@@ -458,51 +440,6 @@ static void browser_exit_event_cb(lv_event_t *event)
 }
 
 // 将 LVGL RGB888 脏区域转换为 framebuffer 像素并翻页显示。
-static void browser_flush_cb(lv_display_t *display, const lv_area_t *area,
-                             uint8_t *color_p)
-{
-    BrowserUi *ui = lv_display_get_user_data(display);
-    int width = area->x2 - area->x1 + 1;
-    int height = area->y2 - area->y1 + 1;
-
-    if (lcd_begin_frame(ui->lcd) == 0)
-    {
-        for (int y = 0; y < height; ++y)
-        {
-            const uint8_t *source = color_p + (size_t)y * (size_t)width * 3;
-            int *target = ui->lcd->pixels +
-                          (area->y1 + y) * LCD_WIDTH + area->x1;
-
-            for (int x = 0; x < width; ++x)
-            {
-                /* LVGL's RGB888 renderer emits BGR bytes on this target. */
-                target[x] = source[x * 3 + 2] << 16 |
-                            source[x * 3 + 1] << 8 | source[x * 3 + 0];
-            }
-        }
-        (void)lcd_present(ui->lcd);
-    }
-    lv_display_flush_ready(display);
-}
-
-// 将项目触摸驱动的坐标和按压状态适配为 LVGL 指针输入。
-static void browser_input_read_cb(lv_indev_t *indev, lv_indev_data_t *data)
-{
-    BrowserInput *input = lv_indev_get_user_data(indev);
-    int pressed;
-
-    if (touch_read_pointer(input->touch, &input->x, &input->y, &pressed) == -1)
-    {
-        data->point.x = input->x;
-        data->point.y = input->y;
-        data->state = LV_INDEV_STATE_RELEASED;
-        return;
-    }
-    data->point.x = input->x;
-    data->point.y = input->y;
-    data->state = pressed ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
-}
-
 // 创建文件列表、图片预览、路径栏和操作按钮。
 static void browser_create_ui(BrowserUi *ui)
 {
@@ -567,21 +504,17 @@ static void browser_create_ui(BrowserUi *ui)
 }
 
 // 运行受限于 root_dir 的模态文件浏览器，直到退出或选择回放。
-int lvgl_file_browser_run(Lcd *lcd, Touch *touch, const char *root_dir,
+int lvgl_file_browser_run(LvglRuntime *runtime, const char *root_dir,
                           LvglBrowserSelection *selection,
                           LvglBrowserInterrupt interrupt,
                           void *interrupt_data)
 {
     BrowserUi ui;
-    BrowserInput input;
-    lv_display_t *display;
-    lv_indev_t *indev;
-    uint8_t *draw_buffer;
     char resolved_root[BROWSER_PATH_SIZE];
     struct stat root_status;
     int result = -1;
 
-    if (lcd == NULL || touch == NULL || root_dir == NULL || selection == NULL ||
+    if (runtime == NULL || runtime->lcd == NULL || root_dir == NULL || selection == NULL ||
         realpath(root_dir, resolved_root) == NULL ||
         strlen(resolved_root) >= BROWSER_PATH_SIZE ||
         stat(resolved_root, &root_status) == -1 || !S_ISDIR(root_status.st_mode))
@@ -589,38 +522,12 @@ int lvgl_file_browser_run(Lcd *lcd, Touch *touch, const char *root_dir,
     memset(selection, 0, sizeof(*selection));
     selection->result = LVGL_BROWSER_EXIT;
     memset(&ui, 0, sizeof(ui));
-    ui.lcd = lcd;
     ui.selection = selection;
     copy_path(ui.root_dir, resolved_root);
     copy_path(ui.current_dir, resolved_root);
-    memset(&input, 0, sizeof(input));
-    input.lcd = lcd;
-    input.touch = touch;
-    draw_buffer = malloc(BROWSER_DRAW_BUFFER_BYTES);
-    if (draw_buffer == NULL)
-        return -1;
-
-    lv_init();
-    lv_tick_set_cb(browser_tick_get);
-    display = lv_display_create(LCD_WIDTH, LCD_HEIGHT);
-    if (display == NULL)
-        goto cleanup_lvgl;
-    lv_display_set_color_format(display, LV_COLOR_FORMAT_RGB888);
-    lv_display_set_buffers(display, draw_buffer, NULL, BROWSER_DRAW_BUFFER_BYTES,
-                           LV_DISPLAY_RENDER_MODE_FULL);
-    lv_display_set_flush_cb(display, browser_flush_cb);
-    lv_display_set_user_data(display, &ui);
+    ui.lcd = runtime->lcd;
     browser_create_ui(&ui);
-
-    /* 先渲染首帧，再安装可能阻塞读取触摸设备的输入回调。 */
-    lv_refr_now(display);
-    indev = lv_indev_create();
-    if (indev == NULL)
-        goto cleanup_lvgl;
-    lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER);
-    lv_indev_set_display(indev, display);
-    lv_indev_set_user_data(indev, &input);
-    lv_indev_set_read_cb(indev, browser_input_read_cb);
+    lv_refr_now(lvgl_runtime_display(runtime));
     while (!ui.done)
     {
         if (interrupt != NULL && interrupt(interrupt_data))
@@ -629,13 +536,13 @@ int lvgl_file_browser_run(Lcd *lcd, Touch *touch, const char *root_dir,
             ui.done = 1;
             continue;
         }
-        lv_timer_handler();
+        lvgl_runtime_process(runtime);
         usleep(5 * 1000);
     }
     result = 0;
 
-cleanup_lvgl:
-    lv_deinit();
-    free(draw_buffer);
+    browser_free_photo(&ui);
+    if (ui.screen != NULL)
+        lv_obj_delete(ui.screen);
     return result;
 }

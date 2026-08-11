@@ -13,6 +13,8 @@
 #include "ui_remote_commands.h"
 #include "weather_receiver.h"
 
+#define HOURLY_PROTOCOL_COUNT 24
+
 static pthread_mutex_t weather_mutex = PTHREAD_MUTEX_INITIALIZER;
 static MainWeather last_weather;
 static int weather_update_count;
@@ -35,7 +37,7 @@ static int build_forecast(char *json, size_t json_size, int first_hour_offset)
     used += (size_t)snprintf(json + used, json_size - used,
                              "{\"type\":\"weather.hourly.v1\",\"city\":\"广州\","
                              "\"latitude\":23.1291,\"longitude\":113.2644,\"hours\":[");
-    for (int i = 0; i < WEATHER_HOUR_COUNT; ++i)
+    for (int i = 0; i < HOURLY_PROTOCOL_COUNT; ++i)
     {
         char hour[WEATHER_FORECAST_TIME_SIZE];
         struct tm utc_plus_eight;
@@ -107,11 +109,19 @@ int main(void)
     build_forecast(json, sizeof(json), 0);
     assert(weather_receiver_parse_hourly_json(json, &forecast) == 0);
     assert(strcmp(forecast.city, "广州") == 0);
-    assert(strcmp(forecast.hours[0].text, "小雨") == 0);
+    assert(strcmp(forecast.text, "小雨") == 0);
+    assert(forecast.temp_c == 26.4);
     assert(weather_receiver_parse_hourly_json(
                "{\"type\":\"weather.hourly.v1\",\"city\":\"广州\","
                "\"latitude\":23.1291,\"longitude\":113.2644,\"hours\":[]}",
                &forecast) == -1);
+
+    build_forecast(future_json, sizeof(future_json), 1);
+    assert(weather_receiver_parse_hourly_json(future_json, &forecast) == 0);
+    assert(forecast.temp_c == 27.4);
+    build_forecast(past_json, sizeof(past_json), -24);
+    assert(weather_receiver_parse_hourly_json(past_json, &forecast) == 0);
+    assert(forecast.temp_c == 25.4);
 
     assert(ui_remote_commands_init(&commands) == 0);
     weather_receiver_set_text_handler(ui_remote_commands_handle_text, &commands);
@@ -142,7 +152,6 @@ int main(void)
     assert(strcmp(last_weather.city, "广州") == 0);
     pthread_mutex_unlock(&weather_mutex);
 
-    build_forecast(future_json, sizeof(future_json), 1);
     assert(send_request(future_json, reply, sizeof(reply)) == 0);
     assert(strcmp(reply, "OK weather cached\n") == 0);
     pthread_mutex_lock(&weather_mutex);
@@ -150,7 +159,6 @@ int main(void)
     assert(last_weather.temperature_c == 27);
     pthread_mutex_unlock(&weather_mutex);
 
-    build_forecast(past_json, sizeof(past_json), -24);
     assert(send_request(past_json, reply, sizeof(reply)) == 0);
     assert(strcmp(reply, "OK weather cached\n") == 0);
     pthread_mutex_lock(&weather_mutex);

@@ -132,18 +132,25 @@ static void delete_digit(MemberLogin *login)
 }
 
 // 校验手机号并创建一次可由后台线程发送的短信请求。
-static MemberLoginAction request_sms(MemberLogin *login,
-                                     MemberSmsRequest *request)
+MemberLoginAction member_login_request_sms(MemberLogin *login,
+                                           MemberSmsRequest *request)
 {
+    MemberLoginAction action;
+
+    if (login == NULL || request == NULL)
+        return MEMBER_LOGIN_ACTION_NONE;
+    pthread_mutex_lock(&login->mutex);
     if (strlen(login->phone) != MEMBER_LOGIN_PHONE_LENGTH)
     {
         set_status(login, "请输入11位手机号");
-        return MEMBER_LOGIN_ACTION_NONE;
+        action = MEMBER_LOGIN_ACTION_NONE;
+        goto done;
     }
     if (login->sms_pending)
     {
         set_status(login, "验证码发送中...");
-        return MEMBER_LOGIN_ACTION_NONE;
+        action = MEMBER_LOGIN_ACTION_NONE;
+        goto done;
     }
 
     ++login->request_id;
@@ -157,34 +164,53 @@ static MemberLoginAction request_sms(MemberLogin *login,
     snprintf(request->phone, sizeof(request->phone), "%s", login->phone);
     make_code(request->code);
     request->request_id = login->request_id;
-    return MEMBER_LOGIN_ACTION_SEND_SMS;
+    action = MEMBER_LOGIN_ACTION_SEND_SMS;
+
+done:
+    ++login->version;
+    pthread_mutex_unlock(&login->mutex);
+    return action;
 }
 
 // 校验验证码状态和输入内容，成功时通知 UI 进入会员中心。
-static MemberLoginAction submit(MemberLogin *login)
+MemberLoginAction member_login_submit(MemberLogin *login)
 {
+    MemberLoginAction action;
+
+    if (login == NULL)
+        return MEMBER_LOGIN_ACTION_NONE;
+    pthread_mutex_lock(&login->mutex);
     if (login->sms_pending)
     {
         set_status(login, "验证码发送中...");
-        return MEMBER_LOGIN_ACTION_NONE;
+        action = MEMBER_LOGIN_ACTION_NONE;
+        goto done;
     }
     if (!login->sms_ready)
     {
         set_status(login, "请先获取验证码");
-        return MEMBER_LOGIN_ACTION_NONE;
+        action = MEMBER_LOGIN_ACTION_NONE;
+        goto done;
     }
     if (strlen(login->code) != MEMBER_LOGIN_CODE_LENGTH)
     {
         set_status(login, "请输入4位验证码");
-        return MEMBER_LOGIN_ACTION_NONE;
+        action = MEMBER_LOGIN_ACTION_NONE;
+        goto done;
     }
     if (strcmp(login->code, login->expected_code) != 0)
     {
         set_status(login, "验证码错误");
-        return MEMBER_LOGIN_ACTION_NONE;
+        action = MEMBER_LOGIN_ACTION_NONE;
+        goto done;
     }
     set_status(login, "登录成功");
-    return MEMBER_LOGIN_ACTION_SUCCESS;
+    action = MEMBER_LOGIN_ACTION_SUCCESS;
+
+done:
+    ++login->version;
+    pthread_mutex_unlock(&login->mutex);
+    return action;
 }
 
 // 初始化互斥锁和空白登录状态。
@@ -220,6 +246,46 @@ void member_login_reset(MemberLogin *login)
     pthread_mutex_unlock(&login->mutex);
 }
 
+// 用控件当前文本更新字段；仅接受数字且保持原有长度限制和验证码失效规则。
+int member_login_set_input(MemberLogin *login, MemberLoginField field,
+                           const char *value)
+{
+    char *target;
+    size_t limit;
+    size_t length;
+
+    if (login == NULL || value == NULL ||
+        (field != MEMBER_LOGIN_FIELD_PHONE && field != MEMBER_LOGIN_FIELD_CODE))
+        return -1;
+    length = strlen(value);
+    limit = field == MEMBER_LOGIN_FIELD_PHONE ? MEMBER_LOGIN_PHONE_LENGTH :
+                                                MEMBER_LOGIN_CODE_LENGTH;
+    if (length > limit)
+        return -1;
+    for (size_t i = 0; i < length; ++i)
+    {
+        if (value[i] < '0' || value[i] > '9')
+            return -1;
+    }
+    pthread_mutex_lock(&login->mutex);
+    target = field == MEMBER_LOGIN_FIELD_PHONE ? login->phone : login->code;
+    if (strcmp(target, value) != 0)
+    {
+        snprintf(target, limit + 1, "%s", value);
+        if (field == MEMBER_LOGIN_FIELD_PHONE)
+            invalidate_sms(login);
+        login->status[0] = '\0';
+        ++login->version;
+    }
+    if (login->active_field != field)
+    {
+        login->active_field = field;
+        ++login->version;
+    }
+    pthread_mutex_unlock(&login->mutex);
+    return 0;
+}
+
 // 按登录图片中的控件坐标处理一次完整点击。
 // 数字键、删除键和确认键统一在此处转成状态机动作。
 MemberLoginAction member_login_handle_tap(MemberLogin *login, int x, int y,
@@ -243,14 +309,18 @@ MemberLoginAction member_login_handle_tap(MemberLogin *login, int x, int y,
     else if (in_area(x, y, SMS_BUTTON_X1, SMS_BUTTON_Y1, SMS_BUTTON_X2, SMS_BUTTON_Y2))
     {
         if (request != NULL)
-            action = request_sms(login, request);
+        {
+            pthread_mutex_unlock(&login->mutex);
+            return member_login_request_sms(login, request);
+        }
         else
             set_status(login, "验证码请求失败");
     }
     else if (in_area(x, y, LOGIN_BUTTON_X1, LOGIN_BUTTON_Y1,
                      LOGIN_BUTTON_X2, LOGIN_BUTTON_Y2))
     {
-        action = submit(login);
+        pthread_mutex_unlock(&login->mutex);
+        return member_login_submit(login);
     }
     else
     {
@@ -264,7 +334,10 @@ MemberLoginAction member_login_handle_tap(MemberLogin *login, int x, int y,
             else if (keypad[i].value == 'B')
                 delete_digit(login);
             else
-                action = submit(login);
+            {
+                pthread_mutex_unlock(&login->mutex);
+                return member_login_submit(login);
+            }
             break;
         }
     }

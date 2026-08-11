@@ -7,6 +7,7 @@
 #define TEST_PAGE_PIXELS (LCD_WIDTH * LCD_HEIGHT)
 
 static int framebuffer[LCD_MAX_PAGES * TEST_PAGE_PIXELS];
+static int icon[96 * 64];
 
 int main(void)
 {
@@ -43,6 +44,7 @@ int main(void)
     lcd.base_pixels = framebuffer;
     lcd.page_count = LCD_MAX_PAGES;
     if (main_weather_draw_icon(&lcd, &weather) != 0 ||
+        main_weather_copy_icon_pixels(icon, &weather) != 0 ||
         memcmp(framebuffer,
                framebuffer + TEST_PAGE_PIXELS,
                TEST_PAGE_PIXELS * sizeof(*framebuffer)) != 0 ||
@@ -50,6 +52,12 @@ int main(void)
                framebuffer + 2 * TEST_PAGE_PIXELS,
                TEST_PAGE_PIXELS * sizeof(*framebuffer)) != 0)
         return 1;
+    for (int y = 0; y < 64; ++y)
+    {
+        if (memcmp(icon + y * 96, framebuffer + (68 + y) * LCD_WIDTH + 352,
+                   96 * sizeof(*icon)) != 0)
+            return 1;
+    }
 
     main_weather_destroy();
     return 0;

@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/record_indicator.c.o: \
- /home/gec/workspace/Project/src/record_indicator.c \
+ /home/gec/workspace/PROJECT_LVGL/Project/src/record_indicator.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdlib.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -28,8 +28,8 @@ CMakeFiles/myapp.dir/src/record_indicator.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/string.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
- /home/gec/workspace/Project/include/app_config.h \
- /home/gec/workspace/Project/include/jpeg_codec.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/app_config.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jpeg_codec.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/libio.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/_G_config.h \
@@ -37,7 +37,7 @@ CMakeFiles/myapp.dir/src/record_indicator.c.o: \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdarg.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
- /home/gec/workspace/Project/include/jpeglib.h \
- /home/gec/workspace/Project/include/jconfig.h \
- /home/gec/workspace/Project/include/jmorecfg.h \
- /home/gec/workspace/Project/include/record_indicator.h
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jpeglib.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jconfig.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jmorecfg.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/record_indicator.h

@@ -3,7 +3,7 @@ lvgl/CMakeFiles/lvgl.dir/src/font/fmt_txt/lv_font_fmt_txt.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/fmt_txt/../lv_font.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/fmt_txt/../../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/fmt_txt/../../misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/font/fmt_txt/../../misc/../lv_conf_internal.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \

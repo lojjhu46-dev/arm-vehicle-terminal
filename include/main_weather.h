@@ -41,5 +41,7 @@ const char *main_weather_label(MainWeatherType type);
 
 /* Draw the cached, background-matched icon into every framebuffer page. */
 int main_weather_draw_icon(Lcd *lcd, const MainWeather *weather);
+int main_weather_draw_icon_pixels(int *pixels, const MainWeather *weather);
+int main_weather_copy_icon_pixels(int *pixels, const MainWeather *weather);
 
 #endif

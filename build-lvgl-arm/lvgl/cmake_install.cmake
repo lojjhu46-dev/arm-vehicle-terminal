@@ -48,25 +48,25 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/lvgl" TYPE FILE FILES
-    "/home/gec/workspace/Project/lv_conf.h"
+    "/home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h"
     "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h"
     "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lvgl.h"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/gec/workspace/Project/build-lvgl-arm/lvgl/lib/liblvgl.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm/lvgl/lib/liblvgl.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/lvgl" TYPE FILE FILES
-    "/home/gec/workspace/Project/lv_conf.h"
+    "/home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h"
     "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lv_version.h"
     "/home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/lvgl.h"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pkgconfig" TYPE FILE FILES "/home/gec/workspace/Project/build-lvgl-arm/lvgl/lvgl.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pkgconfig" TYPE FILE FILES "/home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm/lvgl/lvgl.pc")
 endif()
 

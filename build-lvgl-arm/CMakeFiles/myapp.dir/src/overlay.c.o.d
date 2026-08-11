@@ -1,8 +1,8 @@
 CMakeFiles/myapp.dir/src/overlay.c.o: \
- /home/gec/workspace/Project/src/overlay.c \
+ /home/gec/workspace/PROJECT_LVGL/Project/src/overlay.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
- /home/gec/workspace/Project/include/app_config.h \
- /home/gec/workspace/Project/include/overlay.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/app_config.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/overlay.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdlib.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
@@ -28,5 +28,5 @@ CMakeFiles/myapp.dir/src/overlay.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/alloca.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h \
- /home/gec/workspace/Project/include/app_config.h \
- /home/gec/workspace/Project/include/overlay.h
+ /home/gec/workspace/PROJECT_LVGL/Project/include/app_config.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/overlay.h

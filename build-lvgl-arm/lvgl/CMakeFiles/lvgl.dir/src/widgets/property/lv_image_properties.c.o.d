@@ -3,7 +3,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_image_properties.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/../image/lv_image.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/../image/../../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/../image/../../core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/../image/../../core/../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/property/../image/../../core/../misc/lv_types.h \

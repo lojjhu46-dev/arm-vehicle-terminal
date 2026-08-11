@@ -74,8 +74,6 @@ int main(void)
         weather_receiver_started = 1;
     else
         fprintf(stderr, "weather receiver disabled: %s\n", strerror(errno));
-    //播放开机动画
-    show_startup_animation(&lcd);
     //界面显示，切换
     result = ui_run(&lcd, &touch, &camera, &recorder, &remote_commands);
     if(result == -1) 

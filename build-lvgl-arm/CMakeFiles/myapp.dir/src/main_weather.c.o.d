@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/main_weather.c.o: \
- /home/gec/workspace/Project/src/main_weather.c \
+ /home/gec/workspace/PROJECT_LVGL/Project/src/main_weather.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -39,10 +39,10 @@ CMakeFiles/myapp.dir/src/main_weather.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/alloca.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/string.h \
- /home/gec/workspace/Project/include/app_config.h \
- /home/gec/workspace/Project/include/jpeg_codec.h \
- /home/gec/workspace/Project/include/jpeglib.h \
- /home/gec/workspace/Project/include/jconfig.h \
- /home/gec/workspace/Project/include/jmorecfg.h \
- /home/gec/workspace/Project/include/main_weather.h \
- /home/gec/workspace/Project/include/lcd.h
+ /home/gec/workspace/PROJECT_LVGL/Project/include/app_config.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jpeg_codec.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jpeglib.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jconfig.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/jmorecfg.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/main_weather.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/lcd.h

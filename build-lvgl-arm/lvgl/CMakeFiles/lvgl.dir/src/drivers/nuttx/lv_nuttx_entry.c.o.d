@@ -3,7 +3,7 @@ lvgl/CMakeFiles/lvgl.dir/src/drivers/nuttx/lv_nuttx_entry.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/nuttx/lv_nuttx_entry.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/nuttx/../../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/nuttx/../../display/lv_display.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/nuttx/../../display/../misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/drivers/nuttx/../../display/../misc/../lv_conf_internal.h \

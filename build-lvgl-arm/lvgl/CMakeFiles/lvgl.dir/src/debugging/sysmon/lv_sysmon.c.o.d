@@ -5,7 +5,7 @@ lvgl/CMakeFiles/lvgl.dir/src/debugging/sysmon/lv_sysmon.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/sysmon/lv_sysmon.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/sysmon/../../misc/lv_timer.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/sysmon/../../misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/sysmon/../../misc/../tick/lv_tick.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/sysmon/../../misc/../tick/../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/debugging/sysmon/../../misc/../tick/../misc/lv_types.h \

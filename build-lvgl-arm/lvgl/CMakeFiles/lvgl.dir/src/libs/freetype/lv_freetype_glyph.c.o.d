@@ -6,7 +6,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_freetype_glyph.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../lv_version.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/lv_init.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/misc/../lv_conf_internal.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -197,6 +197,8 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_freetype_glyph.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/widgets/button/../../core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/widgets/buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/widgets/buttonmatrix/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/widgets/buttonmatrix/../../core/lv_obj.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/widgets/buttonmatrix/../../core/lv_obj_property.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/widgets/calendar/lv_calendar.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/widgets/calendar/../buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/widgets/canvas/lv_canvas.h \
@@ -324,6 +326,9 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_freetype_glyph.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/libs/libjpeg_turbo/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/libs/freetype/lv_freetype.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/libs/freetype/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/libs/freetype/../../misc/lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/libs/freetype/../../misc/lv_event.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/libs/freetype/../../misc/lv_color.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/libs/rlottie/lv_rlottie.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/libs/rlottie/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/libs/ffmpeg/lv_ffmpeg.h \
@@ -440,4 +445,74 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/freetype/lv_freetype_glyph.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../../src/lv_api_map_v9_4.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/lv_freetype_private.h \
- /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/lv_freetype.h
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/lv_freetype.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/lv_cache.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/../lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/lv_cache_entry.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/lv_cache_class.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/lv_cache_lru_rb.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/../lv_cache_private.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/../../lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/../../../osal/lv_os_private.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/../../../osal/../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/../../../osal/lv_os.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/../../../osal/../misc/lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/../../../osal/lv_linux.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/../../../osal/lv_os_none.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/lv_cache_lru_ll.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/class/lv_cache_sc_da.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/instance/lv_cache_instance.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/instance/lv_image_header_cache.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/instance/../../lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/cache/instance/lv_image_cache.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/lv_ll.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../font/lv_font.h \
+ /home/gec/workspace/freetype/freetype_arm/include/ft2build.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/config/ftheader.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/freetype.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/config/ftconfig.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/config/ftoption.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/config/ftstdlib.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/string.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/types.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/typesizes.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/libio.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/_G_config.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/wchar.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdio_lim.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sys_errlist.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdlib.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/waitflags.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/waitstatus.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/endian.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/types.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/time.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/select.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/select.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/sigset.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/time.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/sys/sysmacros.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/alloca.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/stdlib-float.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/setjmp.h \
+ /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/setjmp.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/config/integer-types.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/config/public-macros.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/config/mac-support.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/fttypes.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/ftsystem.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/ftimage.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/fterrors.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/ftmoderr.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/fterrdef.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/ftglyph.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/ftcache.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/ftsizes.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/ftoutln.h \
+ /home/gec/workspace/freetype/freetype_arm/include/freetype/ftstroke.h

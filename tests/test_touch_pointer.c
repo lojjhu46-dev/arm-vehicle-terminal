@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <fcntl.h>
 #include <linux/input.h>
 #include <pthread.h>
 #include <unistd.h>
@@ -36,6 +37,7 @@ int main(void)
     Touch touch;
     int x;
     int y;
+    int pressed;
 
     assert(pipe(pipe_fds) == 0);
     touch.fd = pipe_fds[0];
@@ -60,6 +62,18 @@ int main(void)
     send_event(pipe_fds[1], EV_KEY, BTN_TOUCH, 0);
     assert(touch_read_tap(&touch, &x, &y) == 1);
     assert(x == 400 && y == 80);
+
+    assert(fcntl(touch.fd, F_SETFL, fcntl(touch.fd, F_GETFL) | O_NONBLOCK) == 0);
+    assert(touch_poll_pointer(&touch, &x, &y, &pressed) == 0);
+    assert(x == 400 && y == 80 && pressed == 0);
+
+    /* A quick tap can queue both edges before LVGL polls again. */
+    send_event(pipe_fds[1], EV_KEY, BTN_TOUCH, 1);
+    send_event(pipe_fds[1], EV_KEY, BTN_TOUCH, 0);
+    assert(touch_poll_pointer(&touch, &x, &y, &pressed) == 1);
+    assert(pressed == 1);
+    assert(touch_poll_pointer(&touch, &x, &y, &pressed) == 1);
+    assert(pressed == 0);
 
     close(pipe_fds[1]);
     touch_close(&touch);

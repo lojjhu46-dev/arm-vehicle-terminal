@@ -4,7 +4,7 @@ lvgl/CMakeFiles/lvgl.dir/src/indev/lv_indev.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/../misc/lv_ext_data.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/../misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/lv_indev.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/../core/lv_group.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/../core/../lv_conf_internal.h \

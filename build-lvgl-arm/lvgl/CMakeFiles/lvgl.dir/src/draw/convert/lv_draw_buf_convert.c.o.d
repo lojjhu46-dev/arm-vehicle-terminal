@@ -4,7 +4,7 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/convert/lv_draw_buf_convert.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/convert/lv_draw_buf_convert.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/convert/../../misc/lv_color.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/convert/../../misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/convert/../../misc/lv_assert.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/convert/../../misc/lv_log.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/convert/../../misc/lv_types.h \

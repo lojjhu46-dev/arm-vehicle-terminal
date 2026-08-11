@@ -5,7 +5,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/calendar/lv_calendar.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../core/lv_obj_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../core/../misc/lv_ext_data.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../core/../misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../core/../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../core/../misc/lv_types.h \
@@ -135,6 +135,8 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/calendar/lv_calendar.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/lv_calendar.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../buttonmatrix/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../buttonmatrix/../../core/lv_obj.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../buttonmatrix/../../core/lv_obj_property.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../draw/lv_draw_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../draw/lv_draw.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../draw/../osal/lv_os_private.h \
@@ -353,6 +355,9 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/calendar/lv_calendar.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../../src/libs/libjpeg_turbo/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../../src/libs/freetype/lv_freetype.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../../src/libs/freetype/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../../src/libs/freetype/../../misc/lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../../src/libs/freetype/../../misc/lv_event.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../../src/libs/freetype/../../misc/lv_color.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../../src/libs/rlottie/lv_rlottie.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../../src/libs/rlottie/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/calendar/../../../src/libs/ffmpeg/lv_ffmpeg.h \

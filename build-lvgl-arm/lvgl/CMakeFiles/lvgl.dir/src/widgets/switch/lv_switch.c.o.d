@@ -4,7 +4,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/switch/lv_switch.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/lv_switch_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/lv_switch.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/../../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/../../core/lv_obj_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/../../core/../misc/lv_ext_data.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/switch/../../core/../misc/../lv_conf_internal.h \

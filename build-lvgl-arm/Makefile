@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gec/workspace/Project
+CMAKE_SOURCE_DIR = /home/gec/workspace/PROJECT_LVGL/Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gec/workspace/Project/build-lvgl-arm
+CMAKE_BINARY_DIR = /home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gec/workspace/Project/build-lvgl-arm/CMakeFiles /home/gec/workspace/Project/build-lvgl-arm//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm/CMakeFiles /home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gec/workspace/Project/build-lvgl-arm/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gec/workspace/PROJECT_LVGL/Project/build-lvgl-arm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -354,6 +354,54 @@ src/lvgl_file_browser.s: src/lvgl_file_browser.c.s
 src/lvgl_file_browser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/lvgl_file_browser.c.s
 .PHONY : src/lvgl_file_browser.c.s
+
+src/lvgl_runtime.o: src/lvgl_runtime.c.o
+.PHONY : src/lvgl_runtime.o
+
+# target to build an object file
+src/lvgl_runtime.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/lvgl_runtime.c.o
+.PHONY : src/lvgl_runtime.c.o
+
+src/lvgl_runtime.i: src/lvgl_runtime.c.i
+.PHONY : src/lvgl_runtime.i
+
+# target to preprocess a source file
+src/lvgl_runtime.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/lvgl_runtime.c.i
+.PHONY : src/lvgl_runtime.c.i
+
+src/lvgl_runtime.s: src/lvgl_runtime.c.s
+.PHONY : src/lvgl_runtime.s
+
+# target to generate assembly for a file
+src/lvgl_runtime.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/lvgl_runtime.c.s
+.PHONY : src/lvgl_runtime.c.s
+
+src/lvgl_ui.o: src/lvgl_ui.c.o
+.PHONY : src/lvgl_ui.o
+
+# target to build an object file
+src/lvgl_ui.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/lvgl_ui.c.o
+.PHONY : src/lvgl_ui.c.o
+
+src/lvgl_ui.i: src/lvgl_ui.c.i
+.PHONY : src/lvgl_ui.i
+
+# target to preprocess a source file
+src/lvgl_ui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/lvgl_ui.c.i
+.PHONY : src/lvgl_ui.c.i
+
+src/lvgl_ui.s: src/lvgl_ui.c.s
+.PHONY : src/lvgl_ui.s
+
+# target to generate assembly for a file
+src/lvgl_ui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/lvgl_ui.c.s
+.PHONY : src/lvgl_ui.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -678,6 +726,12 @@ help:
 	@echo "... src/lvgl_file_browser.o"
 	@echo "... src/lvgl_file_browser.i"
 	@echo "... src/lvgl_file_browser.s"
+	@echo "... src/lvgl_runtime.o"
+	@echo "... src/lvgl_runtime.i"
+	@echo "... src/lvgl_runtime.s"
+	@echo "... src/lvgl_ui.o"
+	@echo "... src/lvgl_ui.i"
+	@echo "... src/lvgl_ui.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

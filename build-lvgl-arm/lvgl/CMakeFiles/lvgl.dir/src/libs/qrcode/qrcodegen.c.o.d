@@ -6,7 +6,7 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/qrcode/qrcodegen.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../lv_version.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/lv_init.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/misc/../lv_conf_internal.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
@@ -197,6 +197,8 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/qrcode/qrcodegen.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/widgets/button/../../core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/widgets/buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/widgets/buttonmatrix/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/widgets/buttonmatrix/../../core/lv_obj.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/widgets/buttonmatrix/../../core/lv_obj_property.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/widgets/calendar/lv_calendar.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/widgets/calendar/../buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/widgets/canvas/lv_canvas.h \
@@ -324,6 +326,9 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/qrcode/qrcodegen.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/libs/libjpeg_turbo/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/libs/freetype/lv_freetype.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/libs/freetype/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/libs/freetype/../../misc/lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/libs/freetype/../../misc/lv_event.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/libs/freetype/../../misc/lv_color.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/libs/rlottie/lv_rlottie.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/libs/rlottie/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/qrcode/../../../src/libs/ffmpeg/lv_ffmpeg.h \

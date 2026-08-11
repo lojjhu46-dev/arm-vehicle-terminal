@@ -4,4 +4,4 @@ lvgl/CMakeFiles/lvgl.dir/src/draw/vg_lite/lv_vg_lite_stroke.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_stroke.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/lv_vg_lite_utils.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/draw/vg_lite/../../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h

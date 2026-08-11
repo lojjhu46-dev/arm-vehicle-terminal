@@ -1,4 +1,5 @@
-CMakeFiles/myapp.dir/src/lcd.c.o: /home/gec/workspace/Project/src/lcd.c \
+CMakeFiles/myapp.dir/src/lcd.c.o: \
+ /home/gec/workspace/PROJECT_LVGL/Project/src/lcd.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/fcntl.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -49,5 +50,5 @@ CMakeFiles/myapp.dir/src/lcd.c.o: /home/gec/workspace/Project/src/lcd.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/environments.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/confname.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/getopt.h \
- /home/gec/workspace/Project/include/app_config.h \
- /home/gec/workspace/Project/include/lcd.h
+ /home/gec/workspace/PROJECT_LVGL/Project/include/app_config.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/lcd.h

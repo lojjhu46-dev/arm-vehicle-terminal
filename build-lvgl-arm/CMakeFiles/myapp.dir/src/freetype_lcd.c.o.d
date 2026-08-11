@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/freetype_lcd.c.o: \
- /home/gec/workspace/Project/src/freetype_lcd.c \
+ /home/gec/workspace/PROJECT_LVGL/Project/src/freetype_lcd.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
  /home/gec/workspace/freetype/freetype_arm/include/ft2build.h \
@@ -59,4 +59,4 @@ CMakeFiles/myapp.dir/src/freetype_lcd.c.o: \
  /home/gec/workspace/freetype/freetype_arm/include/freetype/fterrors.h \
  /home/gec/workspace/freetype/freetype_arm/include/freetype/ftmoderr.h \
  /home/gec/workspace/freetype/freetype_arm/include/freetype/fterrdef.h \
- /home/gec/workspace/Project/include/freetype_lcd.h
+ /home/gec/workspace/PROJECT_LVGL/Project/include/freetype_lcd.h

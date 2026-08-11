@@ -1,5 +1,5 @@
 CMakeFiles/myapp.dir/src/weather_receiver.c.o: \
- /home/gec/workspace/Project/src/weather_receiver.c \
+ /home/gec/workspace/PROJECT_LVGL/Project/src/weather_receiver.c \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/arpa/inet.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
@@ -76,7 +76,7 @@ CMakeFiles/myapp.dir/src/weather_receiver.c.o: \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/environments.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/bits/confname.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/getopt.h \
- /home/gec/workspace/Project/include/app_config.h \
- /home/gec/workspace/Project/include/main_weather.h \
- /home/gec/workspace/Project/include/lcd.h \
- /home/gec/workspace/Project/include/weather_receiver.h
+ /home/gec/workspace/PROJECT_LVGL/Project/include/app_config.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/main_weather.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/lcd.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/include/weather_receiver.h

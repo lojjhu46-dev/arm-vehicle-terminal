@@ -4,7 +4,7 @@ lvgl/CMakeFiles/lvgl.dir/src/lv_init.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_timer_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_ext_data.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/lv_timer.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/../tick/lv_tick.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/misc/../tick/../lv_conf_internal.h \
@@ -257,6 +257,9 @@ lvgl/CMakeFiles/lvgl.dir/src/lv_init.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/ffmpeg/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/lv_freetype.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/lv_event.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/freetype/../../misc/lv_color.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/fsdrv/lv_fsdrv.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/fsdrv/../../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/libs/tjpgd/lv_tjpgd.h \

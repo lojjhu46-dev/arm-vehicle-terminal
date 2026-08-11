@@ -5,7 +5,7 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_refr.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_refr.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/../misc/lv_types.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/core/../misc/../lv_conf_internal.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \

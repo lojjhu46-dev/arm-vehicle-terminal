@@ -1,0 +1,10 @@
+file(REMOVE_RECURSE
+  "CMakeCache.txt"
+  "CMakeFiles"
+  "Makefile"
+  "cmake_install.cmake"
+  "CTestTestfile.cmake"
+  "DartConfiguration.tcl"
+  "Testing"
+  "lvgl"
+)

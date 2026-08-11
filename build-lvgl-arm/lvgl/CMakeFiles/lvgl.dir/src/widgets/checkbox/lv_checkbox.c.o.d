@@ -4,7 +4,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/checkbox/lv_checkbox.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/checkbox/lv_checkbox_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/checkbox/lv_checkbox.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/checkbox/../../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/checkbox/../../core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/checkbox/../../core/../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/checkbox/../../core/../misc/lv_types.h \

@@ -1,3 +1,4 @@
+#include <errno.h>
 #include <fcntl.h>
 #include <linux/input.h>
 #include <stdio.h>
@@ -14,7 +15,7 @@ int touch_open(Touch *touch)
     if (pthread_mutex_init(&touch->mutex, NULL) != 0)
         return -1;
 
-    touch->fd = open(TOUCH_PATH, O_RDWR);
+    touch->fd = open(TOUCH_PATH, O_RDWR | O_NONBLOCK);
     if (touch->fd == -1)
     {
         perror("open touch_fd error");
@@ -103,6 +104,40 @@ int touch_read_pointer(Touch *touch, int *x, int *y, int *pressed)
     return 0;
 }
 //最新改动
+
+// 非阻塞处理一个待处理事件；保留按下/抬起边沿供 LVGL 分两轮消费。
+int touch_poll_pointer(Touch *touch, int *x, int *y, int *pressed)
+{
+    struct input_event event;
+    ssize_t count;
+
+    for (;;)
+    {
+        count = read(touch->fd, &event, sizeof(event));
+
+        if (count == (ssize_t)sizeof(event))
+        {
+            (void)touch_process_event(touch, &event, NULL, NULL);
+            break;
+        }
+        if (count == -1 && (errno == EAGAIN || errno == EWOULDBLOCK))
+            return 0;
+        if (count == -1 && errno == EINTR)
+            continue;
+        if (count == 0)
+            return 0;
+        return -1;
+    }
+    pthread_mutex_lock(&touch->mutex);
+    if (x != NULL)
+        *x = touch->touchsrceen_x;
+    if (y != NULL)
+        *y = touch->touchsrceen_y;
+    if (pressed != NULL)
+        *pressed = touch->touch_active;
+    pthread_mutex_unlock(&touch->mutex);
+    return 1;
+}
 
 //最新改动
 // 在互斥锁保护下返回最近一次触摸坐标。

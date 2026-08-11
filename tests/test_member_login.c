@@ -30,6 +30,15 @@ int main(void)
     char wrong_code[MEMBER_LOGIN_CODE_LENGTH + 1];
 
     assert(member_login_init(&login) == 0);
+    assert(member_login_set_input(&login, MEMBER_LOGIN_FIELD_PHONE,
+                                  "13800138000") == 0);
+    assert(member_login_request_sms(&login, &request) == MEMBER_LOGIN_ACTION_SEND_SMS);
+    member_login_complete_sms(&login, &request, 1);
+    assert(member_login_set_input(&login, MEMBER_LOGIN_FIELD_CODE, request.code) == 0);
+    assert(member_login_submit(&login) == MEMBER_LOGIN_ACTION_SUCCESS);
+    assert(member_login_set_input(&login, MEMBER_LOGIN_FIELD_PHONE,
+                                  "13800abc000") == -1);
+    member_login_reset(&login);
     assert(member_login_handle_tap(&login, 690, 180, &request) ==
            MEMBER_LOGIN_ACTION_NONE);
     member_login_snapshot(&login, &snapshot);

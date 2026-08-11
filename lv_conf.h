@@ -1,7 +1,7 @@
 #ifndef LV_CONF_H
 #define LV_CONF_H
 
-/* The browser is the only LVGL user in this application. */
+/* LVGL renders the static application pages and file browser. */
 #define LV_COLOR_DEPTH 32
 #define LV_USE_STDLIB_MALLOC LV_STDLIB_CLIB
 #define LV_USE_STDLIB_STRING LV_STDLIB_CLIB
@@ -56,14 +56,14 @@
 #define LV_USE_ARC 0
 #define LV_USE_ARCLABEL 0
 #define LV_USE_BAR 0
-#define LV_USE_BUTTONMATRIX 0
+#define LV_USE_BUTTONMATRIX 1
 #define LV_USE_CALENDAR 0
 #define LV_USE_CANVAS 0
 #define LV_USE_CHART 0
 #define LV_USE_CHECKBOX 0
 #define LV_USE_DROPDOWN 0
 #define LV_USE_IMAGEBUTTON 0
-#define LV_USE_KEYBOARD 0
+#define LV_USE_KEYBOARD 1
 #define LV_USE_LED 0
 #define LV_USE_LINE 0
 #define LV_USE_LOTTIE 0
@@ -78,7 +78,7 @@
 #define LV_USE_SWITCH 0
 #define LV_USE_TABLE 0
 #define LV_USE_TABVIEW 0
-#define LV_USE_TEXTAREA 0
+#define LV_USE_TEXTAREA 1
 #define LV_USE_TILEVIEW 0
 #define LV_USE_WIN 0
 
@@ -95,6 +95,9 @@
 #define LV_USE_OBJ_PROPERTY_NAME 0
 
 #define LV_USE_TINY_TTF 0
+#define LV_USE_FREETYPE 1
+#define LV_FREETYPE_USE_LVGL_PORT 0
+#define LV_FREETYPE_CACHE_FT_GLYPH_CNT 128
 #define LV_USE_FONT_COMPRESSED 0
 #define LV_USE_FONT_PLACEHOLDER 0
 #define LV_USE_BIDI 0

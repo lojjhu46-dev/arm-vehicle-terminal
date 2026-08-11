@@ -5,7 +5,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/buttonmatrix/lv_buttonmatrix.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/lv_obj_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/../misc/lv_ext_data.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/../misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/../misc/lv_types.h \
@@ -134,6 +134,19 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/buttonmatrix/lv_buttonmatrix.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/lv_group.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/lv_obj.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/lv_obj_property.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../misc/lv_area_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../misc/lv_area.h \
- /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/lv_obj_class_private.h
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/lv_obj_class_private.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../misc/lv_assert.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../indev/lv_indev.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/lv_group.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../draw/lv_draw.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../core/lv_refr.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../misc/lv_text_private.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../misc/lv_text.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../misc/lv_text_ap.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../misc/lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../misc/../draw/lv_draw.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/buttonmatrix/../../stdlib/lv_string.h

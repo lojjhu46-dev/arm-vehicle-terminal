@@ -26,16 +26,17 @@ typedef struct {
 } JsonCursor;
 
 typedef struct {
+    char time[WEATHER_FORECAST_TIME_SIZE];
+    char text[WEATHER_FORECAST_TEXT_SIZE];
+    double temp_c;
+} ParsedWeatherHour;
+
+typedef struct {
     pthread_mutex_t mutex;
     pthread_t thread;
     int thread_started;
     int running;
     int listen_fd;
-    int has_forecast;
-    unsigned long forecast_version;
-    unsigned long applied_version;
-    char applied_hour[14];
-    WeatherForecast forecast;
     WeatherTextHandler text_handler;
     void *text_handler_data;
 } WeatherReceiverContext;
@@ -253,7 +254,7 @@ static int valid_hour_time(const char *text)
 }
 
 // 解析一条小时预报对象，并要求 time、text、temp_c 字段完整。
-static int parse_hourly_object(JsonCursor *cursor, WeatherHourly *hour)
+static int parse_hourly_object(JsonCursor *cursor, ParsedWeatherHour *hour)
 {
     char key[16];
     int first = 1;
@@ -307,11 +308,55 @@ static int parse_hourly_object(JsonCursor *cursor, WeatherHourly *hour)
     return 0;
 }
 
-// 解析并校验恰好 24 条小时预报数据。
-static int parse_hours(JsonCursor *cursor, WeatherForecast *forecast)
+// 生成当前本地小时的比较键，格式为 YYYY-MM-DDTHH。
+static int current_hour_key(char key[14]);
+
+// 逐条比较小时预报，只留下当前小时、最早未来或最新过去的候选项。
+static void select_hour(ParsedWeatherHour *exact, ParsedWeatherHour *future,
+                        ParsedWeatherHour *past, const ParsedWeatherHour *hour,
+                        const char current_hour[14], int *has_exact,
+                        int *has_future, int *has_past)
+{
+    int comparison = strncmp(hour->time, current_hour, 13);
+
+    if (comparison == 0)
+    {
+        if (!*has_exact)
+        {
+            *exact = *hour;
+            *has_exact = 1;
+        }
+        return;
+    }
+    if (*has_exact)
+        return;
+    if (comparison > 0)
+    {
+        if (!*has_future || strcmp(hour->time, future->time) < 0)
+        {
+            *future = *hour;
+            *has_future = 1;
+        }
+    }
+    else if (!*has_past || strcmp(hour->time, past->time) > 0)
+    {
+        *past = *hour;
+        *has_past = 1;
+    }
+}
+
+// 解析并校验恰好 24 条小时预报数据，同时选择唯一的显示快照。
+static int parse_hours(JsonCursor *cursor, WeatherForecast *forecast,
+                       const char current_hour[14])
 {
     int count = 0;
     int first = 1;
+    int has_exact = 0;
+    int has_future = 0;
+    int has_past = 0;
+    ParsedWeatherHour exact = { 0 };
+    ParsedWeatherHour future = { 0 };
+    ParsedWeatherHour past = { 0 };
 
     if (json_expect(cursor, '[') == -1)
         return -1;
@@ -326,20 +371,41 @@ static int parse_hours(JsonCursor *cursor, WeatherForecast *forecast)
         if (!first && json_expect(cursor, ',') == -1)
             return -1;
         first = 0;
-        if (count >= WEATHER_HOUR_COUNT ||
-            parse_hourly_object(cursor, &forecast->hours[count]) == -1)
+        if (count >= WEATHER_HOURLY_PROTOCOL_COUNT)
             return -1;
+        {
+            ParsedWeatherHour candidate;
+
+            if (parse_hourly_object(cursor, &candidate) == -1)
+                return -1;
+            select_hour(&exact, &future, &past, &candidate, current_hour,
+                        &has_exact, &has_future, &has_past);
+        }
         ++count;
     }
-    return count == WEATHER_HOUR_COUNT ? 0 : -1;
+    if (count != WEATHER_HOURLY_PROTOCOL_COUNT ||
+        (!has_exact && !has_future && !has_past))
+        return -1;
+    {
+        const ParsedWeatherHour *selected = has_exact ? &exact :
+            (has_future ? &future : &past);
+
+        snprintf(forecast->time, sizeof(forecast->time), "%s", selected->time);
+        snprintf(forecast->text, sizeof(forecast->text), "%s", selected->text);
+        forecast->temp_c = selected->temp_c;
+    }
+    return 0;
 }
 
-// 解析 weather.hourly.v1 报文，提取城市、坐标和小时预报。
+// 解析完整 weather.hourly.v1 报文，并选出一个立即显示的小时天气快照。
 int weather_receiver_parse_hourly_json(const char *json, WeatherForecast *forecast)
 {
     JsonCursor cursor;
     char key[16];
     char type[32];
+    char hour[14];
+    double latitude;
+    double longitude;
     int first = 1;
     int has_type = 0;
     int has_city = 0;
@@ -350,6 +416,8 @@ int weather_receiver_parse_hourly_json(const char *json, WeatherForecast *foreca
     if (json == NULL || forecast == NULL ||
         strnlen(json, WEATHER_RECEIVER_MAX_PAYLOAD + 1) >
             WEATHER_RECEIVER_MAX_PAYLOAD)
+        return -1;
+    if (current_hour_key(hour) == -1)
         return -1;
     memset(forecast, 0, sizeof(*forecast));
     cursor.position = json;
@@ -385,19 +453,19 @@ int weather_receiver_parse_hourly_json(const char *json, WeatherForecast *foreca
         }
         else if (strcmp(key, "latitude") == 0)
         {
-            if (has_latitude || json_parse_number(&cursor, &forecast->latitude) == -1)
+            if (has_latitude || json_parse_number(&cursor, &latitude) == -1)
                 return -1;
             has_latitude = 1;
         }
         else if (strcmp(key, "longitude") == 0)
         {
-            if (has_longitude || json_parse_number(&cursor, &forecast->longitude) == -1)
+            if (has_longitude || json_parse_number(&cursor, &longitude) == -1)
                 return -1;
             has_longitude = 1;
         }
         else if (strcmp(key, "hours") == 0)
         {
-            if (has_hours || parse_hours(&cursor, forecast) == -1)
+            if (has_hours || parse_hours(&cursor, forecast, hour) == -1)
                 return -1;
             has_hours = 1;
         }
@@ -414,8 +482,9 @@ int weather_receiver_parse_hourly_json(const char *json, WeatherForecast *foreca
         forecast->city[0] == '\0' ||
         strnlen(forecast->city, sizeof(forecast->city)) >=
             MAIN_WEATHER_CITY_SIZE ||
-        forecast->latitude < -90.0 || forecast->latitude > 90.0 ||
-        forecast->longitude < -180.0 || forecast->longitude > 180.0 ||
+        forecast->time[0] == '\0' || forecast->text[0] == '\0' ||
+        latitude < -90.0 || latitude > 90.0 ||
+        longitude < -180.0 || longitude > 180.0 ||
         strcmp(type, "weather.hourly.v1") != 0)
         return -1;
     return 0;
@@ -465,101 +534,25 @@ static int current_hour_key(char key[14])
     return strftime(key, 14, "%Y-%m-%dT%H", &utc_plus_eight) == 13 ? 0 : -1;
 }
 
-// 查找当前小时；未命中时选择最近的未来小时或最后一条记录。
-static int forecast_hour_index(const WeatherForecast *forecast, const char hour[14])
+// 将解析得到的唯一天气快照立即同步到主界面。
+static void weather_receiver_apply_snapshot(const WeatherForecast *forecast)
 {
-    int exact_index = -1;
-    int future_index = -1;
-    int latest_index = -1;
-
-    for (int i = 0; i < WEATHER_HOUR_COUNT; ++i)
-    {
-        if (strncmp(forecast->hours[i].time, hour, 13) == 0)
-            exact_index = i;
-        if (strncmp(forecast->hours[i].time, hour, 13) > 0 &&
-            (future_index < 0 ||
-             strcmp(forecast->hours[i].time,
-                    forecast->hours[future_index].time) < 0))
-            future_index = i;
-        if (latest_index < 0 ||
-            strcmp(forecast->hours[i].time,
-                   forecast->hours[latest_index].time) > 0)
-            latest_index = i;
-    }
-    if (exact_index >= 0)
-        return exact_index;
-    if (future_index >= 0)
-        return future_index;
-    return latest_index;
-}
-
-// 从缓存预报选择当前小时，并同步更新主界面天气。
-static void weather_receiver_apply_current_hour(void)
-{
-    WeatherForecast forecast;
     MainWeather weather;
-    char hour[14];
-    unsigned long version;
     size_t city_length;
-    int index;
 
-    if (current_hour_key(hour) == -1)
+    if (forecast == NULL)
         return;
-    pthread_mutex_lock(&receiver.mutex);
-    if (!receiver.has_forecast ||
-        (receiver.applied_version == receiver.forecast_version &&
-         strcmp(receiver.applied_hour, hour) == 0))
-    {
-        pthread_mutex_unlock(&receiver.mutex);
-        return;
-    }
-    forecast = receiver.forecast;
-    version = receiver.forecast_version;
-    pthread_mutex_unlock(&receiver.mutex);
-
-    index = forecast_hour_index(&forecast, hour);
-    if (index < 0)
-    {
-        fprintf(stderr, "[Weather] no usable hour in cached forecast for %s\n",
-                hour);
-        return;
-    }
     fprintf(stderr, "[Weather] applying hour=%s text=%s temp=%.1f city=%s\n",
-            forecast.hours[index].time, forecast.hours[index].text,
-            forecast.hours[index].temp_c, forecast.city);
+            forecast->time, forecast->text, forecast->temp_c, forecast->city);
     memset(&weather, 0, sizeof(weather));
-    weather.type = weather_type_from_text(forecast.hours[index].text);
-    weather.temperature_c = (int)lround(forecast.hours[index].temp_c);
-    city_length = strlen(forecast.city);
+    weather.type = weather_type_from_text(forecast->text);
+    weather.temperature_c = (int)lround(forecast->temp_c);
+    city_length = strlen(forecast->city);
     if (city_length >= sizeof(weather.city))
         return;
-    memcpy(weather.city, forecast.city, city_length + 1);
+    memcpy(weather.city, forecast->city, city_length + 1);
     if (main_weather_set(&weather) == -1)
-    {
         fprintf(stderr, "[Weather] main weather update failed\n");
-        return;
-    }
-
-    pthread_mutex_lock(&receiver.mutex);
-    if (receiver.forecast_version == version)
-    {
-        receiver.applied_version = version;
-        memcpy(receiver.applied_hour, hour, sizeof(receiver.applied_hour));
-    }
-    pthread_mutex_unlock(&receiver.mutex);
-}
-
-// 原子替换预报缓存后立即应用当前小时。
-static void weather_receiver_store_forecast(const WeatherForecast *forecast)
-{
-    pthread_mutex_lock(&receiver.mutex);
-    receiver.forecast = *forecast;
-    receiver.has_forecast = 1;
-    ++receiver.forecast_version;
-    receiver.applied_version = 0;
-    receiver.applied_hour[0] = '\0';
-    pthread_mutex_unlock(&receiver.mutex);
-    weather_receiver_apply_current_hour();
 }
 
 // 将协议回复完整发送给客户端。
@@ -665,10 +658,9 @@ static void handle_client(int client_fd)
         }
         else
         {
-            fprintf(stderr, "[Weather] parsed city=%s latitude=%.4f longitude=%.4f hours=%d\n",
-                    forecast.city, forecast.latitude, forecast.longitude,
-                    WEATHER_HOUR_COUNT);
-            weather_receiver_store_forecast(&forecast);
+            fprintf(stderr, "[Weather] parsed city=%s hour=%s text=%s temp=%.1f\n",
+                    forecast.city, forecast.time, forecast.text, forecast.temp_c);
+            weather_receiver_apply_snapshot(&forecast);
             snprintf(reply, sizeof(reply), "%s", "OK weather cached\n");
         }
     }
@@ -724,7 +716,6 @@ static void *weather_receiver_thread(void *argument)
             usleep(10 * 1000);
             continue;
         }
-        weather_receiver_apply_current_hour();
     }
     return NULL;
 }

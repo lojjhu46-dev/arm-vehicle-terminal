@@ -6,7 +6,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/keyboard/lv_keyboard.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/lv_obj_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/lv_ext_data.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/lv_types.h \
@@ -135,7 +135,23 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/keyboard/lv_keyboard.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/lv_group.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/lv_obj.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/lv_obj_property.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/lv_keyboard.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../../core/lv_obj_class_private.h \
- /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../../core/lv_obj_class.h
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../../core/lv_obj_class.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/lv_textarea.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/lv_label.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/../../lv_conf_internal.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/../../misc/lv_types.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/../../core/lv_obj.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/../../font/lv_font.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/../../font/lv_symbol_def.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/../../misc/lv_text.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/../../draw/lv_draw.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/../../core/lv_observer.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/../../core/../misc/lv_ext_data.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../textarea/../label/../../core/lv_obj.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../../misc/lv_assert.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/keyboard/../../stdlib/lv_string.h

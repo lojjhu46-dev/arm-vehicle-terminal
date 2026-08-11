@@ -5,7 +5,7 @@ lvgl/CMakeFiles/lvgl.dir/src/indev/lv_indev_scroll.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/../core/lv_obj_scroll.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/../core/../misc/lv_area.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/../core/../misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/indev/../core/../misc/lv_types.h \
  /usr/local/arm/5.4.0/usr/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
  /usr/local/arm/5.4.0/usr/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \

@@ -5,7 +5,7 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/textarea/lv_textarea.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../core/lv_obj_private.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../core/../misc/lv_ext_data.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../core/../misc/../lv_conf_internal.h \
- /home/gec/workspace/Project/lv_conf.h \
+ /home/gec/workspace/PROJECT_LVGL/Project/lv_conf.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../core/lv_obj.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../core/../lv_conf_internal.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../core/../misc/lv_types.h \
@@ -143,4 +143,21 @@ lvgl/CMakeFiles/lvgl.dir/src/widgets/textarea/lv_textarea.c.o: \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../label/../../draw/lv_draw.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../label/../../core/lv_observer.h \
  /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../label/../../core/../misc/lv_ext_data.h \
- /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../label/../../core/lv_obj.h
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../label/../../core/lv_obj.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../label/lv_label_private.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../label/../../draw/lv_draw_label_private.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../label/../../draw/lv_draw_label.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../label/../../core/lv_obj_private.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../label/lv_label.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../core/lv_obj_class_private.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../core/lv_group.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../core/lv_refr.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../indev/lv_indev.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../draw/lv_draw.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../misc/lv_assert.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../misc/lv_anim_private.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../misc/lv_anim.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../misc/lv_text_private.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../misc/lv_text.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../misc/lv_math.h \
+ /home/gec/workspace/lvgl_project/lv_port_pc_vscode/lvgl/src/widgets/textarea/../../stdlib/lv_string.h
