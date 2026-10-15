@@ -1,6 +1,7 @@
 # ===== 构建产物 =====
 # C 工程构建产物
 camera_project/build/
+build-lvgl-arm/
 
 # Android 构建产物与本地配置
 **/build/
@@ -9,9 +10,22 @@ camera_project/build/
 *.apk
 *.aab
 
+# 编译中间产物
+*.o
+*.d
+
+# 部署/编译产物
+bin/
+doc/myapp
+
 # ===== Python 缓存 =====
 **/__pycache__/
 *.py[cod]
+
+# ===== 本地备份与板端运行时数据 =====
+backup_resources/
+recordings/
+photos/
 
 # ===== 功能重复的旧项目（历史保留，不入库） =====
 CameraReceiver/
@@ -21,3 +35,7 @@ CameraReceiver/
 .idea/
 *.iml
 .vscode/
+
+# ===== AI 工具目录 =====
+.agents/
+.codex/
