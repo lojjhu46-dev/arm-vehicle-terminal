@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主色 / 强调色 -->
+    <color name="primary">#1E88E5</color>
+    <color name="primary_dark">#1565C0</color>
+
+    <!-- 背景 -->
+    <color name="bg_dark">#121212</color>
+    <color name="bg_panel">#1E1E1E</color>
+    <color name="black">#000000</color>
+
+    <!-- 文本 -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#BBBBBB</color>
+    <color name="text_hint">#888888</color>
+
+    <!-- 功能色 -->
+    <color name="warning">#FFD54F</color>
+    <color name="success">#43A047</color>
+    <color name="danger">#E53935</color>
+</resources>

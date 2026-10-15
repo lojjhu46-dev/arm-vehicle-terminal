@@ -1,0 +1,32 @@
+构建命令：
+
+  cmake -S . -B /tmp/camera-phone-arm-build -DCMAKE_C_COMPILER=arm-linux-gcc
+  cmake --build /tmp/camera-phone-arm-build --parallel 2
+
+对端 IP 仍位于 src/clinet_and_server.c:46，按实际接收方地址修改。
+
+## 新拓扑说明（公网中继）
+
+本工程现作为**发送端**，将摄像头画面经 UDP 8888 分片发送到 **Windows 中继服务**
+（relay_server），再由其通过内网穿透（cpolar HTTP 隧道 + WebSocket）转发到公网。
+
+数据流向：
+
+  开发板(本工程) --UDP 8888 分片--> Windows中继服务(relay_server)
+      --WebSocket--> cpolar HTTP隧道 --> 公网接收程序(public_viewer)
+
+### 需要修改
+
+`src/clinet_and_server.c` 第 46 行，把发送目标 IP 改成 **Windows 中继服务所在主机的局域网 IP**：
+
+```c
+dest_addr.sin_addr.s_addr = inet_addr("192.168.33.54");  // ← 改成 Windows 主机局域网 IP
+```
+
+### 注意事项
+
+- 开发板与 Windows 主机必须在**同一网段**（同一路由器下），且两边 IP 不冲突。
+- 端口 `PORT`(8888) 需与 Windows 中继服务监听的 UDP 端口一致。
+- 协议（1324B/包、小端帧头、校验和、组帧规则）保持完全不变，
+  与 Android `CameraReceiver` 及 `public_viewer` 接收格式一致。
+- 板端 `recv_thread` 接收线程保留：无对端数据时自然阻塞，不影响采集/发送主流程。

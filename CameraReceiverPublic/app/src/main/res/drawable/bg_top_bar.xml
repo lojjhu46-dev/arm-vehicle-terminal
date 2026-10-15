@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 顶部栏半透明背景：悬浮在画面上方，保证文字可读同时不遮挡画面 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:startColor="#CC121212"
+        android:endColor="#00121212" />
+</shape>

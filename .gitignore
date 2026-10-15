@@ -1,0 +1,23 @@
+# ===== 构建产物 =====
+# C 工程构建产物
+camera_project/build/
+
+# Android 构建产物与本地配置
+**/build/
+**/.gradle/
+**/local.properties
+*.apk
+*.aab
+
+# ===== Python 缓存 =====
+**/__pycache__/
+*.py[cod]
+
+# ===== 功能重复的旧项目（历史保留，不入库） =====
+CameraReceiver/
+
+# ===== IDE / 工具数据 =====
+.codebuddy/
+.idea/
+*.iml
+.vscode/

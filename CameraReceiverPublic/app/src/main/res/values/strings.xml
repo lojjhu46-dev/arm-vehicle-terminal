@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CameraReceiverPublic</string>
+
+    <!-- 连接设置页 -->
+    <string name="settings_title">公网相机画面</string>
+    <string name="settings_subtitle">通过 WebSocket 连接 cpolar 公网隧道，接收实时画面</string>
+    <string name="ws_address_label">公网 WebSocket 地址</string>
+    <string name="ws_address_hint">ws://214006ed.r27.cpolar.top</string>
+    <string name="btn_connect">连接并查看</string>
+    <string name="btn_disconnect">断开</string>
+    <string name="default_hint">默认：ws://214006ed.r27.cpolar.top（cpolar 隧道地址，变了随时改）</string>
+
+    <!-- 画面显示页 -->
+    <string name="status_waiting">请输入地址后连接</string>
+    <string name="status_connecting">连接中…</string>
+    <string name="status_connected">已连接</string>
+    <string name="status_disconnected">已断开</string>
+    <string name="status_error">错误: %1$s</string>
+    <string name="fps_label">%1$d FPS</string>
+    <string name="btn_back">返回</string>
+    <string name="btn_rotate_to_landscape">横屏</string>
+    <string name="btn_rotate_to_portrait">竖屏</string>
+</resources>
