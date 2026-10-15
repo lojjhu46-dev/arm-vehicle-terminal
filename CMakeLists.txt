@@ -58,6 +58,7 @@ set(SREC
     src/member_sms.c
     src/recorder.c 
     src/ui_flow.c
+    src/udp_sender.c
     src/main_weather.c
     src/weather_receiver.c
     src/ui_remote_commands.c

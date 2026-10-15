@@ -27,4 +27,15 @@
 #define WEATHER_RECEIVER_MAX_PAYLOAD 8192
 #endif
 
+/* UDP video stream sender settings (integrated from camera_project). */
+#ifndef UDP_RECEIVER_IP
+#define UDP_RECEIVER_IP "192.168.33.53" /* 接收端（relay_server）IP */
+#endif
+#ifndef UDP_RECEIVER_PORT
+#define UDP_RECEIVER_PORT 8888 /* 接收端 UDP 端口 */
+#endif
+#ifndef UDP_QUEUE_DEPTH
+#define UDP_QUEUE_DEPTH 3 /* YUYV 帧发送队列深度 */
+#endif
+
 #endif

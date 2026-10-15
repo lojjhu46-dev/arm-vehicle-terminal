@@ -317,16 +317,49 @@ static void ui_stop_playback(UiState *state)
 //最新修改
 
 //最新改动
-// 更新实时影像状态；退出实时影像时同时清除录像状态。
+// 更新实时影像状态；进入实时画面时置位侧栏脏标志，
+// 退出实时影像时同时清除录像状态。
 static void ui_set_live(UiState *state, int live_mode)
 {
     pthread_mutex_lock(&state->state_mutex);
     state->live_mode = live_mode;
+    if (live_mode)
+        state->live_sidebar_dirty = 1;
     if (!live_mode)
         state->recording = 0;
     pthread_mutex_unlock(&state->state_mutex);
 }
 //最新改动
+
+// 在线程安全条件下读取常驻摄像头线程运行标志。
+static int ui_camera_running(UiState *state)
+{
+    int running;
+
+    pthread_mutex_lock(&state->state_mutex);
+    running = !state->camera_stop;
+    pthread_mutex_unlock(&state->state_mutex);
+    return running;
+}
+
+// 请求常驻摄像头线程退出。
+static void ui_request_camera_stop(UiState *state)
+{
+    pthread_mutex_lock(&state->state_mutex);
+    state->camera_stop = 1;
+    pthread_mutex_unlock(&state->state_mutex);
+}
+
+// 停止常驻摄像头线程并等待其退出（可安全重复调用）。
+static void ui_stop_camera_thread(UiState *state, pthread_t *camera_thread,
+                                  int *started)
+{
+    if (!*started)
+        return;
+    *started = 0;
+    ui_request_camera_stop(state);
+    pthread_join(*camera_thread, NULL);
+}
 
 //最新改动
 // 更新录像状态，供红点和 REC 线程查询。
@@ -597,7 +630,7 @@ static void playback_run(Lcd *lcd, UiState *state, LiveControls *controls,
 //最新修改
 
 //最新修改
-// 摄像头线程独占后台页，整帧完成后再翻转显示。
+// 常驻摄像头线程：程序启动即采集画面（供 UDP 发送），仅实时画面状态时写 LCD。
 static void *camera_thread_main(void *argument)
 {
     CameraThreadContext *context = argument;
@@ -606,6 +639,7 @@ static void *camera_thread_main(void *argument)
     unsigned int sidebar_version = 1;         // 当前侧栏状态版本。
     int last_guides_enabled = -1;             // 最近侧栏辅助线状态。
     int last_recording = -1;                  // 最近侧栏录像状态。
+    unsigned int stale_frame_count = 0;       // 连续无帧次数（摄像头断开检测）。
 
     if (camera_open(context->camera, "/dev/video7") == -1 ||
         camera_init(context->camera) == -1 ||
@@ -618,23 +652,40 @@ static void *camera_thread_main(void *argument)
         return NULL;
     }
 
-    while (ui_is_live(context->state))
+    /* 摄像头打开成功：启动常驻 UDP 图形帧发送线程。 */
+    if (udp_sender_init(&context->udp_sender) == -1)
+        fprintf(stderr, "[UI] udp sender initialization failed\n");
+
+    /* 常驻循环：始终采集画面，不受实时画面状态影响；仅 live 时写入 LCD。 */
+    while (ui_camera_running(context->state))
     {
         void *frame_buffer;
-        JSAMPLE *image_buffer;
         unsigned int actions;
-        struct timeval now;
-        int guides_enabled;
-        int recording;
-        int dot_visible;
-        int page;
+        int frame_ready;
 
-        if (camera_wait_frame(context->camera) < 0)
+        frame_ready = camera_wait_frame(context->camera);
+        if (frame_ready < 0)
             break;
+        if (frame_ready == 0)
+        {
+            /* select 超时无帧：跳过 DQBUF 避免阻塞，连续 3 次（约 6 秒）
+             * 无帧视为摄像头断开，退出线程并释放 UDP 与设备资源。 */
+            if (++stale_frame_count >= 3)
+            {
+                fprintf(stderr, "[UI] camera stream timed out, stopping camera thread\n");
+                break;
+            }
+            continue;
+        }
+        stale_frame_count = 0;
         frame_buffer = camera_dequeue(context->camera);
         if (frame_buffer == NULL)
             break;
 
+        /* 常驻 UDP 发送：提交 YUYV 原始帧（不依赖实时画面状态）。 */
+        (void)udp_sender_submit_frame(&context->udp_sender, frame_buffer);
+
+        /* 录像/拍照动作由摄像头线程统一消费（远程命令可在非 live 时设置）。 */
         actions = ui_take_actions(context->state);
         if (actions & UI_ACTION_RECORD_STOP)
         {
@@ -670,55 +721,79 @@ static void *camera_thread_main(void *argument)
                             context->recorder->dirbuffer);
             }
         }
-        recording = recorder_is_recording(context->recorder);
-        ui_set_recording(context->state, recording);
-        guides_enabled = ui_parking_guides_enabled(context->state);
-        if (guides_enabled != last_guides_enabled || recording != last_recording)
-        {
-            ++sidebar_version;
-            last_guides_enabled = guides_enabled;
-            last_recording = recording;
-        }
 
-        lcd_sem_wait(context->state);
-        if (lcd_begin_frame(context->lcd) == -1)
+        /* 仅实时画面状态（且未打开文件浏览器）时把帧写入 LCD 并保存照片/录像。 */
+        if (ui_is_live(context->state) &&
+            !ui_is_file_browser_requested(context->state))
         {
-            sem_post(&context->state->lcd_sem);
-            break;
-        }
-        page = lcd_draw_page(context->lcd);
-        image_buffer = image_convert_frame(&converter, frame_buffer,
-                                           (unsigned int *)context->lcd->pixels);
-        if (image_buffer != NULL && guides_enabled)
-            parking_assist_lines_drawing(context->lcd->pixels);
-        if (image_buffer != NULL && page_versions[page] != sidebar_version)
-        {
-            live_controls_draw(context->controls, context->lcd->pixels, recording,
-                               guides_enabled, 1);
-            page_versions[page] = sidebar_version;
-        }
-        gettimeofday(&now, NULL);
-        dot_visible = recording && ((now.tv_sec * 2 + now.tv_usec / 500000) & 1);
-        record_indicator_draw_dot(context->lcd->pixels, dot_visible);
-        record_indicator_draw_rec(context->indicator, context->lcd->pixels, recording);
-        if (lcd_present(context->lcd) == -1)
-        {
-            sem_post(&context->state->lcd_sem);
-            break;
-        }
-        sem_post(&context->state->lcd_sem);
-        if (image_buffer == NULL)
-            break;
+            JSAMPLE *image_buffer;
+            struct timeval now;
+            int guides_enabled;
+            int recording;
+            int dot_visible;
+            int page;
 
-        if (actions & UI_ACTION_PHOTO)
-            (void)recorder_save_photo(context->recorder, PHOTO_DIR, image_buffer);
-        (void)recorder_submit_frame(context->recorder, image_buffer);
-        ui_set_recording(context->state, recorder_is_recording(context->recorder));
+            /* 进入实时画面时强制重绘所有页侧栏（清除退出时残留的版本号）。
+             * 标志置位与消费闭环，即使当帧竞态未重绘，下一帧也必然重绘。 */
+            pthread_mutex_lock(&context->state->state_mutex);
+            if (context->state->live_sidebar_dirty)
+            {
+                memset(page_versions, 0, sizeof(page_versions));
+                context->state->live_sidebar_dirty = 0;
+            }
+            pthread_mutex_unlock(&context->state->state_mutex);
+
+            recording = recorder_is_recording(context->recorder);
+            ui_set_recording(context->state, recording);
+            guides_enabled = ui_parking_guides_enabled(context->state);
+            if (guides_enabled != last_guides_enabled || recording != last_recording)
+            {
+                ++sidebar_version;
+                last_guides_enabled = guides_enabled;
+                last_recording = recording;
+            }
+
+            lcd_sem_wait(context->state);
+            if (lcd_begin_frame(context->lcd) == -1)
+            {
+                sem_post(&context->state->lcd_sem);
+                break;
+            }
+            page = lcd_draw_page(context->lcd);
+            image_buffer = image_convert_frame(&converter, frame_buffer,
+                                               (unsigned int *)context->lcd->pixels);
+            if (image_buffer != NULL && guides_enabled)
+                parking_assist_lines_drawing(context->lcd->pixels);
+            if (image_buffer != NULL && page_versions[page] != sidebar_version)
+            {
+                live_controls_draw(context->controls, context->lcd->pixels, recording,
+                                   guides_enabled, 1);
+                page_versions[page] = sidebar_version;
+            }
+            gettimeofday(&now, NULL);
+            dot_visible = recording && ((now.tv_sec * 2 + now.tv_usec / 500000) & 1);
+            record_indicator_draw_dot(context->lcd->pixels, dot_visible);
+            record_indicator_draw_rec(context->indicator, context->lcd->pixels, recording);
+            if (lcd_present(context->lcd) == -1)
+            {
+                sem_post(&context->state->lcd_sem);
+                break;
+            }
+            sem_post(&context->state->lcd_sem);
+            if (image_buffer == NULL)
+                break;
+
+            if (actions & UI_ACTION_PHOTO)
+                (void)recorder_save_photo(context->recorder, PHOTO_DIR, image_buffer);
+            (void)recorder_submit_frame(context->recorder, image_buffer);
+            ui_set_recording(context->state, recorder_is_recording(context->recorder));
+        }
 
         if (camera_requeue(context->camera) == -1)
             break;
     }
 
+    udp_sender_destroy(&context->udp_sender);
     image_converter_destroy(&converter);
     camera_close(context->camera);
     ui_set_live(context->state, 0);
@@ -914,7 +989,9 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
     LvglRuntime runtime;
     LvglUi lvgl_ui;
     pthread_t touch_thread;
+    pthread_t camera_thread;
     int touch_thread_running = 0;
+    int camera_thread_started = 0;
     int controls_initialized = 0;
     int indicator_initialized = 0;
     int login_initialized = 0;
@@ -972,9 +1049,14 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
     camera_context.sms_worker = &sms_worker;
     lvgl_ui_play_startup(&lvgl_ui);
 
+    /* 常驻摄像头线程：程序启动即采集画面（供 UDP 发送），不受 UI 状态影响。 */
+    if (pthread_create(&camera_thread, NULL, camera_thread_main,
+                       &camera_context) != 0)
+        goto cleanup;
+    camera_thread_started = 1;
+
     for (;;)
     {
-        pthread_t camera_thread;
         LvglUiAction action;
 
         ui_apply_remote_commands(&state, remote_commands);
@@ -1018,20 +1100,12 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
             continue;
         }
 
-        if (pthread_create(&camera_thread, NULL, camera_thread_main,
-                           &camera_context) != 0)
-        {
-            ui_set_live(&state, 0);
-            stop_dynamic_touch(&state, &touch_thread, &touch_thread_running);
-            lvgl_runtime_set_input_enabled(&runtime, 1);
-            goto cleanup;
-        }
+        /* 摄像头线程已常驻，这里只需等待 live 状态切换。 */
         while (ui_is_live(&state))
         {
             ui_apply_remote_commands(&state, remote_commands);
             usleep(10 * 1000);
         }
-        pthread_join(camera_thread, NULL);
         recorder_stop_session(recorder);
         recorder_wait_idle(recorder);
 
@@ -1051,6 +1125,7 @@ int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,
     }
 
 cleanup:
+    ui_stop_camera_thread(&state, &camera_thread, &camera_thread_started);
     stop_dynamic_touch(&state, &touch_thread, &touch_thread_running);
     if (lvgl_ui_initialized)
         lvgl_ui_destroy(&lvgl_ui);

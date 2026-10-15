@@ -1,12 +1,13 @@
-# ARM 行车记录仪
+# ARM 智能车载终端（arm-vehicle-terminal）
 
-这是一个运行在 ARM Linux 开发板上的触摸式行车记录仪应用。项目直接使用 Linux framebuffer、Linux input event 和 V4L2 接口，不依赖桌面窗口系统；界面资源以 JPEG/PNG 图片形式放在 `resource/` 目录中。
+这是一个运行在 ARM Linux 开发板上的触摸式智能车载终端应用，涵盖行车记录、倒车影像、远程视频回传、天气与会员服务等模块。项目直接使用 Linux framebuffer、Linux input event 和 V4L2 接口，不依赖桌面窗口系统；界面资源以 JPEG/PNG 图片形式放在 `resource/` 目录中。
 
 当前实现覆盖以下功能：
 
 - 800×480 LCD framebuffer 显示与开机动画
 - 触摸屏点击及原始坐标到 LCD 坐标的转换
-- 通过 V4L2 摄像头采集 640×480 YUYV 图像
+- 常驻摄像头线程：程序启动即通过 V4L2 采集 640×480 YUYV 图像，不受界面状态影响
+- 独立 UDP 图形帧发送线程：YUYV→RGB→JPEG 编码→1300B 分片→校验和→UDP 发送，与配套接收程序协议兼容
 - YUYV 转 RGB，并在实时预览中叠加倒车辅助线
 - 开始/停止录像、拍照、录像指示灯
 - 最近一次录像会话的帧回放
@@ -31,6 +32,7 @@
 | LCD | `/dev/fb0`，800×480，32 bpp，行跨度为 800×4 字节 |
 | 触摸屏 | `/dev/input/event0`，原始坐标范围按 1024×600 处理 |
 | 摄像头 | `/dev/video7`，支持 V4L2 MMAP 和 YUYV 640×480 |
+| 网络 | 与 UDP 接收端（relay_server）同网段，UDP 端口 8888 可达 |
 | 文件系统 | `/root/workspace` 可写，且能创建录像目录和 `photos/` |
 | 运行目录 | 必须是包含 `resource/` 的项目目录，当前资源路径是相对路径 `./resource` |
 | 字库 | FreeType ARM SDK，默认路径为 `../freetype/freetype_arm` |
@@ -93,9 +95,36 @@ cd /root/workspace
 2. 打开并检查 `/dev/fb0`。
 3. 打开 `/dev/input/event0`。
 4. 播放 `resource/logo/` 下的开机动画，并显示主界面。
-5. 进入触摸驱动的 UI 主循环。
+5. 进入 UI 主循环，并创建常驻摄像头线程：程序启动即打开 `/dev/video7` 采集画面并启动 UDP 图形帧发送，采集与发送不受界面状态影响。
 
-程序退出或初始化失败时会释放 framebuffer 映射、触摸设备、摄像头缓冲区和录像编码线程。
+程序退出或初始化失败时会释放 framebuffer 映射、触摸设备、摄像头缓冲区、UDP 发送线程和录像编码线程。
+
+## UDP 图形帧传输
+
+程序整合了 `camera_project` 的摄像头画面 UDP 传输能力，作为常驻后台功能运行，与界面状态无关：
+
+- **常驻摄像头采集**：程序启动后即打开 `/dev/video7` 持续采集 640×480 YUYV 帧（独立摄像头线程），主界面、会员页、文件浏览器和回放期间均不受影响；实时画面状态仅决定是否把帧写入 LCD，不再决定是否采集。
+- **独立 UDP 发送线程**：摄像头线程把每帧 YUYV 原始数据非阻塞放入队列（深度 `UDP_QUEUE_DEPTH`，默认 3，满队时丢帧），发送线程异步执行 YUYV→RGB→JPEG 编码（质量 55）→1300B 分片→校验和→`sendto` 整包 1324B。
+- **协议兼容**：分片结构、校验和算法（`(sum<<5)-sum+byte`）、小端帧头与 `camera_project` 及配套接收程序 `relay_server` 逐字段一致，接收端零改动即可组帧显示。
+- **发送目标**：对端 IP 与端口由 `include/app_config.h` 中的 `UDP_RECEIVER_IP`（默认 `192.168.33.53`）和 `UDP_RECEIVER_PORT`（默认 `8888`）配置。
+- **故障隔离**：`camera_wait_frame`（select 2 秒超时）连续 3 次无帧（约 6 秒）视为摄像头断开，线程自行退出并释放 UDP 与设备资源，不阻塞触摸与 UI 响应。
+- **生命周期**：摄像头线程成功打开设备后才启动 UDP 发送线程；摄像头初始化失败时打印错误并退出线程（UDP 随之停止），不影响 UI 其他功能。
+
+### 分片协议（`UdpPacketInfo_t`，与 camera_project/relay_server 逐字段一致）
+
+每包固定 **1324 字节** = 24 字节帧头（6×uint32，小端字节序）+ 1300 字节 JPEG 负载：
+
+| 字段 | 字节 | 说明 |
+| --- | --- | --- |
+| `frame_id` | 0..3 | 帧号，每发送一帧自增（uint32 回绕） |
+| `frame_size` | 4..7 | 完整 JPEG 帧字节数 |
+| `packet_id` | 8..11 | 分片序号，从 0 开始 |
+| `packet_total` | 12..15 | 一帧总分片数 |
+| `packet_size` | 16..19 | 当前分片有效负载字节数 |
+| `checksum` | 20..23 | 负载校验和 `(sum<<5)-sum+byte` 取低 32 位 |
+| `packetbuf` | 24..1323 | JPEG 负载（尾片不足 1300 字节时剩余字节为 0） |
+
+接收端 `relay_server` 以帧号连续、`packet_id == 0` 起帧、包序严格递增为条件组帧，因此发送端必须保证同一帧的 `frame_id`/`frame_size`/`packet_total` 不变且 `packet_id` 从 0 顺序递增。
 
 ## 操作说明
 
@@ -207,6 +236,7 @@ GET /weather/v1/hourly/{latitude}/{longitude}?hours=24&localTime=true&lang=zh
 │   ├── main_weather.c      # 天气资源缓存、状态接口和图标绘制
 │   ├── weather_receiver.c  # TCP 文本/24小时天气接收和单条快照更新
 │   ├── ui_remote_commands.c # 远程文本指令邮箱及精确匹配处理器
+│   ├── udp_sender.c        # 常驻 UDP 图形帧发送线程（YUYV→JPEG→分片→发送）
 │   ├── freetype_lcd.c      # FreeType LCD 文字绘制封装
 │   ├── camera.c            # V4L2 摄像头及 MMAP 缓冲区
 │   ├── lcd.c               # framebuffer 映射和页面翻转
@@ -238,14 +268,13 @@ GET /weather/v1/hourly/{latitude}/{longitude}?hours=24&localTime=true&lang=zh
 模块间的主要数据流为：
 
 ```text
-V4L2 YUYV 帧
-    -> image_convert.c
-    -> LCD framebuffer 实时显示
-    -> recorder.c 异步复制到队列
-    -> jpeg_codec.c 写入 JPEG
+V4L2 YUYV 帧（常驻摄像头线程）
+    ├-> image_convert.c -> LCD framebuffer 实时显示（仅实时画面状态）
+    ├-> recorder.c 异步复制到队列 -> jpeg_codec.c 写入 JPEG（仅实时画面状态）
+    └-> udp_sender.c 异步队列 -> YUYV→RGB→JPEG 编码 -> 1300B 分片 -> UDP 发送（常驻）
 ```
 
-UI 使用触摸线程接收点击，摄像头线程负责采集、显示、录像和拍照；`UiState`、互斥锁、信号量以及 framebuffer 页面翻转用于协调多线程访问。
+UI 使用触摸线程接收点击，常驻摄像头线程负责采集、实时显示、录像和拍照，独立 UDP 发送线程负责图形帧编码与传输；`UiState`、互斥锁、信号量以及 framebuffer 页面翻转用于协调多线程访问。
 
 ## 测试与验证
 
@@ -282,7 +311,8 @@ test -w /root/workspace
 - 和风天气 API 尚未接入，当前天气数据不会自动从网络更新。
 - `wifi.png`、`settings.png`、`audio_recording.png`、`lock_file.png` 等资源目前未接入主 UI 流程。
 - 程序依赖从包含 `resource/` 的目录启动；直接从其他目录运行会导致资源加载失败。
-- 摄像头必须接受源码请求的 YUYV 640×480 格式，否则实时线程会退出并返回主界面。
+- 摄像头必须接受源码请求的 YUYV 640×480 格式，否则常驻摄像头线程会退出，UDP 发送随之停止。
+- UDP 发送目标 IP/端口为编译期常量（`app_config.h` 的 `UDP_RECEIVER_IP`/`UDP_RECEIVER_PORT`），修改后需重新编译；UDP 发送队列满时丢帧，且发送线程不处理接收。
 - 录像采用 JPEG 序列而不是视频容器，文件数量和存储占用随录像时间增长，并受 200 个帧编号限制。
 
 ## 许可证

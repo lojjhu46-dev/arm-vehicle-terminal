@@ -21,6 +21,7 @@
 #include "lvgl_runtime.h"
 #include "lvgl_ui.h"
 #include "playback.h"
+#include "udp_sender.h"
 #include "ui_remote_commands.h"
 //最新改动
 #include "overlay.h"
@@ -39,6 +40,8 @@ typedef struct {
     int touch_running;             // 触摸线程运行标志：1 继续读取，0 请求退出。
     int file_browser_requested;    // 文件管理按钮已请求交给主线程运行 LVGL。
     int screen;                   // 图片页面：主界面、扩展页、登录页或会员中心。
+    int camera_stop;               // 1 请求常驻摄像头线程退出。
+    int live_sidebar_dirty;        // 1 表示刚进入实时画面，需强制重绘所有页侧栏。
 } UiState;
 
 enum {
@@ -59,6 +62,7 @@ typedef struct {
     UiState *state;                // 与其他线程共享的界面状态和同步对象。
     MemberLogin *member_login;     // 会员登录输入和验证码状态。
     MemberSmsWorker *sms_worker;   // 后台短信发送任务。
+    UdpSender udp_sender;          // 常驻 UDP 图形帧发送模块。
 } CameraThreadContext;
 
 int ui_run(Lcd *lcd, Touch *touch, Camera *camera, Recorder *recorder,

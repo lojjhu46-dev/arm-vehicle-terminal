@@ -1,0 +1,22 @@
+# 构建目录
+build-lvgl-arm/
+build/
+
+# 编译中间产物
+*.o
+*.d
+
+# 部署/编译产物
+bin/
+doc/myapp
+
+# 本地备份
+backup_resources/
+
+# 板端运行时生成的数据
+recordings/
+photos/
+
+# AI 工具目录
+.agents/
+.codex/

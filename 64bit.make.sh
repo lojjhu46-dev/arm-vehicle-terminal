@@ -2,7 +2,7 @@
 
 #请重新清理旧构建并编译、部署：
 
-#cd /home/gec/workspace/PROJECT_LVGL/Project
+#cd /home/gec/workspace/PROJECT_LVGL/arm-vehicle-terminal
 #CLEAN_BUILD=1 DEPLOY=1 ./64bit.make.sh
 
 # Sourcing a build script must not apply `set -e` or `exit` to the caller's
